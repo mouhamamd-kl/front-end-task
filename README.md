@@ -31,7 +31,7 @@ To run this project locally, follow these steps:
 2. Navigate to the project directory:
 
     ```bash
-    cd roomyco
+    cd front-end-task
     ```
 
 3. Open `index.html` in your preferred browser to view the website.
