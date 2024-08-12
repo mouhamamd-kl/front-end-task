@@ -8,7 +8,7 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [License](#license)
-- [Contact](#contact)
+
 
 
 ## Technologies Used
@@ -35,3 +35,8 @@ To run this project locally, follow these steps:
     ```
 
 3. Open `index.html` in your preferred browser to view the website.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
