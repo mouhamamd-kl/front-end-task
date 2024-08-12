@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding   : 0;
+    margin    : 0;
+    /* outline: 1px solid #f00 !important; */
+
+}
+
+
+
+
+body {
+    direction  : ltr;
+    font-family: 'Poppins', sans-serif;
+    background : linear-gradient(to bottom,
+            rgba(248, 244, 219, 1), #FCFAEC, #FCFAEE, #FEFDF8, rgb(255, 255, 255));
+    color         : #292C2D;
+    /* overflow   : hidden;
+    height        : 100%; */
+}
+
+/* start navbar /*/
+
+
+.custom-navbar {
+    box-shadow      : 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
+    border-radius   : 0px 0px 20px 20px;
+    background-color: rgba(248, 244, 219, 1);
+}
+
+.custom-navbar a.navbar-brand {
+    font-size     : 20px;
+    font-weight   : 700;
+    letter-spacing: 3px;
+    line-height   : 1;
+    color         : rgba(35, 135, 194, 1);
+}
+
+.custom-navbar a.navbar-brand span {
+    font-size     : 9px;
+    font-weight   : 300;
+    line-height   : 13.5px;
+    letter-spacing: 6px;
+    text-align    : start;
+    margin        : 0;
+    padding       : 0;
+    display       : block;
+
+}
+
+.custom-navbar .navbar-nav .nav-item>.nav-link {
+    color      : #292c2d;
+    line-height: 30px;
+    font-size  : 20px;
+    font-weight: 500;
+}
+
+
+.custom-navbar .navbar-nav .nav-item>.nav-link.active {
+    color: rgba(3, 87, 129, 1) !important;
+}
+
+.navbar-nav>.nav-item:nth-last-child(3)>a::after {
+    content     : '|';
+    padding-left: 3rem;
+}
+
+.navbar-nav .nav-item .nav-btn {
+    font-size    : 20px;
+    border-radius: 50px;
+}
+
+/* finish navbar */
+
+/* start body  */
+main section.first-section {
+    /* background-color: rgba(248, 244, 219, 1); */
+}
+
+main section.introduction .introduction-text p {
+    font-size     : 88px;
+    font-weight   : bold;
+    color         : #035781;
+    letter-spacing: 5%;
+}
+
+main section.introduction .introduction-text p .span-head {
+    color: #2387C2;
+}
+
+main section.introduction .introduction-text i,
+main section.introduction .introduction-text img {
+    box-shadow   : 0px 2px 5px 5px rgba(0, 0, 0, 0.06);
+    color        : black;
+    background   : white;
+    border-radius: 75%;
+    float        : left;
+}
+
+main section.introduction .introduction-text .span-body {
+    font-size     : 20px;
+    font-weight   : normal;
+    letter-spacing: 0%;
+    /* word-break : break-all; */
+    color         : #292C2D;
+}
+
+
+/* help section Start*/
+main section.help .help-text {
+
+    align-self: center;
+}
+
+main section.help .help-text .help-text-heading {
+    font-size     : 50px;
+    font-weight   : bold;
+    color         : #035781;
+    letter-spacing: 5px;
+}
+
+main section.help .help-text h1.help-text-heading span {
+    color: #2387C2;
+}
+
+main section.help .help-text-body {
+    font-size: 20px;
+}
+
+main section.help .help-text .help-button {
+    box-shadow      : 0px 16px 17.5px 0px rgba(0, 0, 0, 0.25) !important;
+    font-size       : 24px;
+    color           : white;
+    border          : none;
+    border-radius   : 25px;
+    background-image: linear-gradient(#FFD433, #997F1F);
+}
+
+/* help section End*/
+
+/* our-servies section end*/
+main section.our-services {
+    /* background-image: url(../images/blue-background.png) !important; */
+    background-image: url(../images/blue-background.png) !important;
+
+}
+
+main section.our-services .our-services-text {
+    align-items  : center;
+    align-content: center;
+}
+
+main section.our-services h1.our-services-text-heading {
+    font-size  : 56px;
+    font-weight: bold;
+    text-align : start;
+    color      : #F6F6F6;
+}
+
+main section.our-services h1.our-services-text-heading span {
+
+    color: #FFD433;
+}
+
+.carousel-item {
+    float       : unset;
+    margin-right: auto;
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+    transform: translateY(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+    transform: translateY(-100%);
+}
+
+/* our-serviecs section end*/
+
+/* about-our-app section start*/
+
+main section.about-our-app h1.about-our-app-main-heading {
+    font-size  : 50px;
+    font-weight: 600;
+    text-align : center;
+    color      : #035781;
+}
+
+main section.about-our-app h1.about-our-app-main-heading span {
+    color: #F3704A;
+}
+
+main section.about-our-app .about-our-app-text h1.about-our-app-text-heading {
+    font-size  : 48px;
+    font-weight: 600;
+}
+
+main section.about-our-app .about-our-app-text p.about-our-app-text-body {
+    font-size  : 20px;
+    font-weight: 300;
+}
+
+main section.about-our-app .about-our-app-text .carousel-icons i,
+main section.about-our-app .about-our-app-text .carousel-icons img {
+
+    width        : 50px;
+    /* Ensure this matches the height */
+    height       : 50px;
+    /* Ensure this matches the width */
+    border       : 1px solid black;
+    border-radius: 50%;
+    /* 50% ensures a circle */
+
+}
+
+main section.about-our-app .about-our-app-text .download-app h5 {
+    font-size  : 20px;
+    font-weight: 600;
+}
+
+main section.about-our-app .about-our-app-text .download-app .download-buttons a.download-button {
+    font-size                 : 20px;
+    font-weight               : 400;
+    border                    : none;
+    border-top-left-radius    : 20px;
+    border-bottom-left-radius : 20px;
+    border-top-right-radius   : 20px;
+    border-bottom-right-radius: 20px;
+    color                     : white;
+    background-color          : #035781;
+    width                     : 30%;
+
+}
+
+/* about-our-app section end*/
+
+/*faq section start*/
+/* main section.faq .row {
+    display        : flex;
+    justify-content: center;
+    align-content  : space-between;
+} */
+
+main section.faq .faq-heading {
+    font-size  : 48px;
+    font-weight: bold;
+    color      : #035781;
+}
+
+main section.faq .first-card,
+.second-card,
+.third-card {
+    border-radius   : 20px;
+    /* height       : 60%;
+    width           : 60%; */
+    width           : 31.3%;
+    /* margin-left  : 20px; */
+}
+
+main section.faq .first-card {
+    background-color: #FAEFC7;
+}
+
+main section.faq .second-card {
+    background-color: #BEDFF3;
+}
+
+main section.faq .third-card {
+    background-color: rgba(243, 112, 74, 0.44);
+}
+
+main section.faq h3.faq-subheading {
+    font-size: 20px !important;
+    color    : #292C2D;
+}
+
+/* .faq-body {
+    position: relative;
+    overflow: visible;
+}
+
+.faq-image {
+    position: absolute;
+    float   : right;
+    top     : 86%;
+    left    : 35%;
+}
+
+main section.faq .second-card .faq-image {
+    top: 166%;
+}
+
+div.rightimage {
+    position: relative;
+}
+
+img.rightimage {
+    position: absolute;
+    float   : right;
+    left    : 20vh;
+    top     : -10vh;
+} */
+
+
+
+/*faq section end*/
+
+/* who we are section start*/
+
+
+main section.who-we-are h1.who-we-are-main-heading {
+    font-size  : 48px;
+    font-weight: bold;
+    text-align : center;
+    color      : #035781;
+}
+
+main section.who-we-are .who-we-are-text {
+    align-items  : center;
+    align-content: center;
+}
+
+main section.who-we-are .who-we-are-text .who-we-are-text-body {
+    text-align: start;
+    font-size : 20px;
+    color     : #292c2d;
+}
+
+/*who we are section end*/
+
+/*let's talk section start*/
+main section.lets-talk {
+    border-radius: 20px;
+    box-shadow   : 0px 3px 6px rgba(0, 0, 0, 0.25);
+
+}
+
+main section.lets-talk .lets-talk-form {
+    background-color: rgba(154, 175, 185, 0.14);
+}
+
+main section.lets-talk .lets-talk-form span {
+    font-size  : 16px;
+    font-weight: 300;
+}
+
+main section.lets-talk .lets-talk-form .input-group input,
+main section.lets-talk .lets-talk-form .input-group textarea {
+    border-radius   : 20px;
+    background-color: #F6F6F6;
+    box-shadow      : 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main section.lets-talk .lets-talk-form .input-group textarea {
+    font-weight: 300;
+    color      : #AEAEAE;
+    resize     : none;
+}
+
+main section.lets-talk .lets-talk-form .lets-talk-button {
+    font-size    : 20px;
+    border-radius: 20px;
+    box-shadow   : 0px 2px 6px rgba(0, 0, 0, 0.25);
+
+}
+
+main section.lets-talk .lets-talk-text {
+    background-color          : rgba(3, 87, 129, 0.84);
+    border-top-right-radius   : 5%;
+    border-bottom-right-radius: 5%;
+
+
+}
+
+main section.lets-talk .lets-talk-text h1.lets-talk-heading {
+    font-size  : 48px;
+    font-weight: 600;
+    color      : #ffff;
+}
+
+main section.lets-talk .lets-talk-text p.lets-talk-text-body {
+    font-size: 16px;
+    color    : #ffff
+}
+
+/*let's talk section end*/
+
+
+/* footer Start */
+.footer {
+    background-image: linear-gradient(to right, #035781, #131D22);
+    color           : #F6F6F6;
+}
+
+.footer .socials .footer-logo {
+    float: left;
+}
+
+.footer .socials h5 {
+    letter-spacing: 3px;
+}
+
+.footer .socials span {
+    font-size     : 9px;
+    letter-spacing: 5px;
+    font-weight   : 100;
+    display       : block;
+
+}
+
+.footer .socials p {
+    font-size  : 20px;
+    font-weight: normal;
+    color      : #AEAEAE;
+}
+
+.footer ul li i,
+.footer ul li img {
+    color    : #FFD433;
+    font-size: 20px;
+}
+
+.footer .Policies h5,
+.Contact h5 {
+    font-size  : 24px;
+    font-weight: 500;
+}
+
+.footer .Policies ul li a,
+.footer .Contact ul li a {
+    font-size  : 20px;
+    font-weight: normal;
+    color      : #AEAEAE;
+}
+
+.footer .Policies ul li i,
+.footer .Contact ul li i {
+
+    font-size: 15px;
+}
+
+.footer .Contact span {
+    font-size  : 20px;
+    font-weight: normal;
+}
+
+.footer .rights {
+    font-size                 : 16px;
+    font-weight               : 300;
+    color                     : #AEAEAE;
+    border                    : 1px solid #AEAEAE;
+    border-radius             : 20px;
+    border-bottom             : none;
+    border-bottom-left-radius : 0;
+    border-bottom-right-radius: 0;
+}
+
+/* footer End*/
+
+
+/*Responsive*/
+
+@media (max-width: 576px) {
+    main section.faq h3.faq-subheading {
+        font-size: 14px !important;
+
+    }
+    main section.faq .faq-body {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    main section.faq .faq-body p {
+
+        font-size    : 12px;
+        margin-top   : 0;
+        margin-bottom: 0rem;
+    }
+
+    main section.faq .faq-body img {
+        height: 50%;
+        max-width: 70%;
+    }
+}
+
+
+/*end faq responsive*/
+
+/*start carousel responsive*/
+/* Responsive Styles */
+
+
+@media (max-width: 992px) {
+    main section.our-services h1.our-services-text-heading {
+        font-size: 24px;
+    }
+
+
+    .carouselo {
+        width : 100% !important;
+        height: auto;
+    }
+
+
+
+    .carousel-image {
+        width : 100%;
+        height: auto;
+    }
+
+    .lower-carousel p {
+        font-size: 16px;
+    }
+}
