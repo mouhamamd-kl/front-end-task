@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style : normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style : normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style : normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style : normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style : normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style : normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style : normal;
+}
+
+
+
+body {
+
+    font-family: 'Poppins' !important;
+    background : rgba(213, 227, 236, 0.42);
+}
+
+html,
+body {
+    height : 100%;
+    margin : 0;
+    padding: 0;
+}
+
+main {
+    height: 100%;
+}
+
+.main-page {
+    height: 100%;
+}
+
+.page-container {
+    height: 100%;
+    width : 100%;
+}
+
+/*first section start styling*/
+
+main section.main-page .page-container {
+    position: relative;
+    overflow: hidden;
+}
+
+main section.main-page .page-container::before {
+    content   : '';
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    background: radial-gradient(circle at 10% 57%, rgba(243, 112, 74, 1) 2%, rgba(255, 212, 51, 1) 13%, rgba(213, 227, 236, 1) 27%, rgba(213, 227, 236, 1) 34%);
+}
+
+main section.main-page .page-container::after {
+    content         : '';
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(213, 227, 236, 0.42);
+    backdrop-filter : blur(10px);
+    z-index         : 2;
+}
+
+main section.main-page .page-container * {
+    position: relative;
+    z-index : 3;
+}
+
+main section.main-page .page-container .branding-section .branding-header {
+    color: #2387C2;
+
+}
+
+main section.main-page .page-container .branding-section .branding-header h5 {
+    letter-spacing: 5px;
+}
+
+main section.main-page .page-container .branding-section .branding-header span {
+    font-size     : 9px;
+    letter-spacing: 6px;
+    font-weight   : 100;
+    display       : block;
+
+}
+
+main section.main-page .page-container .branding-section .branding-header img.logo {
+    float: left;
+}
+
+/*first section end styling*/
+
+/*second section start styling*/
+main section.main-page .form-section {
+    background-image: url(../../images/loginPage/round.svg);
+    background-repeat: no-repeat;
+    background-position: right center; /* Start position */
+    transition: background-position 1s ease-in-out; /* Smooth transition */
+}
+
+main section.main-page .form-section.animate-bg {
+    background-position: -10px ; /* End position */
+}
+
+
+main section.main-page .form-section {
+    display        : flex;
+    flex-direction : column;
+    /* Stack children vertically */
+    justify-content: space-evenly;
+    /* Center children horizontally */
+    align-items    : center;
+    /* Center children vertically */
+}
+
+main section.main-page .form-section form.page-form h1.welcome-message {
+    font-size: 28px;
+    color    : #035781;
+}
+
+main section.main-page .form-section form.page-form h2.sign-in-message {
+    font-size: 24px;
+    color    : #292C2D;
+}
+
+main section.main-page .form-section form.page-form input.form-control,
+main section.main-page .form-section form.page-form input.form-control {
+    font-size    : 18px;
+    border-radius: 20px;
+}
+
+main section.main-page .form-section form.page-form input.number-input,
+main section.main-page .form-section form.page-form input.password-input {
+    border-left: none;
+
+}
+
+main section.main-page .form-section form.page-form span.input-group-text {
+    border-radius   : 20px;
+    background-color: white !important;
+}
+
+main section.main-page .form-section form.page-form a.forget-password {
+    color: #2387C2;
+
+}
+
+main section.main-page .form-section form.page-form .button-container button.sign-in-button,
+main section.main-page .form-section form.page-form .button-container button.sign-up-button {
+    font-size: 20px;
+
+    border-radius: 19px;
+    color        : white;
+
+}
+
+main section.main-page .form-section form.page-form .button-container button.sign-in-button {
+    background-color: #2387C2;
+
+}
+
+main section.main-page .form-section form.page-form .button-container button.sign-up-button {
+    background-color: white;
+    color           : #2387C2;
+    border          : 2px solid #2387C2;
+}
+
+.social-sign-in-container {
+    text-align: center;
+}
+
+
+
+.social-sing-in-text {
+    color    : #666;
+    font-size: 0.9rem;
+
+}
+
+
+
+.social-icons .social-icon {
+    width          : 65px;
+    height         : 65px;
+    border-radius  : 65px;
+    box-shadow     : 0px 4px 4px 3px rgba(0, 0, 0, 0.15);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-decoration: none;
+    /* Removes underline from links */
+}

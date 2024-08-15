@@ -1,0 +1,119 @@
+main section.main-page .form-section {
+    background-image : url(../../images/loginPage/Rectangle\ 1044\(1\).svg);
+    background-size  : 100%;
+    background-repeat: no-repeat;
+    transition       : background-image 0.5s ease-in-out;
+}
+
+.branding-section .branding-body {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100% !important;
+}
+
+.branding-section .branding-body .branding-text {
+    font-size: 24px;
+    color    : #035781;
+}
+
+/* Name Input Group */
+.main-page .page-container .form-section .page-form .name-input-group {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    align-items    : center;
+}
+
+/* Customizing the radio button */
+.page-form {
+    width: 55%;
+}
+
+.custom-radio-input {
+    appearance        : none;
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+    width             : 20px;
+    height            : 20px;
+    border            : 2px solid #FF7043;
+    border-radius     : 50%;
+    outline           : none;
+    transition        : background-color 0.3s, border-color 0.3s;
+    cursor            : pointer;
+    margin-right      : 10px;
+}
+
+.custom-radio-input:checked {
+    background-color: #FF7043;
+    border-color    : #FF7043;
+}
+
+/* Aligning the label text with the custom radio button */
+.custom-radio-label {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 0;
+}
+
+/* Steps Indicator */
+.steps-indicator {
+    position     : relative;
+    height       : 0px;
+    margin-bottom: 20px;
+}
+
+.step-circle {
+    font-size       : 24px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    align-content   : center;
+    position        : absolute;
+    width           : 50px;
+    height          : 50px;
+    border-radius   : 50%;
+    border          : 1px solid #2387C2;
+    color           : #2387C2;
+    background-color: white;
+    cursor          : pointer;
+    transition      : background-color 0.3s, border-color 0.3s;
+}
+
+/* Visually Hidden */
+.visually-hidden {
+    position: absolute !important;
+    clip    : rect(1px, 1px, 1px, 1px);
+    padding : 0 !important;
+    border  : 0 !important;
+    height  : 1px !important;
+    width   : 1px !important;
+    overflow: hidden;
+}
+
+/* Step Circle States */
+.step-circle.done {
+    background-color: #2387C2;
+    box-shadow      : 0 0 10px rgba(35, 135, 194, 2.2);
+    color           : white;
+}
+
+.step-circle.active {
+    box-shadow: 0 0 10px rgba(35, 135, 194, 2.2);
+}
+
+/* Step Circle Positions */
+.step-circle:nth-child(1) {
+    top : 29vh;
+    left: -77vh;
+}
+
+.step-circle:nth-child(2) {
+    top : 33vh;
+    left: -79vh;
+}
+
+.step-circle:nth-child(3) {
+    top : 37vh;
+    left: -78vh;
+}

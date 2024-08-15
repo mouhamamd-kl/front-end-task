@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/loginStyle/login.css">
+    <link rel="stylesheet" href="./css/signUpStyle/signup.css">
+    <link rel="stylesheet" href="./css/signUpStyle/signup2.css">
+    <link rel="stylesheet" href="./css/signUpStyle/signup3.css">
+    <title>RoomyCo</title>
+</head>
+
+
+
+<body>
+    <main>
+        <section class="main-page">
+            <div class="page-container row mx-0 p-0">
+                <!-- Branding Section -->
+                <div class="branding-section p-5 col-lg-3 col-md-12">
+                    <div class="branding-header">
+                        <img class="logo me-3" src="./images/loginPage/loginLogo.svg" alt="RoomyCo Logo">
+                        <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span>
+                        </h5>
+                    </div>
+                    <div class="branding-body">
+                        <p class="branding-text poppins-light text-start mb-5 pb-5">Tell us more
+                            about you</p>
+                    </div>
+
+                    <!-- Step Indicator Section -->
+
+                </div>
+
+                <!-- Form Section -->
+                <div class="col-lg-9 col-md-12 form-section pe-5  text-md-center ">
+                    <div class="steps-indicator ">
+                        <div class="step-circle done poppins-light" id="step1" onclick="loadPage('signup.html')">1
+                        </div>
+                        <div class="step-circle done poppins-light" id="step2" onclick="loadPage('signup2.html')">2
+                        </div>
+                        <div class="step-circle active poppins-light" id="step3" onclick="loadPage('signup3.html')">
+                            3</div>
+                    </div>
+                    <form action="" class="page-form ps-5 pe-2" id="signup3-form">
+                        <div class="mb-3">
+                            <label for="locationEmirate" class="form-label">What is your location?</label>
+                            <div class="d-flex   justify-content-start align-items-evenly gap-2 ">
+
+                                <select id="locationEmirate" class="form-select custom-select poppins-light me-3 p-3">
+                                    <option selected>Emirate</option>
+                                    <!-- Add options here -->
+                                </select>
+
+
+                                <select id="locationCity" class="form-select custom-select poppins-light p-3">
+                                    <option selected>City</option>
+                                    <!-- Add options here -->
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-start align-items-evenly gap-2 mb-3">
+                            <div class="col-auto me-5 d-flex justify-content-center align-items-center">
+                                <label for="originCountry" class="form-label">Where are you from?</label>
+                            </div>
+                            <div class="col">
+                                <select id="originCountry" class="form-select custom-select poppins-light  p-3">
+                                    <option selected>Select..</option>
+                                    <!-- Add options here -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-start align-items-evenly gap-2">
+                            <div class="col-auto me-5 d-flex justify-content-center align-items-center">
+                                <label for="originCountry" class="form-label">What's your religion?</label>
+                            </div>
+                            <div class="col">
+                                <select id="originCountry" class="form-select custom-select poppins-light  p-3">
+                                    <option selected>Select..</option>
+                                    <!-- Add options here -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Date of birth</label>
+                            <div class="row g-2">
+                                <div class="col">
+                                    <select class="form-select custom-select poppins-light p-3" id="day">
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select custom-select poppins-light p-3" id="month">
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select custom-select poppins-light p-3" id="bitch">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center align-items-center mb-3">
+                            <label class="form-label col-8 mb-0">Count of people prefer to live with</label>
+                            <div class="d-flex align-items-center col-4 qty ">
+                                <span class="d-flex justify-content-center align-items-center minus me-3">-</span>
+                                <input type="number" class="count Poppins-medium" name="qty" value="1" min="1">
+                                <span class="d-flex justify-content-center align-items-center plus ms-3">+</span>
+                            </div>
+                        </div>
+
+
+                        <div class="row ">
+                            <label class="col-lg-6 form-label mb-3">Do you prefer any pets?</label>
+                            <div class="col-6">
+                                <input type="checkbox" id="petsToggle" class="toggleCheckbox " />
+                                <label for="petsToggle" class='toggleContainer w-75'>
+                                    <div class="poppins-light">Yes</div>
+                                    <div class="poppins-light">No</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-lg-6 form-label">Do you smoke?</label>
+                            <div class="col-6">
+                                <input type="checkbox" id="smokeToggle" class="toggleCheckbox " />
+                                <label for="smokeToggle" class='toggleContainer w-75'>
+                                    <div class="poppins-light">Yes</div>
+                                    <div class="poppins-light">No</div>
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="row ">
+                            <div class="button-container d-flex justify-content-center">
+                                <button type="submit"
+                                    class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
+                                    onclick="loadPage('signup2.html')">
+                                    Next
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        const smoketoggleCheckbox = document.getElementById('smokeToggle');
+
+        // Function to get the current value
+        function getToggleValue() {
+            return smoketoggleCheckbox.checked ? 'No' : 'Yes';
+        }
+
+        // Example usage: listen to change event
+        smoketoggleCheckbox.addEventListener('change', () => {
+            const value = getToggleValue();
+            console.log("smokeToggle Toggle value:", value); // This will print "Yes" or "No"
+        });
+
+        const petstoggleCheckbox = document.getElementById('petsToggle');
+
+        // Function to get the current value
+        function getToggleValue2() {
+            return petstoggleCheckbox.checked ? 'No' : 'Yes';
+        }
+
+        // Example usage: listen to change event
+        petstoggleCheckbox.addEventListener('change', () => {
+            const value = getToggleValue2();
+            console.log("pets Toggle value:", value); // This will print "Yes" or "No"
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            optionText = 'Premium';
+            optionValue = 'premium';
+            $('#year')
+                .append(new Option(optionText, optionValue));
+
+
+
+            var $daySelect = $('#day');
+            var $monthSelect = $('#month');
+            var $yearSelect = $('#year');
+
+
+
+            var startYear = 1960;
+            var endYear = 2024;
+
+            // Populate years
+            for (var year = endYear; year >= startYear; year--) {
+                $('<option>').val(year).text(year).appendTo($yearSelect);
+            }
+
+            // Function to populate days based on month and year
+            function updateDays() {
+                var month = parseInt($monthSelect.val(), 10);
+                var year = parseInt($yearSelect.val(), 10);
+
+                $daySelect.empty().append('<option value="" disabled selected>Day</option>'); // Clear previous days
+
+                if (month && year) {
+                    var daysInMonth = new Date(year, month, 0).getDate(); // Get the number of days in the selected month and year
+
+                    for (var day = 1; day <= daysInMonth; day++) {
+                        $('<option>').val(day).text(day).appendTo($daySelect);
+                    }
+                }
+            }
+
+            // Event listeners to update days when month or year changes
+            $monthSelect.change(updateDays);
+            $yearSelect.change(updateDays);
+
+            // Initial population of days
+            updateDays();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('change', (event) => {
+            const form = event.target.closest('form');
+            if (form && form.id) {
+                saveData(form.id);
+            }
+        });
+
+        document.addEventListener('submit', (event) => {
+            const form = event.target.closest('form');
+            if (form && form.id) {
+                saveData(form.id);
+            }
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/signup3.js"></script>
+
+</body>
+
+</html>

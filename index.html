@@ -11,20 +11,12 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/carousel.css">
-    <link rel="stylesheet" href="./css/mobileScreenAnimation.css">
-    <link rel="stylesheet" href="./css/scrollAnimation.css">
-    <style>
-        .btn-custom {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .btn-custom:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/homeStyle/index.css">
+    <link rel="stylesheet" href="./css/homeStyle/carousel.css">
+    <link rel="stylesheet" href="./css/homeStyle/mobileScreenAnimation.css">
+    <link rel="stylesheet" href="./css/homeStyle/scrollAnimation.css">
+    <link rel="stylesheet" href="./css/homeStyle/navbar.css">
+    <link rel="stylesheet" href="./css/homeStyle/footer.css">
     <title>RoomyCo</title>
 </head>
 
@@ -44,23 +36,30 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item me-4 align-middle">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#about-us">About Us</a>
                     </li>
                     <li class="nav-item me-4 align-middle">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">Services</a>
+                        <a class="nav-link" href="#services" role="button" aria-expanded="false">Services</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">FAQ</a>
+                        <a class="nav-link" href="#faq" role="button" aria-expanded="false">FAQ</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">
-                            EN
-                            <!-- <i class="fa-solid fa-caret-down ps-2"></i> -->
-                            <img src="./images/website icon/caret-down-fill.svg" alt="">
-                        </a>
+                        <div class="dropdown">
+                            <a class="nav-link btn dropdown-toggle" href="#" role="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                EN
+                                <!-- <i class="fa-solid fa-caret-down ps-2"></i> -->
+                                <!-- <img src="./images/website icon/caret-down-fill.svg" alt=""> -->
+                            </a>
+                            <ul class="dropdown-menu lang-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item fw-norman active" href="#">English</a></li>
+                                <li><a class="dropdown-item fw-nromal" href="#">Arabic</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#index.html" class="btn btn-primary nav-btn px-5 py-2">Get Start?</a>
+                        <a href="./mainLogin&SignUp.html" class="btn btn-primary nav-btn px-5 py-2">Get Start?</a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +68,7 @@
 
     <main class="mb-5">
         <section class="first-section pt-5 your-section-class">
-            <section class="introduction mx-5 my-5 py-5 your-section-class" >
+            <section class="introduction mx-5 my-5 py-5 your-section-class">
                 <div class="row my-3">
                     <div class="col-lg-6 col-md-12 introduction-text order-lg-first">
                         <div>
@@ -90,7 +89,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 d-flex justify-content-center order-md-first">
                         <!-- <img class="img-fluid" src="./images/girl.png" alt=""> -->
-                         <img class="img-fluid" src="./gifs/girlAnimation.gif" alt="">
+                        <img class="img-fluid" src="./gifs/girlAnimation.gif" alt="">
                     </div>
                 </div>
             </section>
@@ -98,7 +97,7 @@
                 <div class="row my-3">
                     <div class="col-lg-6  col-md-12 d-flex justify-content-center">
                         <!-- <img class="img-fluid" src="./images/man-holding-laptop.png" alt=""> -->
-                         <img src="./gifs/manAnimation.gif" alt="" class="img-fluid">
+                        <img src="./gifs/manAnimation.gif" alt="" class="img-fluid">
                     </div>
                     <div class="col-lg-6 col-md-12 p-2 help-text">
                         <div class="">
@@ -123,7 +122,7 @@
 
                 </div>
             </section>
-            <section class="our-services my-5 py-5 px-5 your-section-class">
+            <section class="our-services my-5 py-5 px-5 your-section-class" id="services">
                 <div class="row my-3">
                     <div class="col-md-6  our-services-text  order-first">
                         <div>
@@ -144,10 +143,10 @@
                             </div>
                             <div class="carouselo">
                                 <div class="carousel-images">
-                                    <img src="./images/Faq-Questions-pana.png" alt="Image 1"
+                                    <img src="./images/HomePage/Faq-Questions-pana.png" alt="Image 1"
                                         class="img-fluid carousel-image">
-                                    <img src="./images/girl.png" alt="Image 2" class="img-fluid carousel-image">
-                                    <img src="./images/man-holding-laptop.png" alt="Image 3"
+                                    <img src="./images/HomePage/girl.png" alt="Image 2" class="img-fluid carousel-image">
+                                    <img src="./images/HomePage/man-holding-laptop.png" alt="Image 3"
                                         class=" img-fluid carousel-image">
                                 </div>
                                 <div class="lower-carousel">
@@ -158,16 +157,16 @@
                     </div>
                 </div>
             </section>
-            <section class="about-our-app my-5 py-5 your-section-class">
+            <section class="about-our-app my-5 py-5 your-section-class" id="about-us">
                 <h1 class="about-our-app-main-heading">About our app <span>ROOM</span></h1>
                 <div class="row mx-0">
                     <div class="col-lg-6 col-md-12">
                         <div class="image-container mt-4 d-lg-flex justify-content-lg-center">
-                            <img src="./images/screens/Myprofile.png" alt="Image 1" class="image img-fluid"
+                            <img src="./images/HomePage/screens/Myprofile.png" alt="Image 1" class="image img-fluid"
                                 style="z-index: 3;">
-                            <img src="./images/screens/myAd.png" alt="Image 2" class="image img-fluid"
+                            <img src="./images/HomePage/screens/myAd.png" alt="Image 2" class="image img-fluid"
                                 style="z-index: 2;">
-                            <img src="./images/screens/HomePage.png" alt="Image 3" class="image img-fluid"
+                            <img src="./images/HomePage/screens/HomePage.png" alt="Image 3" class="image img-fluid"
                                 style="z-index: 1;">
                         </div>
                     </div>
@@ -176,7 +175,7 @@
                             <h1 class="about-our-app-text-heading">
                                 Message page
                             </h1>
-                            <img class="img-fluid" src="./images/yellow-line.png" alt="">
+                            <img class="img-fluid" src="./images/HomePage/yellow-line.png" alt="">
                         </div>
                         <div>
                             <p class="about-our-app-text-body mb-5">You can communicate with roommate or <br>
@@ -210,7 +209,7 @@
 
                 </div>
             </section>
-            <section class="faq my-5 py-5 your-section-class">
+            <section class="faq my-5 py-5 your-section-class" id="faq">
                 <h1 class="faq-heading text-center mb-5">FAQ</h1>
                 <div class="row mx-0 justify-content-around">
                     <div class="col-4 first-card pt-2">
@@ -218,14 +217,14 @@
                         <div class="faq-body d-lg-flex align-items-center">
                             <p>The services of searching for Roommates, seeker for room., easy access and direct
                                 communication with users through the in-app conversation, and lots of features.</p>
-                            <img class="img-fluid " src="./images/Faq-Questions-pana.png" alt="">
+                            <img class="img-fluid " src="./images/HomePage/Faq-Questions-pana.png" alt="">
                         </div>
                     </div>
                     <div class="col-4 second-card  ">
                         <h3 class="faq-subheading fw-bold pt-2">Where can I avail of the application services?</h3>
                         <div class="faq-body d-lg-flex align-items-center">
                             <p>The services of searching for Roommates, seeker for room., easy </p>
-                            <img class="img-fluid " src="./images/Faq-Address-bro.png" alt="">
+                            <img class="img-fluid " src="./images/HomePage/Faq-Address-bro.png" alt="">
                         </div>
                     </div>
                     <div class="col-4  third-card ">
@@ -235,7 +234,7 @@
                                 highest degree of security and protection of users' information.</p>
 
 
-                            <img class="img-fluid " src="./images/Faq-Data1.png" alt="">
+                            <img class="img-fluid " src="./images/HomePage/Faq-Data1.png" alt="">
 
 
                         </div>
@@ -250,7 +249,7 @@
                 <div class="row my-3 mx-0">
                     <div class="col-lg-6  col-md-12 d-flex justify-content-center">
                         <!-- <img class="img-fluid" src="./images/who-we-are.png" alt=""> -->
-                         <img src="./gifs/who-we-areAnimation.gif" alt="" class="img-fluid">
+                        <img src="./gifs/who-we-areAnimation.gif" alt="" class="img-fluid">
                     </div>
                     <div class="col-lg-6 col-md-12 p-2 who-we-are-text text-md-center">
 
@@ -277,7 +276,7 @@
                             will get back to you promptly.</p>
                         <div class="d-flex justify-content-center">
                             <!-- <img class="img-fluid" src="./images/contact.png" alt=""> -->
-                             <img src="./gifs/letsTalkAnimation.gif" alt="" class="img-fluid">
+                            <img src="./gifs/letsTalkAnimation.gif" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-12 lets-talk-form p-5 order-lg-first">
@@ -321,7 +320,7 @@
                 <!-- Logo and Description -->
                 <div class="col-lg-4 col-md-6 mb-4 socials">
                     <div>
-                        <img class="footer-logo me-2" src="./images/footer-logo.png" alt="">
+                        <img class="footer-logo me-2" src="./images/HomePage/footer-logo.png" alt="">
                         <h5 class="text-uppercase">RoomyCo <span>ROOMMATE</span></h5>
 
                     </div>
@@ -371,7 +370,7 @@
                 <div class="col-lg-4 col-md-6 mb-4 Policies d-flex  justify-content-lg-center ">
                     <div>
                         <h5>Terms & policies</h5>
-                        <img class="img-fluid" src="./images/footer-breaker.png" alt="">
+                        <img class="img-fluid" src="./images/HomePage/footer-breaker.png" alt="">
                         <ul class="list-unstyled">
                             <li class="mb-3">
                                 <a href="#" class=" text-decoration-none">Terms of Service</a>
@@ -391,7 +390,7 @@
                     class="col-lg-4 col-md-12 Contact d-flex justify-content-lg-end align-items-lg-start justify-content-lg-center">
                     <div>
                         <h5>Contact</h5>
-                        <img class="img-fluid" src="./images/footer-breaker.png" alt="">
+                        <img class="img-fluid" src="./images/HomePage/footer-breaker.png" alt="">
 
                         <ul class="list-unstyled">
                             <li class="mb-3">

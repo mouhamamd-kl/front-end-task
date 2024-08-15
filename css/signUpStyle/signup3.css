@@ -1,0 +1,135 @@
+.main-page .page-container .form-section .page-form {
+    text-align: start;
+}
+
+main section.main-page .form-section form.page-form .form-select {
+    font-size    : 18px;
+    border-radius: 20px;
+}
+
+main section.main-page .form-section form.page-form {
+    height    : 100vh;
+    overflow-y: auto;
+}
+
+/* Quantity Count Styling */
+main section.main-page .page-container .form-section .page-form .qty .count {
+    color         : #000;
+    display       : inline-block;
+    vertical-align: top;
+    font-size     : 16px;
+    border        : 0;
+    width         : 2%;
+    padding       : 0 2px;
+    min-width     : 35px;
+    text-align    : center;
+}
+
+
+
+
+
+/* Quantity Container Alignment */
+main section.main-page .page-container .form-section .page-form .qty {
+    text-align: center;
+}
+
+/* Plus & Minus Button Styling */
+main section.main-page .page-container .form-section .page-form .qty .plus,
+.qty .minus {
+    cursor         : pointer;
+    display        : inline-block;
+    vertical-align : middle;
+    width          : 20px;
+    height         : 20px;
+    font           : 20px Arial, sans-serif;
+    text-align     : center;
+    border-radius  : 50%;
+    background-clip: padding-box;
+}
+
+/* Hover Effects for Plus and Minus Buttons */
+main section.main-page .page-container .form-section .page-form .qty .minus:hover,
+main section.main-page .page-container .form-section .page-form .qty .plus:hover {
+    background-color: #F3704A !important;
+}
+
+/* Prevent Text Selection */
+main section.main-page .page-container .form-section .page-form .qty span {
+    background-color: rgba(246, 246, 246, 1);
+    color           : rgba(35, 135, 194, 1);
+    box-shadow      : 0px 1px 1.5px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Remove Spin Buttons in Number Input */
+main section.main-page .page-container .form-section .page-form .qty input.count::-webkit-outer-spin-button,
+main section.main-page .page-container .form-section .page-form .qty input.count::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin            : 0;
+}
+
+main section.main-page .page-container .form-section .page-form .qty input[type=number].count {
+    -moz-appearance: textfield;
+}
+
+
+
+.toggleContainer {
+    position             : relative;
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    width                : fit-content;
+    border               : 3px solid #F6F6F6;
+    border-radius        : 20px;
+    background           : #F6F6F6;
+    font-weight          : bold;
+    cursor               : pointer;
+}
+
+.toggleCheckbox {
+    display: none;
+}
+
+.toggleContainer::before {
+    content      : '';
+    position     : absolute;
+    width        : 50%;
+    height       : 100%;
+    left         : 0%;
+    border-radius: 20px;
+    background   : #FFD433;
+    transition   : all 0.3s;
+}
+
+.toggleCheckbox:checked+.toggleContainer::before {
+    left: 50%;
+}
+
+.toggleContainer div {
+    font-size : 16px;
+    padding   : 6px;
+    text-align: center;
+    z-index   : 1;
+    color     : #000;
+    transition: color 0.3s;
+}
+
+.toggleCheckbox:checked+.toggleContainer div:first-child {
+    color: black;
+
+}
+
+.toggleCheckbox:checked+.toggleContainer div:last-child {
+    color: white;
+
+}
+
+.toggleCheckbox+.toggleContainer div:first-child {
+    color: white;
+}
+
+.toggleCheckbox+.toggleContainer div:last-child {
+    color: black;
+
+}
