@@ -1,19 +1,18 @@
-.main-page .page-container .form-section .page-form {
+main .main-page .page-container .form-section .page-form {
     text-align: start;
 }
 
-main section.main-page .form-section form.page-form .form-select {
+main .main-page .form-section .page-form .form-select {
     font-size    : 18px;
     border-radius: 20px;
 }
 
-main section.main-page .form-section form.page-form {
-    height    : 100vh;
-    overflow-y: auto;
+main .main-page .form-section .page-form {
+    height: 100vh !important;
 }
 
-/* Quantity Count Styling */
-main section.main-page .page-container .form-section .page-form .qty .count {
+/* Quantity  Styling Start*/
+main .main-page .page-container .form-section .page-form .qty .count {
     color         : #000;
     display       : inline-block;
     vertical-align: top;
@@ -25,17 +24,13 @@ main section.main-page .page-container .form-section .page-form .qty .count {
     text-align    : center;
 }
 
-
-
-
-
 /* Quantity Container Alignment */
-main section.main-page .page-container .form-section .page-form .qty {
+main .main-page .page-container .form-section .page-form .qty {
     text-align: center;
 }
 
 /* Plus & Minus Button Styling */
-main section.main-page .page-container .form-section .page-form .qty .plus,
+main .main-page .page-container .form-section .page-form .qty .plus,
 .qty .minus {
     cursor         : pointer;
     display        : inline-block;
@@ -49,13 +44,13 @@ main section.main-page .page-container .form-section .page-form .qty .plus,
 }
 
 /* Hover Effects for Plus and Minus Buttons */
-main section.main-page .page-container .form-section .page-form .qty .minus:hover,
-main section.main-page .page-container .form-section .page-form .qty .plus:hover {
+main .main-page .page-container .form-section .page-form .qty .minus:hover,
+main .main-page .page-container .form-section .page-form .qty .plus:hover {
     background-color: #F3704A !important;
 }
 
 /* Prevent Text Selection */
-main section.main-page .page-container .form-section .page-form .qty span {
+main .main-page .page-container .form-section .page-form .qty span {
     background-color: rgba(246, 246, 246, 1);
     color           : rgba(35, 135, 194, 1);
     box-shadow      : 0px 1px 1.5px 0px rgba(0, 0, 0, 0.25);
@@ -63,19 +58,24 @@ main section.main-page .page-container .form-section .page-form .qty span {
 }
 
 /* Remove Spin Buttons in Number Input */
-main section.main-page .page-container .form-section .page-form .qty input.count::-webkit-outer-spin-button,
-main section.main-page .page-container .form-section .page-form .qty input.count::-webkit-inner-spin-button {
+main .main-page .page-container .form-section .page-form .qty input.count::-webkit-outer-spin-button,
+main .main-page .page-container .form-section .page-form .qty input.count::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin            : 0;
 }
 
-main section.main-page .page-container .form-section .page-form .qty input[type=number].count {
+main .main-page .page-container .form-section .page-form .qty input[type=number].count {
     -moz-appearance: textfield;
 }
 
+/* Quantity  Styling End*/
 
+/*custom check box styling Start*/
+main .main-page .page-container .form-section .page-form .toggleCheckbox {
+    display: none;
+}
 
-.toggleContainer {
+main .main-page .page-container .form-section .page-form .toggleContainer {
     position             : relative;
     display              : grid;
     grid-template-columns: repeat(2, 1fr);
@@ -87,11 +87,9 @@ main section.main-page .page-container .form-section .page-form .qty input[type=
     cursor               : pointer;
 }
 
-.toggleCheckbox {
-    display: none;
-}
 
-.toggleContainer::before {
+
+main .main-page .page-container .form-section .page-form .toggleContainer::before {
     content      : '';
     position     : absolute;
     width        : 50%;
@@ -102,11 +100,11 @@ main section.main-page .page-container .form-section .page-form .qty input[type=
     transition   : all 0.3s;
 }
 
-.toggleCheckbox:checked+.toggleContainer::before {
+main .main-page .page-container .form-section .page-form .toggleCheckbox:checked+.toggleContainer::before {
     left: 50%;
 }
 
-.toggleContainer div {
+main .main-page .page-container .form-section .page-form .toggleContainer div {
     font-size : 16px;
     padding   : 6px;
     text-align: center;
@@ -115,21 +113,29 @@ main section.main-page .page-container .form-section .page-form .qty input[type=
     transition: color 0.3s;
 }
 
-.toggleCheckbox:checked+.toggleContainer div:first-child {
+main .main-page .page-container .form-section .page-form .toggleCheckbox:checked+.toggleContainer div:first-child {
     color: black;
 
 }
 
-.toggleCheckbox:checked+.toggleContainer div:last-child {
+main .main-page .page-container .form-section .page-form .toggleCheckbox:checked+.toggleContainer div:last-child {
     color: white;
 
 }
 
-.toggleCheckbox+.toggleContainer div:first-child {
+main .main-page .page-container .form-section .page-form .toggleCheckbox+.toggleContainer div:first-child {
     color: white;
 }
 
-.toggleCheckbox+.toggleContainer div:last-child {
+main .main-page .page-container .form-section .page-form .toggleCheckbox+.toggleContainer div:last-child {
     color: black;
 
+}
+
+/*custom check box styling End*/
+
+@media (max-width:576px) {
+    .main-page .page-container .form-section .page-form {
+        overflow-y: scroll;
+    }
 }

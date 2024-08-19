@@ -90,7 +90,7 @@ main section.help .help-text .help-button {
 /* our-servies section end*/
 main section.our-services {
     /* background-image: url(../images/blue-background.png) !important; */
-    background-image: url(../images/HomePage/blue-background.png) !important;
+    background-image: url(../../images/HomePage/blue-background.png) !important;
 
 }
 
@@ -225,36 +225,6 @@ main section.faq h3.faq-subheading {
     color    : #292C2D;
 }
 
-/* .faq-body {
-    position: relative;
-    overflow: visible;
-}
-
-.faq-image {
-    position: absolute;
-    float   : right;
-    top     : 86%;
-    left    : 35%;
-}
-
-main section.faq .second-card .faq-image {
-    top: 166%;
-}
-
-div.rightimage {
-    position: relative;
-}
-
-img.rightimage {
-    position: absolute;
-    float   : right;
-    left    : 20vh;
-    top     : -10vh;
-} */
-
-
-
-/*faq section end*/
 
 /* who we are section start*/
 

@@ -1,24 +1,27 @@
-main section.main-page .form-section {
-    background-image : url(../../images/loginPage/Rectangle\ 1044\(1\).svg);
-    background-size  : 100%;
-    background-repeat: no-repeat;
-    transition       : background-image 0.5s ease-in-out;
-}
-
+/* Branding body */
 .branding-section .branding-body {
     display        : flex;
     justify-content: center;
     align-items    : center;
-    height         : 100% !important;
+    height         : 100vh !important;
 }
 
+/* Branding body text*/
 .branding-section .branding-body .branding-text {
     font-size: 24px;
     color    : #035781;
 }
 
+/*form section*/
+section.main-page .form-section {
+    background-image : url(../../images/loginPage/Rectangle\ 1044\(1\).svg);
+    background-size  : cover;
+    background-repeat: no-repeat;
+    transition       : background-image 0.5s ease-in-out;
+}
+
 /* Name Input Group */
-.main-page .page-container .form-section .page-form .name-input-group {
+.form-section .page-form .name-input-group {
     display        : flex;
     flex-direction : row;
     justify-content: space-evenly;
@@ -26,17 +29,15 @@ main section.main-page .form-section {
 }
 
 /* Customizing the radio button */
-.page-form {
-    width: 55%;
-}
 
-.custom-radio-input {
+
+.gender-container .gender-buttons .custom-radio-input {
     appearance        : none;
     -webkit-appearance: none;
     -moz-appearance   : none;
     width             : 20px;
     height            : 20px;
-    border            : 2px solid #FF7043;
+    border            : 2px solid #FF7043 !important;
     border-radius     : 50%;
     outline           : none;
     transition        : background-color 0.3s, border-color 0.3s;
@@ -44,26 +45,33 @@ main section.main-page .form-section {
     margin-right      : 10px;
 }
 
-.custom-radio-input:checked {
-    background-color: #FF7043;
-    border-color    : #FF7043;
+.gender-container .gender-buttons .custom-radio-input:checked {
+    background-color: #FF7043 !important;
+    border-color    : #FF7043 َ !important;
 }
 
 /* Aligning the label text with the custom radio button */
-.custom-radio-label {
+.gender-container .gender-buttons .custom-radio .custom-radio-label {
     display      : flex;
     align-items  : center;
     margin-bottom: 0;
 }
 
 /* Steps Indicator */
-.steps-indicator {
-    position     : relative;
-    height       : 0px;
-    margin-bottom: 20px;
+.form-section .steps-indicator {
+
+    display       : flex;
+    flex-direction: column;
+    gap           : 2.4rem;
+    position      : absolute;
+    top           : 50%;
+    right         : 50%;
+    transform     : translateY(-50%);
+
 }
 
-.step-circle {
+/* Step Circle  Start*/
+.steps-indicator .step-circle {
     font-size       : 24px;
     display         : flex;
     justify-content : center;
@@ -80,40 +88,109 @@ main section.main-page .form-section {
     transition      : background-color 0.3s, border-color 0.3s;
 }
 
-/* Visually Hidden */
-.visually-hidden {
-    position: absolute !important;
-    clip    : rect(1px, 1px, 1px, 1px);
-    padding : 0 !important;
-    border  : 0 !important;
-    height  : 1px !important;
-    width   : 1px !important;
-    overflow: hidden;
-}
+/* Step Circle  End*/
 
-/* Step Circle States */
-.step-circle.done {
+
+/* Step Circle States Start*/
+.steps-indicator .step-circle.done {
     background-color: #2387C2;
     box-shadow      : 0 0 10px rgba(35, 135, 194, 2.2);
     color           : white;
 }
 
-.step-circle.active {
+.steps-indicator .step-circle.active {
     box-shadow: 0 0 10px rgba(35, 135, 194, 2.2);
 }
 
-/* Step Circle Positions */
-.step-circle:nth-child(1) {
-    top : 29vh;
-    left: -77vh;
+/* Step Circle States end*/
+
+
+.modal-content {
+    border-radius: 10px;
+    padding      : 20px;
 }
 
-.step-circle:nth-child(2) {
-    top : 33vh;
-    left: -79vh;
+.modal-head h5 {
+    font-size: 24px;
+    color: #292C2D;
 }
 
-.step-circle:nth-child(3) {
-    top : 37vh;
-    left: -78vh;
+.modal-title {
+    font-size: 24px;
+    color    : #292C2D;
 }
+
+.code-input {
+    width        : 70px;
+    height       : 50px;
+    margin       : 0 10px;
+    border-radius: 30%;
+    text-align   : center;
+    font-size    : 24px;
+}
+
+#timer {
+    font-size: 16px;
+}
+
+.resend-code {
+    color    : #292C2D;
+    font-size: 20px;
+}
+
+.resend-code span {
+    color          : #F3704A !important;
+    text-decoration: underline;
+}
+
+.modal-btn {
+    background-color: #2387C2 !important;
+    border-color: #2387C2 !important;
+    color: white;
+    border-radius: 20px;
+    font-size    : 20px;
+}
+.modal-btn-outline {
+    color: #2387C2;
+    border-color: #2387C2 !important;
+    background-color: white !important;
+    border-radius: 20px;
+    font-size    : 20px;
+}
+/* .btn-block {
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.close {
+    outline: none;
+} */
+
+/* make the form responsive and the step indicators in row direction*/
+
+@media (max-width: 768px) {
+    main section.main-page .form-section {
+        background               : #fff !important;
+        border-top-left-radius   : 20% !important;
+        border-bottom-left-radius: 20% !important;
+
+    }
+
+    .main-page .page-container .form-section .page-form {
+        width: auto !important;
+    }
+
+    .steps-indicator {
+        top           : 2% !important;
+        right         : 0 !important;
+        flex-direction: row !important;
+    }
+}
+
+@media (min-width:768px) {
+    .main-page .page-container .form-section .page-form {
+        width: 55%;
+    }
+}
+
+/* Responsive end*/

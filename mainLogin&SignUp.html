@@ -28,6 +28,10 @@
 
 
         <div id="content"></div>
+        <!--
+         Script for making the login & sigup pages feels like they are in the same page 
+        with animation for transition and saving form fields values when going from page to page
+        -->
         <script>
             // Function to load page content dynamically
             async function loadPage(page) {
@@ -57,6 +61,17 @@
                         }
                     });
 
+                    // Execute scripts in the loaded content
+                    const scripts = contentElement.querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        if (script.src) {
+                            newScript.src = script.src;
+                        } else {
+                            newScript.textContent = script.textContent;
+                        }
+                        document.body.appendChild(newScript);
+                    });
                     contentElement.classList.remove('fade-out');
                     contentElement.classList.add('fade-in');
 
@@ -71,25 +86,7 @@
                 }
             }
 
-            // Function to save form data to sessionStorage
-            function saveData(formId) {
-                const form = document.getElementById(formId);
-                if (!form) return; // Exit if the form doesn't exist
 
-                const inputs = form.querySelectorAll('input, select, textarea');
-                inputs.forEach(input => {
-                    const key = `${formId}-${input.name}`;
-                    if (input.type === 'radio' || input.type === 'checkbox') {
-                        if (input.checked) {
-                            sessionStorage.setItem(key, input.value);
-                        } else {
-                            sessionStorage.removeItem(key); // Remove unchecked checkbox data
-                        }
-                    } else {
-                        sessionStorage.setItem(key, input.value);
-                    }
-                });
-            }
 
             // Function to populate form fields with data from sessionStorage
             function populateForm(formId) {
@@ -108,11 +105,23 @@
                     }
                 });
             }
-
+            function saveData(formId) {
+                const form = document.getElementById(formId);
+                const inputs = form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    if (input.type === 'radio' || input.type === 'checkbox') {
+                        if (input.checked) {
+                            sessionStorage.setItem(`${formId}-${input.name}`, input.value);
+                        }
+                    } else {
+                        sessionStorage.setItem(`${formId}-${input.name}`, input.value);
+                    }
+                });
+            }
             // Initial page load
             window.addEventListener('DOMContentLoaded', (event) => {
                 // Load initial page content
-                loadPage('login.html');
+                loadPage('loginScreen.html');
                 // Trigger background animation
                 const formSection = document.querySelector('main section.main-page .form-section');
                 formSection.classList.add('animate-bg');

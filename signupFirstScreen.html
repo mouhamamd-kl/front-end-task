@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/loginStyle/login.css">
+    <link rel="stylesheet" href="./css/signUpStyle/signup.css">
+    <link rel="stylesheet" href="./css/font.css">
+
+    <title>RoomyCo</title>
+</head>
+
+<body>
+
+    <body>
+        <main>
+            <section class="main-page">
+                <div class="page-container row mx-0 p-0">
+                    <!-- Branding Section -->
+                    <div class="col-3 p-md-5 p-sm-3 branding-section ">
+                        <div class="branding-header">
+                            <img class="logo me-3" src="./images/loginPage/loginLogo.svg" alt="RoomyCo Logo">
+                            <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span>
+                            </h5>
+                        </div>
+                        <div class="branding-body">
+                            <p class="branding-text poppins-light text-start mb-5 pb-5">Let's create an account!</p>
+                        </div>
+
+                        <!-- Step Indicator Section -->
+
+                    </div>
+
+                    <!-- Form Section -->
+                    <div class="col-9 pe-lg-5 pt-md-5 text-md-center form-section">
+
+                        <div class="steps-indicator">
+                            <div class="step-circle active poppins-light" id="step1"
+                                onclick="loadPage('signupFirstScreen.html')">1
+                            </div>
+                            <div class="step-circle poppins-light" id="step2"
+                                onclick="loadPage('signupSecondScreen.html')">2</div>
+                            <div class="step-circle poppins-light" id="step3"
+                                onclick="loadPage('signupThirdScreen.html')">3</div>
+                        </div>
+
+                        <form action="" id="signup-form" class="page-form p-lg-5 pt-lg-4 needs-validation" novalidate>
+                            <h1 class="welcome-message poppins-light mb-5">Welcome to RoomyCo!</h1>
+
+                            <div class="name-input-group">
+                                <div class="input-group input-group-sm w-50 me-4">
+                                    <input name="firstName" placeholder="First name" type="text" onblur="saveData()"
+                                        class="form-control poppins-extralight p-3" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a firstName .
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-sm w-50">
+                                    <input name="lastName" placeholder="Last Name" type="text" onblur="saveData()"
+                                        class="form-control poppins-extralight p-3" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a lastName .
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group input-group-lg my-3">
+                                <span class="input-group-text ps-4">
+                                    <img src="./images/loginPage/icons/telephone-fill.svg" alt="Phone Icon">
+                                </span>
+                                <input name="signUp-whatsappNumber" placeholder="Whatsapp Number" type="text"
+                                    onblur="saveData()" class="number-input form-control poppins-extralight p-3 "
+                                    required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter a Whatsapp number .
+                                </div>
+                            </div>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <span class="input-group-text ps-4">
+                                    <img src="./images/loginPage/icons/lock.svg" alt="Lock Icon">
+                                </span>
+                                <input name="signUp-password" placeholder="Password" type="password" onblur="saveData()"
+                                    class="password-input form-control poppins-extralight p-3" aria-label="Password"
+                                    required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter a password .
+                                </div>
+                            </div>
+
+                            <div class="gender-container d-flex flex-row justify-content-between">
+                                <span class="poppins-light">You are?</span>
+                                <div class="gender-buttons d-flex flex-row">
+                                    <div class="form-check custom-radio me-5">
+                                        <input class="form-check-input custom-radio-input" type="radio" name="gender"
+                                            oninput="saveData()" id="male" value="male" checked>
+                                        <label class="form-check-label custom-radio-label poppins-light" for="male">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check custom-radio mb-5">
+                                        <input class="form-check-input custom-radio-input" type="radio" name="gender"
+                                            oninput="saveData()" id="female" value="female">
+                                        <label class="form-check-label custom-radio-label poppins-light" for="female">
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-lg-5">
+                                <div class="button-container d-flex justify-content-center">
+                                    <button
+                                        class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#verificationModal">
+                                        Next
+                                    </button>
+                                    <button
+                                        class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
+                                        type="submit">
+                                        test
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </section>
+            <div class="modal fade" id="verificationModal" tabindex="-1" aria-labelledby="verificationModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content p-5">
+                        <div class="modal-head text-center">
+                            <h5 class="modal-title poppins-medium" id="verificationModalLabel">Enter your verification
+                                code!</h5>
+                        </div>
+                        <div class="modal-body text-center ">
+                            <form id="verificationForm">
+                                <div class="d-flex justify-content-center mb-3">
+                                    <input type="text" class="form-control code-input" maxlength="1">
+                                    <input type="text" class="form-control code-input" maxlength="1">
+                                    <input type="text" class="form-control code-input" maxlength="1">
+                                    <input type="text" class="form-control code-input" maxlength="1">
+                                </div>
+                                <div class="text-center text-primary mb-3">
+                                    <span id="timer">04:59</span>
+                                </div>
+                                <div class="mb-3">
+                                    <a href="#" class="text-decoration-none resend-code poppins-light" id="resendLink">I
+                                        didn’t receive the code? <span class="text-primary">Send
+                                            again</span></a>
+                                </div>
+                                <button type="submit"
+                                    class=" modal-btn btn  w-100 h-100 py-3 mb-3 poppins-light">Verify</button>
+                                <button type="button"
+                                    class=" modal-btn btn modal-btn-outline   w-100 h-100 py-3 poppins-light"
+                                    data-bs-dismiss="modal" data-bs-target="#verificationModal"
+                                    onclick="loadPage('signupSecondScreen.html')">Not
+                                    Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- JavaScript Files -->
+        <!-- validating form -->
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+        </script>
+        <!-- script for saving the form data to populate it later when visiting the page again -->
+        <script>
+            document.addEventListener('change', (event) => {
+                const form = event.target.closest('form');
+                if (form && form.id) {
+                    saveData(form.id);
+                }
+            });
+
+            document.addEventListener('submit', (event) => {
+                const form = event.target.closest('form');
+                if (form && form.id) {
+                    saveData(form.id);
+                }
+            });
+        </script>
+        <script src="./js/timer.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

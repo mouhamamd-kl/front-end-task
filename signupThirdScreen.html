@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/signUpStyle/signup.css">
     <link rel="stylesheet" href="./css/signUpStyle/signup2.css">
     <link rel="stylesheet" href="./css/signUpStyle/signup3.css">
+    <link rel="stylesheet" href="./css/font.css">
     <title>RoomyCo</title>
 </head>
 
@@ -31,7 +32,7 @@
         <section class="main-page">
             <div class="page-container row mx-0 p-0">
                 <!-- Branding Section -->
-                <div class="branding-section p-5 col-lg-3 col-md-12">
+                <div class="branding-section p-md-5 p-sm-3 col-3">
                     <div class="branding-header">
                         <img class="logo me-3" src="./images/loginPage/loginLogo.svg" alt="RoomyCo Logo">
                         <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span>
@@ -47,54 +48,78 @@
                 </div>
 
                 <!-- Form Section -->
-                <div class="col-lg-9 col-md-12 form-section pe-5  text-md-center ">
+                <div class="col-9 pe-lg-5 text-md-center form-section">
                     <div class="steps-indicator ">
-                        <div class="step-circle done poppins-light" id="step1" onclick="loadPage('signup.html')">1
+                        <div class="step-circle done poppins-light" id="step1"
+                            onclick="loadPage('signupFirstScreen.html')">1
                         </div>
-                        <div class="step-circle done poppins-light" id="step2" onclick="loadPage('signup2.html')">2
+                        <div class="step-circle done poppins-light" id="step2"
+                            onclick="loadPage('signupSecondScreen.html')">2
                         </div>
-                        <div class="step-circle active poppins-light" id="step3" onclick="loadPage('signup3.html')">
+                        <div class="step-circle active poppins-light" id="step3"
+                            onclick="loadPage('signupThirdScreen.html')">
                             3</div>
                     </div>
-                    <form action="" class="page-form ps-5 pe-2" id="signup3-form">
+                    <form action="" class="page-form ps-md-5 pe-2 ms-5 needs-validation" id="signup3-form" novalidate>
                         <div class="mb-3">
                             <label for="locationEmirate" class="form-label">What is your location?</label>
                             <div class="d-flex   justify-content-start align-items-evenly gap-2 ">
 
                                 <select id="locationEmirate" class="form-select custom-select poppins-light me-3 p-3">
-                                    <option selected>Emirate</option>
+                                    <option disabled>Location</option>
                                     <!-- Add options here -->
                                 </select>
-
+                                <div class="valid-feedback">
+                                    look good
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid Location.
+                                </div>
 
                                 <select id="locationCity" class="form-select custom-select poppins-light p-3">
-                                    <option selected>City</option>
+                                    <option disabled>City</option>
                                     <!-- Add options here -->
                                 </select>
-
+                                <div class="valid-feedback">
+                                    look good
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid City.
+                                </div>
                             </div>
                         </div>
 
                         <div class="row justify-content-start align-items-evenly gap-2 mb-3">
-                            <div class="col-auto me-5 d-flex justify-content-center align-items-center">
+                            <div class="col-auto me-md-5 d-flex justify-content-center align-items-center">
                                 <label for="originCountry" class="form-label">Where are you from?</label>
                             </div>
                             <div class="col">
                                 <select id="originCountry" class="form-select custom-select poppins-light  p-3">
-                                    <option selected>Select..</option>
-                                    <!-- Add options here -->
+                                    <option value="" disabled>Origin</option>
                                 </select>
+                                <div class="valid-feedback">
+                                    look good
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid Origin.
+                                </div>
                             </div>
                         </div>
                         <div class="row justify-content-start align-items-evenly gap-2">
-                            <div class="col-auto me-5 d-flex justify-content-center align-items-center">
+                            <div class="col-auto me-md-5 d-flex justify-content-center align-items-center">
                                 <label for="originCountry" class="form-label">What's your religion?</label>
                             </div>
                             <div class="col">
                                 <select id="originCountry" class="form-select custom-select poppins-light  p-3">
-                                    <option selected>Select..</option>
+                                    <option value="" disabled>religion</option>
                                     <!-- Add options here -->
                                 </select>
+                                <div class="valid-feedback">
+                                    look good
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid religion.
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -102,14 +127,41 @@
                             <div class="row g-2">
                                 <div class="col">
                                     <select class="form-select custom-select poppins-light p-3" id="day">
+                                        <option value="" disabled>Day</option>
                                     </select>
+                                    <div class="valid-feedback">
+                                        look good
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a valid Day.
+                                    </div>
                                 </div>
                                 <div class="col">
                                     <select class="form-select custom-select poppins-light p-3" id="month">
+                                        <option value="" disabled>Month</option>
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
                                     </select>
+                                    <div class="valid-feedback">
+                                        look good
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select a valid Month.
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <select class="form-select custom-select poppins-light p-3" id="bitch">
+                                    <select class="form-select custom-select poppins-light p-3" id="year">
+                                        <option value="" disabled>Year</option>
                                     </select>
                                 </div>
                             </div>
@@ -126,7 +178,7 @@
 
 
                         <div class="row ">
-                            <label class="col-lg-6 form-label mb-3">Do you prefer any pets?</label>
+                            <label class="col-6 form-label mb-3">Do you prefer any pets?</label>
                             <div class="col-6">
                                 <input type="checkbox" id="petsToggle" class="toggleCheckbox " />
                                 <label for="petsToggle" class='toggleContainer w-75'>
@@ -136,7 +188,7 @@
                             </div>
                         </div>
                         <div class="row mb-2">
-                            <label class="col-lg-6 form-label">Do you smoke?</label>
+                            <label class="col-6 form-label">Do you smoke?</label>
                             <div class="col-6">
                                 <input type="checkbox" id="smokeToggle" class="toggleCheckbox " />
                                 <label for="smokeToggle" class='toggleContainer w-75'>
@@ -150,8 +202,7 @@
                         <div class="row ">
                             <div class="button-container d-flex justify-content-center">
                                 <button type="submit"
-                                    class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
-                                    onclick="loadPage('signup2.html')">
+                                    class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3">
                                     Next
                                 </button>
                             </div>
@@ -166,6 +217,30 @@
 
     <!-- JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- validating form -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <!-- function to get the toggle buttons values  -->
     <script>
         const smoketoggleCheckbox = document.getElementById('smokeToggle');
 
@@ -194,23 +269,17 @@
         });
 
     </script>
+    <!-- 
+    script for adding the days and months for every year as option without adding it manually 
+    -->
     <script>
         $(document).ready(function () {
-            optionText = 'Premium';
-            optionValue = 'premium';
-            $('#year')
-                .append(new Option(optionText, optionValue));
-
-
-
             var $daySelect = $('#day');
             var $monthSelect = $('#month');
             var $yearSelect = $('#year');
 
-
-
             var startYear = 1960;
-            var endYear = 2024;
+            var endYear = new Date().getFullYear();
 
             // Populate years
             for (var year = endYear; year >= startYear; year--) {
@@ -222,7 +291,7 @@
                 var month = parseInt($monthSelect.val(), 10);
                 var year = parseInt($yearSelect.val(), 10);
 
-                $daySelect.empty().append('<option value="" disabled selected>Day</option>'); // Clear previous days
+                $daySelect.empty().append('<option value="" disabled>Day</option>'); // Clear previous days
 
                 if (month && year) {
                     var daysInMonth = new Date(year, month, 0).getDate(); // Get the number of days in the selected month and year
@@ -240,8 +309,11 @@
             // Initial population of days
             updateDays();
         });
-    </script>
 
+    </script>
+    <!-- 
+        script for saving the form data to populate it later when visiting the page again 
+         -->
     <script>
         document.addEventListener('change', (event) => {
             const form = event.target.closest('form');
@@ -261,7 +333,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="./js/signup3.js"></script>
+    <script src="./js/counter.js"></script>
 
 </body>
 

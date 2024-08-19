@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./css/loginStyle/login.css">
     <link rel="stylesheet" href="./css/signUpStyle/signup.css">
     <link rel="stylesheet" href="./css/signUpStyle/signup2.css">
+    <link rel="stylesheet" href="./css/font.css">
+
     <title>RoomyCo</title>
 </head>
 
@@ -30,7 +32,7 @@
             <section class="main-page">
                 <div class="page-container row mx-0 p-0">
                     <!-- Branding Section -->
-                    <div class="branding-section p-5 col-lg-3 col-md-12">
+                    <div class="col-3 p-md-5 p-sm-3 branding-section">
                         <div class="branding-header">
                             <img class="logo me-3" src="./images/loginPage/loginLogo.svg" alt="RoomyCo Logo">
                             <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span>
@@ -46,39 +48,39 @@
                     </div>
 
                     <!-- Form Section -->
-                    <div class="col-lg-9 col-md-12 form-section pe-5 pt-5 text-md-center ">
+                    <div class="col-9 pe-5 pt-lg-5 text-md-center form-section">
 
                         <div class="steps-indicator ">
-                            <div class="step-circle done poppins-light" id="step1" onclick="loadPage('signup.html')">1
+                            <div class="step-circle done poppins-light" id="step1" onclick="loadPage('signupFirstScreen.html')">1
                             </div>
-                            <div class="step-circle active poppins-light" id="step2" onclick="loadPage('signup2.html')">
+                            <div class="step-circle active poppins-light" id="step2" onclick="loadPage('signupSecondScreen.html')">
                                 2
                             </div>
-                            <div class="step-circle poppins-light" id="step3" onclick="loadPage('signup3.html')">3</div>
+                            <div class="step-circle poppins-light" id="step3" onclick="loadPage('signupThirdScreen.html')">3</div>
                         </div>
-                        <form action="" class="page-form p-5  " id="signup-form">
-                            <div class="button-check-group d-flex flex-column p-5 mb-5">
+                        <form action="" class="page-form p-lg-5  " id="signup-form">
+                            <div class="button-check-group d-flex flex-column p-lg-5 mb-5">
                                 <h1 class="welcome-message poppins-medium mb-3 p-0 text-start">What are you looking for?
                                 </h1>
                                 <div class="form-check option-seeker-roommate">
-                                    <input class="form-check-input custom-checkbox  me-4" type="checkbox" value=""
-                                        id="flexCheckSeekerRoommate">
+                                    <input class="form-check-input custom-checkbox  me-2" type="radio" value="Seeker of roommate"
+                                        id="flexCheckSeekerRoommate" name="purpose">
                                     <label class="form-check-label custom-checkbox-label poppins-light"
                                         for="flexCheckSeekerRoommate">
                                         Seeker of roommate
                                     </label>
                                 </div>
                                 <div class="form-check option-seeker-room">
-                                    <input class="form-check-input custom-checkbox me-4" type="checkbox" value=""
-                                        id="flexCheckSeekerRoom" checked>
+                                    <input class="form-check-input custom-checkbox me-2" type="radio" value="Seeker of room"
+                                        id="flexCheckSeekerRoom" checked="" name="purpose">
                                     <label class="form-check-label custom-checkbox-label poppins-light"
                                         for="flexCheckSeekerRoom">
                                         Seeker of room
                                     </label>
                                 </div>
                                 <div class="form-check option-list-place">
-                                    <input class="form-check-input custom-checkbox me-4" type="checkbox" value=""
-                                        id="flexCheckListPlace" checked>
+                                    <input class="form-check-input custom-checkbox me-2" type="radio" value="I want to list my place only"
+                                        id="flexCheckListPlace" checked="" name="purpose">
                                     <label class="form-check-label custom-checkbox-label poppins-light"
                                         for="flexCheckListPlace">
                                         I want to list my place only
@@ -86,11 +88,11 @@
                                 </div>
                             </div>
                             <!-- Submit Button -->
-                            <div class="row mt-5 pt-5">
-                                <div class="button-container d-flex justify-content-center mt-5">
+                            <div class="row mt-lg-5 pt-lg-5">
+                                <div class="button-container d-flex justify-content-center mt-5 mb-5">
                                     <button
                                         class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
-                                        type="button" onclick="loadPage('signup3.html')">
+                                        type="button" onclick="loadPage('signupThirdScreen.html')">
                                         Next
                                     </button>
                                 </div>
@@ -100,27 +102,29 @@
                 </div>
             </section>
         </main>
+        <!-- 
+        script for getting the check box values 
+        -->
         <script>
-            // Add an event listener for changes on elements with the class "messageCheckbox"
             document.addEventListener("change", function (event) {
                 // Check if the changed element has the class "messageCheckbox"
                 if (event.target.classList.contains("form-check-input")) {
-                    // Get all elements with the class "messageCheckbox"
                     event.preventDefault(); // Prevent form submission to server
                     var checkboxes = document.querySelectorAll(".form-check-input");
 
-                    // Loop through each checkbox
                     i = 0;
                     checkboxes.forEach(function (checkbox) {
-                        console.log(checkbox.defaultValue, checkbox.checked, i);
                         i++;
-                        // Do something...
                     });
                 }
             });
 
         </script>
+        <!-- 
+        script for saving the form data to populate it later when visiting the page again 
+         -->
         <script>
+
             document.addEventListener('change', (event) => {
                 const form = event.target.closest('form');
                 if (form && form.id) {

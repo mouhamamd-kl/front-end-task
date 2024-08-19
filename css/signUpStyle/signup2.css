@@ -1,29 +1,39 @@
-.main-page .form-section .page-form .welcome-message {
+/*page form styling*/
+.main-page .page-container .form-section .page-form {
+    width: auto;
+}
+
+/* Styling the welcome message */
+.form-section .page-form .welcome-message {
     font-size: 24px !important;
-    color: black !important;
+    color    : black !important;
 }
 
-.main-page .form-section .page-form .button-check-group input.custom-checkbox {
+/* Styling button check group */
+.page-form .button-check-group {
+    font-size : 20px;
+    color     : #292C2D;
+    text-align: start;
+}
+
+/* Styling custom checkbox input */
+.page-form .button-check-group input.custom-checkbox {
     background-image: url("../../images/signUpPage/icons/checkMark.svg") !important;
-    box-shadow: none;
-    background-size: 50%;
-    padding: 3.5%;
-    /* background-image: var(--bs-form-check-bg-image) !important; */
+    box-shadow      : none;
+    background-size : 50%;
+    padding         : 3.5%;
+    border-radius   : 5px;
 }
 
-.main-page .form-section .page-form .button-check-group input.custom-checkbox:not(:checked) {
+/* Styling custom checkbox when not checked */
+.page-form .button-check-group input.custom-checkbox:not(:checked) {
     border: 2px solid black;
 }
 
-.main-page .form-section .page-form .button-check-group input.custom-checkbox:checked {
+/* Styling checked custom checkbox*/
+.page-form .button-check-group input.custom-checkbox:checked {
     background-image: url("../../images/signUpPage/icons/checkMarkWhite.svg") !important;
-    background-size: 50%;
-    border-color: #F3704A;
+    background-size : 50%;
+    border-color    : #F3704A;
     background-color: #F3704A;
-}
-
-.main-page .form-section .page-form .button-check-group {
-    font-size: 20px;
-    color: #292C2D;
-    text-align: start;
 }
