@@ -1,0 +1,67 @@
+/* start navbar /*/
+
+
+.custom-navbar {
+    box-shadow      : 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
+    border-radius   : 0px 0px 20px 20px;
+    background-color: rgba(248, 244, 219, 1);
+}
+
+.custom-navbar a.navbar-brand {
+    font-size     : 20px;
+    font-weight   : 700;
+    letter-spacing: 3px;
+    line-height   : 1;
+    color         : rgba(35, 135, 194, 1);
+}
+
+.custom-navbar a.navbar-brand span {
+    font-size     : 9px;
+    font-weight   : 300;
+    line-height   : 13.5px;
+    letter-spacing: 6px;
+    text-align    : start;
+    margin        : 0;
+    padding       : 0;
+    display       : block;
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link {
+    color      : #292c2d;
+    line-height: 30px;
+    font-size  : 20px;
+    font-weight: 500;
+}
+
+
+.custom-navbar .navbar-nav .nav-item .nav-link.active {
+    color: rgba(3, 87, 129, 1) !important;
+}
+
+.navbar-nav>.nav-item:nth-last-child(3)>a::after {
+    content     : '|';
+    padding-left: 3rem;
+}
+
+.navbar-nav .nav-item .nav-btn {
+    font-size    : 20px;
+    border-radius: 50px;
+}
+
+.custom-navbar .navbar-nav .lang-menu {
+    background: #EEEEEE;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.custom-navbar .navbar-nav .lang-menu .dropdown-item {
+    font-size: 20px;
+    color: #000000;
+}
+
+.custom-navbar .navbar-nav .lang-menu .dropdown-item.active {
+    color     : #035781 !important;
+    background: none !important;
+}
+
+/* finish navbar */

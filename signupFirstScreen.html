@@ -119,15 +119,15 @@
                                 <div class="gender-buttons d-flex flex-row">
                                     <div class="form-check custom-radio me-5">
                                         <input class="form-check-input custom-radio-input" type="radio" name="gender"
-                                            oninput="saveData()" id="male" value="male" checked>
+                                            oninput="saveData()" id="male" value="male" >
                                         <label class="form-check-label custom-radio-label poppins-light" for="male">
                                             Male
                                         </label>
                                     </div>
                                     <div class="form-check custom-radio mb-5">
                                         <input class="form-check-input custom-radio-input" type="radio" name="gender"
-                                            oninput="saveData()" id="female" value="female">
-                                        <label class="form-check-label custom-radio-label poppins-light" for="female">
+                                            oninput="saveData()" id="female" value="female" checked>
+                                        <label class="form-check-label custom-radio-label poppins-light" for="female" >
                                             Female
                                         </label>
                                     </div>
@@ -138,14 +138,14 @@
                                 <div class="button-container d-flex justify-content-center">
                                     <button
                                         class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
-                                        type="button" data-bs-toggle="modal" data-bs-target="#verificationModal">
+                                        type="button"  onclick="validateAndShowModal()">
                                         Next
                                     </button>
-                                    <button
+                                    <!-- <button
                                         class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3"
-                                        type="submit">
+                                        >
                                         test
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </form>
@@ -193,15 +193,28 @@
         </main>
 
         <!-- JavaScript Files -->
+        <!-- ensure input before showing modal  -->
+        <script>
+            function validateAndShowModal() {
+                const form = document.getElementById('signup-form');
+                if (form.checkValidity()) {
+                    // If the form is valid, show the modal
+                    const myModal = new bootstrap.Modal(document.getElementById('verificationModal'));
+                    myModal.show();
+                } else {
+                    // If the form is not valid, prevent the modal from being shown
+                    form.classList.add('was-validated');
+                }
+            }
+        </script>
+        <script></script>
         <!-- validating form -->
         <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields
             (function () {
                 'use strict'
-
                 // Fetch all the forms we want to apply custom Bootstrap validation styles to
                 var forms = document.querySelectorAll('.needs-validation')
-
                 // Loop over them and prevent submission
                 Array.prototype.slice.call(forms)
                     .forEach(function (form) {
@@ -232,7 +245,7 @@
                 }
             });
         </script>
-        <script src="./js/timer.js"></script>
+        <script src="./js//loginFirstScreen/timer.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

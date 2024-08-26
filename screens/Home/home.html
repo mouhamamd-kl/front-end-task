@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../../css/font.css">
+    <link rel="stylesheet" href="../../css/indexStyle/navbar.css">
+    <link rel="stylesheet" href="../../css/indexStyle/footer.css">
+    <link rel="stylesheet" href="../../css/homeStyle/home.css">
+    <title>RoomyCo</title>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg custom-navbar mx-5 py-2">
+        <div class="container-fluid px-3">
+            <img src="/images/website icon/home/navbar/nav-logo.svg" alt="" class="m-2">
+            <a class="navbar-brand" href="#">ROOMY CO<span>ROOMMATE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 mb-2 mb-lg-0">
+                    <!-- Centered Links -->
+                    <div class="ms-lg-auto d-flex justify-content-evenly">
+                        <li class="nav-item">
+                            <a class="nav-link active"  aria-current="page" href="/screens/Home/home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">See More</a>
+                        </li>
+                    </div>
+
+                    <!-- Right-aligned Icons -->
+                    <div class="ms-lg-auto d-flex align-items-center justify-content-center">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">
+                                <img src="/images/website icon/home/navbar/heart.svg" alt="Heart Icon">
+                            </a>
+                        </li>
+
+                        <!-- Messages Dropdown -->
+                        <li class="nav-item  dropdown me-3">
+                            <a class="nav-link position-relative" href="#" role="button" id="messagesDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/images/website icon/home/navbar/messages.svg" alt="Messages Icon">
+                            </a>
+                            <div class="dropdown-menu messages-dropdown dropdown-menu-end px-4  pb-2 pt-3"
+                                aria-labelledby="messagesDropdown">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="poppins-medium messages-heading">Chats</span>
+                                    <div class="d-flex gap-3">
+                                        <!-- <button class="btn heading-button">
+                                        </button> -->
+                                        <a href="/screens/Home/chat.html" class="btn heading-button">
+                                            <img src="/images/website icon/home/navbar/full_screen.svg" alt="">
+
+                                        </a>
+                                        <button class="btn heading-button">
+                                            <img src="/images/website icon/home/navbar/three_dots.svg" alt="">
+
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-group">
+                                    <!-- Message Item 1 -->
+                                    <a href="#"
+                                        class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                        <div class="person-image me-md-2 me-4">
+                                            <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                class="rounded-circle">
+                                        </div>
+                                        <div class="w-75">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                <img class="online-icon"
+                                                    src="/images/website icon/home/navbar/blue_circle.svg">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="mb-0 message-time poppins-light text-truncate message-text">I
+                                                    need roommate
+                                                    to sh...</p>
+                                                <small class="text-muted">3d</small>
+                                            </div>
+
+                                        </div>
+                                    </a>
+
+                                    <!-- Message Item 2 -->
+                                    <a href="#"
+                                        class="message online list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                        <div class="person-image me-md-2 me-4">
+                                            <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
+                                                class="rounded-circle">
+                                        </div>
+                                        <div class="w-75">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="person-name poppins-medium">Rama Kita</h6>
+                                                <img class="online-icon"
+                                                    src="/images/website icon/home/navbar/blue_circle.svg">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+
+                                                <p class="mb-0 message-time poppins-light text-truncate message-text">
+                                                    <span class="poppins-light">You: </span>I
+                                                    need roommate
+                                                    to sh...
+                                                </p>
+                                                <small class="text-muted">3d</small>
+                                            </div>
+
+                                        </div>
+                                    </a>
+
+                                    <!-- Message Item 3 -->
+                                    <a href="#"
+                                        class="message list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                        <div class="person-image me-md-2 me-4">
+                                            <img src="/images/homePage/available_roomate/3.jpg" alt="Bana Dogo"
+                                                class="rounded-circle">
+                                        </div>
+                                        <div class="w-75">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="person-name poppins-medium">Bana Dogo</h6>
+                                                <img class="online-icon"
+                                                    src="/images/website icon/home/navbar/blue_circle.svg">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="mb-0 message-time poppins-light text-truncate message-text">I
+                                                    need roommate
+                                                    to sh...</p>
+                                                <small class="text-muted">3d</small>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                                <img src="/images/website icon/home/navbar/bell.svg" alt="Notifications Icon">
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown me-3">
+                            <a class="nav-link" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                <img src="/images/website icon/home/navbar/grid.svg" alt="Grid Icon">
+                            </a>
+                            <div class="dropdown-menu account-dropdown dropdown-menu-end px-4  pb-2 pt-3"
+                                aria-labelledby="messagesDropdown">
+                                <span class="poppins-medium account-heading">Menu</span>
+
+                                <div class="list-group">
+                                    <div
+                                        class="account-type-container d-flex flex-column justify-content-between gap-2  p-4 mt-3">
+                                        <div
+                                            class="account-type-heading poppins-light mb-1 d-flex justify-content-start align-items-center">
+                                            <h5>
+                                                Change account type
+                                            </h5>
+                                        </div>
+                                        <!-- Inside the account-type section -->
+                                        <div
+                                            class="account-type d-flex justify-content-start align-items-center gap-3 position-relative">
+                                            <div class="arrow arrow-left"></div>
+                                            <div class="account-type-img">
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="">
+                                            </div>
+                                            <div class="arrow arrow-right"></div>
+                                            <h2 class="account-type-subheading poppins-medium">Seeker of room</h2>
+                                        </div>
+
+                                        <!-- Inside the account-type section -->
+                                        <div
+                                            class="account-type d-flex justify-content-start align-items-center gap-3 position-relative">
+                                            <div class="arrow arrow-left"></div>
+                                            <div class="account-type-img">
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="">
+                                            </div>
+                                            <div class="arrow arrow-right"></div>
+                                            <h2 class="account-type-subheading poppins-medium">Seeker of room</h2>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="settings d-flex flex-column justify-content-evenly mt-2">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <img class="setting-img" src="/images/website icon/home/navbar/document.svg"
+                                            alt="">
+                                        <h6>My Advertisements</h6>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <img src="/images/website icon/home/navbar/signal.svg" alt="">
+                                        <h6>My Plan</h6>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <img src="/images/website icon/home/navbar/report.svg" alt="">
+                                        <h6>Ratings</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">
+                                <img src="/images/website icon/home/navbar/userPhoto.svg" alt="User Photo">
+                            </a>
+                        </li>
+
+                        <!-- Language Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                EN
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item active" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Arabic</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mb-5">
+
+        <section class="carousel-section position-relative">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="/images/homePage/bg-carousel/carousel-1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="/images/homePage/bg-carousel/carousel-2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="/images/homePage/bg-carousel/carousel-3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <div class="search-container w-50 d-flex flex-column justicfy-content-center align-items-center ">
+                <div id="locator-input-section" class="search-bar p-3 mb-2">
+
+                    <div class="d-flex input-container w-100 px-3 me-3">
+                        <img src="/images/website icon/home/footer/location.svg" alt="" id="locator-button">
+                        <input type="text" placeholder="Dubai, Emirates" id="autocomplete"
+                            class="form-control poppins-medium px-3 py-2">
+                        <button class="btn" aria-label="Close">
+                            <img src="/images/website icon/home/body/x-circle.svg" alt="">
+                        </button>
+                    </div>
+                    <button class="btn-search btn  py-2 px-2 w-25">Search</button>
+                </div>
+                <div class="search-text align-items-center poppins-medium  w-50 text-center">
+                    <p>FIND YOUR ROOM PARTNER</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore position-relative">
+            <img class="img-fluid position-absolute styling-img" src="/images/homePage/explore/ecclipse.svg" alt="">
+            <h1 class="explore-heading poppins-medium text-center mb-5">Explore our most popular cities</h1>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="btn p-0 carousel-control prev">
+                    <img src="/images/website icon/home/body/ArrowCardReversed.svg" alt="">
+                </button>
+                <div class="explore-carousel-wrapper">
+                    <div class="carousel explore-carousel">
+                        <div class="carousel-inner">
+                            <!-- Individual city cards -->
+                            <div class="city-card">
+                                <img src="/images/homePage/explore/place_1.png" alt="Sharjah">
+                                <div class="card-body">
+                                    <h5 class="card-title poppins-medium">Sharjah1</h5>
+                                </div>
+                            </div>
+                            <div class="city-card">
+                                <img src="/images/homePage/explore/place_2.png" alt="Sharjah">
+                                <div class="card-body">
+                                    <h5 class="card-title poppins-medium">Sharjah2</h5>
+                                </div>
+                            </div>
+                            <div class="city-card">
+                                <img src="/images/homePage/explore/place_3.png" alt="Sharjah">
+                                <div class="card-body">
+                                    <h5 class="card-title poppins-medium">Sharjah3</h5>
+                                </div>
+                            </div>
+                            <div class="city-card">
+                                <img src="/images/homePage/explore/place_3.png" alt="Sharjah">
+                                <div class="card-body">
+                                    <h5 class="card-title poppins-medium">Sharjah4</h5>
+                                </div>
+                            </div>
+                            <div class="city-card">
+                                <img src="/images/homePage/explore/place_2.png" alt="Sharjah">
+                                <div class="card-body">
+                                    <h5 class="card-title poppins-medium">Sharjah5</h5>
+                                </div>
+                            </div>
+                            <div class="city-card">
+                                <img src="/images/homePage/explore/place_1.png" alt="Sharjah">
+                                <div class="card-body">
+                                    <h5 class="card-title poppins-medium">Sharjah6</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn p-0 carousel-control next">
+                    <img src="/images/website icon/home/body/ArrowCard.svg" alt="">
+                </button>
+            </div>
+            <img class="img-fluid position-absolute top-0 end-0" src="/images/homePage/explore/lines.svg" alt="">
+        </section>
+
+
+        <section class="recomendation">
+            <h1 class="recomendation-heading text-center poppins-medium">Recommend for you </h1>
+            <h3 class="recomendation-subheading text-center poppins-medium">Best rooms that match your need</h3>
+            <div class="swiper recommendation-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="card room-card swiper-slide">
+                        <div class="card-img-top">
+                            <img src="/images/homePage/select-room/room_1.png" alt="Room image"
+                                class="img-fluid room-image">
+                            <img src="/images/homePage/select-room/room_2.png" alt="Hover Room image"
+                                class="img-fluid room-image-hover">
+                            <div class="heart-icon">
+
+                                <img class="p-3" src="/images/website icon/home/body/recommendation/heart.svg" alt="">
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Shared room, Sharjah</h5>
+                            <div class="price-rating d-flex justify-content-between align-items-center">
+                                <span class="price">$600 <span class="month">/month</span></span>
+                                <div class="rating d-flex">
+
+                                    <img src="/images/website icon/home/body/recommendation/full_star.svg" alt="">
+                                    <img src="/images/website icon/home/body/recommendation/full_star.svg" alt="">
+                                    <img src="/images/website icon/home/body/recommendation/full_star.svg" alt="">
+                                    <img src="/images/website icon/home/body/recommendation/half_start.svg" alt="">
+                                    <img src="/images/website icon/home/body/recommendation/empty_star.svg" alt="">
+
+                                </div>
+                            </div>
+                            <div class="details d-flex justify-content-between align-items-center">
+                                <span>
+
+                                    <img src="/images/website icon/home/body/recommendation/bed.svg" alt="">
+                                    2 Bedroom</span>
+                                <span>
+
+                                    <img src="/images/website icon/home/body/recommendation/bathtub.svg" alt="">
+                                    1 Bathroom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="recomendation-btn-next swiper-button-next">
+                    <img src="/images/website icon/home/body/ArrowCard.svg" alt="">
+                </div>
+                <div class="recomendation-btn-prev swiper-button-prev">
+                    <img src="/images/website icon/home/body/ArrowCardReversed.svg" alt="">
+
+                </div>
+            </div>
+        </section>
+        <section class="available-rommate px-4">
+            <h1 class="available-rommate-heading poppins-medium text-center mb-5">Available Roommate</h1>
+
+            <div class="row d-flex align-items-center justify-content-center mx-0">
+                <h1 class="col-md-2 available-rommate-subheading poppins-medium text-start">Best roommates that match
+                    your
+                    need</h1>
+                <div class="col-md-9 swiper rommate-swiper d-flex">
+                    <div class="swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image" style="background-image: url(/images/homePage/available_roomate/1.jpg);">
+                            </div>
+                            <div class="info w-100">
+                                <div class="row gap-2">
+                                    <div class="col-12 d-flex justify-content-between poppins-medium">
+
+                                        <h3 class="name">Ali Saebe</h3>
+
+                                        <img class="star icon"
+                                            src="/images/website icon/home/body/available roomate/star.svg" alt="">
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between details poppins-light">
+
+                                        <div class="d-flex">
+                                            <img class="location icon"
+                                                src="/images/website icon/home/body/available roomate/location.svg"
+                                                alt="">
+                                            <p class="location">Dubai | 25 years old</p>
+                                        </div>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 bg-dark">
+        <div class="container-fluid px-5">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4 socials">
+                    <div>
+                        <img class="footer-logo me-2" src="../../images/website icon/home/navbar/nav-logo.svg" alt="">
+                        <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span></h5>
+
+                    </div>
+                    <p>Find your preferred room and <br> choose a roommate who agree.</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item ">
+                            <a href="#">
+
+                                <img src="/images/website icon/home/footer/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5"><a href="#">
+
+                                <img src="/images/website icon/home/footer/facebook.svg" alt="">
+
+
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5"><a href="#">
+
+                                <img src="/images/website icon/home/footer/twitter.svg" alt="">
+
+
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5">
+                            <a href="#">
+
+                                <img src="/images/website icon/home/footer/tiktok.svg" alt="">
+
+
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5">
+                            <a href="#">
+
+                                <img src="/images/website icon/home/footer/whatsapp.svg" alt="">
+
+
+                            </a>
+                        </li>
+                    </ul>
+                    <p><a href="https://www.Romm.com" class=" text-decoration-none">www.Romm.com</a></p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 Policies d-flex  justify-content-lg-center ">
+                    <div>
+                        <h5>Terms & policies</h5>
+                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="#" class=" text-decoration-none">Terms of Service</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class=" text-decoration-none">Privacy Policy</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class=" text-decoration-none">Cookie Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div
+                    class="col-lg-4 col-md-12 Contact d-flex justify-content-lg-end align-items-lg-start justify-content-lg-center">
+                    <div>
+                        <h5>Contact</h5>
+                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
+
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+
+                                <img class="me-3" src="/images/website icon/home/footer/envelope.svg" alt="">
+
+                                <a href="mailto:roomyco@room.com" class=" text-decoration-none">roomyco@room.com</a>
+                            </li>
+                            <li class="mb-3">
+
+                                <img class="me-3" src="/images/website icon/home/footer/telephone.svg" alt="">
+
+                                <a href="tel:+971586834566" class=" text-decoration-none">+971 586 834 566</a>
+                            </li>
+                            <li class="mb-3">
+                                <img class="me-3" src="/images/website icon/home/footer/location.svg" alt="">
+
+                                <span>Emirates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class=" ">
+                    <div class="rights col-12 text-center p-4">
+                        <p>All rights are save 2024 by company.com</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- JQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- BG Carousel JS -->
+    <script src="/js/home/background_carousel.js"> </script>
+    <!-- locationFinder JS -->
+    <script src="/js/home/locationFinder.js"></script>
+    <!-- Explore JS -->
+    <script src="/js/home/explore_carousel.js"></script>
+    <script src="/js/home/recomendation_carousel.js"></script>
+    <script src="/js/home/duplicate_room_card.js"></script>
+    <script>
+        function getImageNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiperWrapper = document.querySelector('.rommate-swiper .swiper-wrapper');
+            const cardTemplate = document.querySelector('.rommate-swiper .swiper-wrapper .card');
+
+            for (let i = 1; i <= 20; i++) {
+                // Clone the card element
+                const cardClone = cardTemplate.cloneNode(true);
+
+                // Change the background image based on the loop index
+                const imageDiv = cardClone.querySelector('.image');
+                imageDiv.style.backgroundImage = `url(/images/homePage/available_roomate/${getImageNumber(1, 5)}.jpg)`;
+
+                // Append the clone to the swiper-wrapper
+                swiperWrapper.appendChild(cardClone);
+            }
+
+            var swiper = new Swiper(".rommate-swiper", {
+                slidesPerView: "auto",
+                centeredSlides: false,
+                spaceBetween: 30,
+                slidesOffsetAfter: 0,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    // when window width is <= 768px
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    // when window width is > 768px and <= 1024px
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    // when window width is > 1024px
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+
+        });
+
+    </script>
+    <script src="/js/home/responsiveRommateCardToggle.js"></script>
+</body>
+
+</html>

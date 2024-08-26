@@ -1,0 +1,845 @@
+body {
+
+    font-family: 'Poppins' !important;
+    background : #FAF7E3;
+
+}
+
+/* NavBar Styling Start */
+.custom-navbar {
+    background-color: rgba(255, 254, 249, 0.6) !important;
+    color           : black;
+}
+
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter : blur(4px) !important;
+}
+
+.navbar-nav>.nav-item:nth-last-child(3)>a::after {
+    content     : '|';
+    padding-left: 3rem;
+}
+nav .messages-dropdown,
+nav .account-dropdown {
+    transform: translateX(50%);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 60vw;
+    /* Use viewport width for better responsiveness */
+    max-width: 400px;
+    /* Limit max width on larger screens */
+    min-width: 280px;
+    /* Ensure it's not too small on small screens */
+}
+
+/* Messages List Styling with Scroll */
+nav .messages-dropdown .list-group {
+    max-height: 300px !important;
+    /* Adjust height as necessary */
+    overflow-y: auto;
+}
+
+/* Chats header with buttons */
+nav .messages-dropdown .btn-light {
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+
+/* Message Items */
+nav .messages-dropdown .list-group-item {
+    border: none;
+    padding: 0.75rem 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav .messages-dropdown .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Small text inside message items */
+nav .messages-dropdown .list-group-item small {
+    font-size: 0.75rem;
+}
+
+/* Badge Styling */
+nav .messages-dropdown .badge {
+    font-size: 0.8rem;
+}
+
+/* Message Item Images */
+nav .messages-dropdown .list-group-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav .messages-dropdown .messages-dropdown {
+    font-size: 20px;
+}
+
+nav .messages-dropdown .person-image {
+    width: 60px;
+    height: 60px;
+}
+
+nav .messages-dropdown .person-name {
+    font-size: 20px !important;
+    color: #292C2D;
+}
+
+nav .messages-dropdown .online-icon {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 !important;
+    padding: 0;
+}
+
+nav .messages-dropdown .message-text {
+    font-size: 16px;
+    color: #292C2D;
+}
+
+nav .messages-dropdown .message-time {
+    color: #707070;
+    font-size: 16px !important;
+}
+
+nav .messages-dropdown .heading-button {
+    background-color: #D3CEBA;
+    border-radius: 50px;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0;
+}
+
+/* Offline status icon adjustments */
+nav .messages-dropdown .off-line .online-icon {
+    /* Custom styles for offline icons can be added here */
+}
+
+/* Rounded Scrollbar Styling */
+nav .messages-dropdown .list-group::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+nav .messages-dropdown .list-group::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+    border-radius: 50px;
+    /* Rounded corners for the track */
+}
+
+nav .messages-dropdown .list-group::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 50px;
+    /* Rounded corners for the thumb */
+    border: 20px solid #f1f1f1;
+    /* Optional: Adds a border to separate the thumb from the track */
+}
+
+nav .messages-dropdown .list-group::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Darker color on hover */
+}
+
+
+
+/* Centered for larger screens */
+@media (max-width: 992px) {
+    .dropdown-menu-end[data-bs-popper] {
+        left: 0;
+        right: 0;
+    }
+
+    nav .messages-dropdown {
+        position: absolute !important;
+        transform: translateX(-30%) !important;
+    }
+}
+
+
+
+/* Adjustments for small screens */
+@media (max-width: 767px) {
+
+    nav .messages-dropdown,
+    .account-dropdown {
+        position: absolute;
+        width: 90vw;
+        /* Almost full width on small screens */
+        padding: 0.5rem;
+    }
+
+    nav .messages-dropdown .person-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav .messages-dropdown .person-name {
+        font-size: 16px;
+    }
+
+    nav .messages-dropdown .message-text,
+    nav .messages-dropdown .message-time {
+        font-size: 14px;
+    }
+}
+
+/* end messages dropdown Styling */
+/* Start account dropdown Styling */
+nav .account-dropdown {
+    height: 85vh;
+    width: 27vw;
+    background: #F6F6F6;
+}
+
+nav .account-dropdown .account-heading {
+    font-size: 20px;
+}
+
+nav .account-dropdown .account-type-container {
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 40vh;
+    border-radius: 10px;
+}
+
+nav .account-dropdown .account-type-container .account-type-heading {}
+
+nav .account-dropdown .account-type-container .account-type-heading h5 {
+    font-size: 16px;
+}
+
+nav .account-dropdown .account-type-container .account-type-img img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+nav .account-dropdown .account-type-container .account-type-subheading {
+    color: rgba(41, 44, 45, 1);
+    font-size: 20px;
+
+}
+
+nav .account-dropdown .settings {
+    height: 30vh;
+}
+
+/* Rotating Arrows around the Image */
+.account-type {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.arrow-left {
+    background: url('/images/website icon/home/navbar/Arrow.svg') no-repeat center center;
+    left: -1%;
+    transform: translateY(-30%);
+    animation: rotate-left 2s linear infinite;
+}
+
+.account-type:hover .arrow-left {
+    transform: scale(-1, 1) translateY(-30%) translateX(5%);
+}
+
+.arrow-right {
+    background: url('/images/website icon/home/navbar/ArrowDown.svg') no-repeat center center;
+
+    left: -2%;
+    transform: translateY(30%);
+    animation: rotate-right 2s linear infinite;
+}
+
+.account-type:hover .arrow-right {
+    transform: scale(-1, 1) translateY(30%);
+}
+
+@media (max-width: 992px) {
+
+    nav .messages-dropdown,
+    .account-dropdown {
+        width: 80vh !important;
+        position: absolute !important;
+        transform: translateX(-50%) !important;
+    }
+}
+/* NavBar Styling End */
+
+/* Swiper Styling Start */
+
+
+.mySwiper .swiper-pagination-bullet-active {
+    width: 2% !important;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    border-radius: var(--swiper-pagination-bullet-border-radius, 25px) !important;
+}
+
+/* Swiper Styling End */
+
+/* LocationFinder Styling Start */
+.carousel-section .search-container {
+    position : absolute;
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    z-index  : 3;
+}
+
+.carousel-section .search-bar {
+    display         : flex;
+    align-items     : center;
+    background-color: #D9D9D7;
+    border-radius   : 10px;
+    padding         : 5px;
+    width           : 120%;
+    border          : 1px solid #e0e0e0;
+    z-index         : 3;
+}
+
+.carousel-section .search-bar .input-container {
+    background-color: white;
+    justify-content : center !important;
+    align-items     : center !important;
+    border-radius   : 10px !important;
+}
+
+.carousel-section .search-bar input {
+    border      : none;
+    background  : white;
+    outline     : none;
+    flex        : 1;
+    padding-left: 10px;
+    font-size   : 16px;
+}
+
+.carousel-section .search-bar .btn-close {
+    background-color: transparent;
+    border          : none;
+    font-size       : 18px;
+    color           : #888;
+    cursor          : pointer;
+}
+
+.carousel-section .search-bar .btn-close:hover {
+    color: #333;
+}
+
+.carousel-section .search-bar .btn-search {
+    background   : linear-gradient(to right, #2387C2, #11405C);
+    color        : white;
+    border       : none;
+    border-radius: 10px;
+    padding      : 5px 15px;
+    font-size    : 16px;
+}
+
+.carousel-section .swiper-slide img {
+    z-index: 1 !important;
+    /* Lower z-index for the images */
+}
+
+.carousel-section .search-container .search-text {
+    font-size       : 20px;
+    color           : white;
+    border-radius   : 25px;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.carousel-section .search-container .search-text p {
+    margin: 0;
+}
+
+
+/* LocationFinder Styling End */
+
+/* explore section Styling Start */
+.explore .explore-heading {
+    font-size: 32px;
+    color    : #292C2D;
+}
+
+.explore-carousel {
+    position: relative;
+    width   : 100%;
+    overflow: hidden;
+}
+
+.explore-carousel .carousel-inner {
+    display : flex;
+    position: relative;
+}
+
+.explore-carousel .carousel-inner .carousel-item {
+    display        : none;
+    flex           : 0 0 100%;
+    justify-content: center;
+    align-items    : center;
+    opacity        : 0;
+    transition     : opacity 0.5s ease-in;
+}
+
+.explore-carousel .active {
+    display: flex;
+    opacity: 1;
+}
+
+.explore-carousel .city-card {
+    width        : 200px !important;
+    text-align   : center;
+    border-radius: 15px;
+    overflow     : hidden;
+}
+
+.explore-carousel .city-card img {
+    width        : 100%;
+    height       : auto;
+    border-radius: 15px;
+}
+
+.explore-carousel .city-card .card-body {
+    padding: 10px;
+}
+
+.explore-carousel .city-card .card-title {
+    font-size: 24px;
+    margin   : 10px 0 0;
+}
+
+/* Default styles for larger screens */
+.explore-carousel .carousel-inner .city-card {
+    display      : none;
+    /* Hidden by default */
+    width        : 200px !important;
+    text-align   : center;
+    border-radius: 15px;
+    overflow     : hidden;
+    margin       : 0 10px;
+    /* Space between cards */
+    opacity      : 0;
+    transition   : opacity 0.75s ease-in-out;
+    /* Smooth fade transition */
+}
+
+/* Styles for small screens */
+
+
+
+/* styles.css */
+
+/* Previous styles remain the same */
+
+
+.carousel-control {
+    position        : relative;
+    background-color: #2387C2;
+    color           : #fff;
+    border-radius   : 50%;
+    width           : 50px;
+    height          : 50px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    transition      : background-color 0.3s ease-in-out;
+    z-index         : 100;
+
+}
+
+.carousel-control img {
+    width : 60%;
+    height: 60%;
+}
+
+.carousel-control:hover {
+    background-color: #2387C2;
+}
+
+/* Other styles remain the same */
+
+/* Media Query for Small Screens */
+
+
+
+
+/* explore section Styling End */
+/*Start recommendation Secton styling */
+.recomendation .recomendation-heading {
+    color    : #292C2D;
+    font-size: 32px;
+}
+
+.recomendation .recomendation-subheading {
+    color    : #292C2D;
+    font-size: 20px;
+}
+
+.room-card {
+    width           : 275px !important;
+    border          : none;
+    border-radius   : 15px;
+    box-shadow      : 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow        : hidden;
+    background-color: #F2EACC;
+    position        : relative;
+    transition      : transform 0.3s ease-in-out;
+    margin-right    : 65px;
+}
+
+.room-card:hover {
+    transform: scale(1.01);
+
+}
+
+.card-img-top {
+    position: relative;
+    overflow: hidden;
+}
+
+.room-image {
+    width     : 100%;
+    height    : auto;
+    display   : block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.room-image-hover {
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : auto;
+    opacity   : 0;
+    filter    : blur(0px);
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+}
+
+.room-card:hover .room-image {
+    opacity: 0;
+}
+
+.room-card:hover .room-image-hover {
+    opacity: 1;
+    filter : blur(2px);
+    /* Slight blur effect */
+}
+
+.heart-icon {
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%);
+    font-size       : 2rem;
+    color           : white;
+    opacity         : 0;
+    transition      : opacity 0.3s ease-in-out;
+    z-index         : 10;
+    background-color: rgba(255, 254, 249, 0.6) !important;
+    border-radius   : 10px;
+}
+
+.room-card:hover .heart-icon {
+    opacity: 1;
+}
+
+.card-body {
+    padding-top: 25px;
+    padding-top: 2px;
+}
+
+.card-title {
+    font-size    : 1.25rem;
+    margin-bottom: 10px;
+    color        : #333;
+}
+
+.price-rating {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color    : #e74c3c;
+}
+
+.month {
+    font-size: 0.875rem;
+    color    : #999;
+}
+
+.rating .fa-star {
+    color: #ffd700;
+}
+
+.rating .fa-star.checked {
+    color: #ffd700;
+}
+
+.rating .fa-star:not(.checked) {
+    color: #ccc;
+}
+
+.details {
+    font-size: 0.875rem;
+    color    : #666;
+}
+
+.details i {
+    margin-right: 5px;
+    color       : #333;
+}
+
+
+.recommendation-swiper .swiper-wrapper {
+    padding: 40px;
+}
+
+.recommendation-swiper .swiper-button-next,
+.recommendation-swiper .swiper-button-prev {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius   : 50%;
+    width           : 50px;
+    height          : 50px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    top             : 50%;
+    transform       : translateY(-50%);
+    transition      : background-color 0.3s ease-in-out;
+}
+
+.recommendation-swiper .swiper-button-next img,
+.recommendation-swiper .swiper-button-prev img {
+    width : 60%;
+    height: 60%;
+}
+
+.recommendation-swiper .swiper-button-next:hover,
+.recommendation-swiper .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.recommendation-swiper .swiper-button-next {
+    right: 10px;
+}
+
+.recommendation-swiper .swiper-button-prev {
+    left: 10px;
+}
+
+/* Hide default navigation button icons */
+.recommendation-swiper .swiper-button-next::after,
+.recommendation-swiper .swiper-button-prev::after {
+    content: "";
+}
+
+/*End recommendation Secton styling */
+/*Start Available Roommate Section */
+.available-rommate .available-rommate-heading {
+    font-size: 32px;
+    color    : #292C2D;
+}
+
+.available-rommate .available-rommate-subheading {
+    font-size: 30px;
+    color    : #292C2D;
+}
+
+/* Card Styling */
+.available-rommate .rommate-swiper .card {
+    position     : relative;
+    width        : 20vh;
+    height       : 90vh;
+    border-radius: 25px;
+    overflow     : hidden;
+    cursor       : pointer;
+    transition   : width 0.3s ease;
+}
+
+.available-rommate .rommate-swiper .info .details,
+.available-rommate .rommate-swiper .info .star {
+    transform : translateX(100%);
+    transition: 0.3s;
+}
+
+.available-rommate .rommate-swiper .card:hover .info .details,
+.available-rommate .rommate-swiper .info .star {
+    transform: translateX(0);
+}
+
+.available-rommate .rommate-swiper .card:hover {
+    width: 70vh !important;
+}
+
+.available-rommate .rommate-swiper .card .image {
+    width              : 100%;
+    height             : 100%;
+    background-size    : cover;
+    background-position: center;
+    border-radius      : 25px;
+    transition         : transform 0.3s ease;
+}
+
+.available-rommate .rommate-swiper .card:hover .info {
+    padding : 20px;
+    position: absolute;
+    bottom  : 5%;
+}
+
+.available-rommate .rommate-swiper .card .info .icon {
+    width : 25px;
+    height: 25px;
+}
+
+.available-rommate .rommate-swiper .card .info .details {
+    font-size: 20px;
+    color    : white !important;
+}
+
+.available-rommate .rommate-swiper .card .name {
+    position     : absolute;
+    font-size    : 24px;
+    font-weight  : bold;
+    margin-bottom: 5px;
+    top          : 72%;
+    transform    : rotate(-90deg);
+    color        : #fff;
+    transition   : transform 0.3s ease;
+}
+
+.available-rommate .rommate-swiper .card:hover .name {
+    position : relative;
+    top      : 0;
+    transform: rotate(0deg);
+    padding  : 0;
+    margin   : 0;
+}
+
+.available-rommate .rommate-swiper .card .rating {
+    display    : flex;
+    align-items: center;
+    margin-top : 5px;
+}
+
+.available-rommate .rommate-swiper .card .rating ion-icon {
+    color       : gold;
+    margin-right: 5px;
+}
+
+/* Navigation buttons styling */
+.available-rommate .rommate-swiper .swiper-button-next,
+.available-rommate .rommate-swiper .swiper-button-prev {
+    color    : #000;
+    font-size: 24px;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .available-rommate .rommate-swiper .card {
+        width : 20vh;
+        height: 50vh;
+
+    }
+
+    /* Remove hover effects on small screens */
+    .available-rommate .rommate-swiper .card.active {
+        width: 40vh;
+    }
+
+    .available-rommate .rommate-swiper .card.active .name {
+        position : relative;
+        top      : 0;
+        transform: rotate(0deg);
+        padding  : 0;
+        margin   : 0;
+    }
+
+    .available-rommate .rommate-swiper .card.active .info .details,
+    .available-rommate .rommate-swipe .card.activer .info .star {
+        transform: translateX(0);
+    }
+
+    .available-rommate .rommate-swiper .card.active .info {
+        padding : 20px;
+        position: absolute;
+        bottom  : 5%;
+    }
+}
+
+/*End Available Roommate Section */
+
+/*  */
+/* footer Styling Start */
+.footer {
+    background-image: linear-gradient(to right, #E8E8E8, #F6F6F6);
+    color           : #292C2D !important;
+}
+
+.footer .socials h5 {
+    color: #2387C2;
+}
+
+.footer .socials p,
+.footer .Policies ul li a,
+.footer .Contact ul li a,
+.footer .rights {
+    color: #292C2D !important;
+
+}
+
+/* footer Styling End */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-container {
+        top      : 20%;
+        transform: translate(-50%, -20%);
+    }
+
+
+    .search-container .search-text {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-container {
+        top      : 50%;
+        left     : 50%;
+        transform: translate(-50%, -50%);
+        width    : 75%;
+    }
+
+    .search-bar .input-container {
+        display: block;
+    }
+
+    .search-bar .btn-search {
+        width: 50% !important;
+    }
+
+    .search-container .search-text {
+        color           : gray;
+        border-radius   : 25px;
+        background-color: rgb(225, 225, 225) !important;
+
+        font-size: 16px;
+    }
+}
