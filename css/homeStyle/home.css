@@ -20,129 +20,130 @@ body {
     content     : '|';
     padding-left: 3rem;
 }
-nav .messages-dropdown,
+
+nav .custom-dropdown,
 nav .account-dropdown {
-    transform: translateX(50%);
+    transform    : translateX(50%);
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: 60vw;
+    box-shadow   : 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding      : 1rem;
+    width        : 60vw;
     /* Use viewport width for better responsiveness */
-    max-width: 400px;
+    max-width    : 400px;
     /* Limit max width on larger screens */
-    min-width: 280px;
+    min-width    : 280px;
     /* Ensure it's not too small on small screens */
 }
 
 /* Messages List Styling with Scroll */
-nav .messages-dropdown .list-group {
+nav .custom-dropdown .list-group {
     max-height: 300px !important;
     /* Adjust height as necessary */
     overflow-y: auto;
 }
 
 /* Chats header with buttons */
-nav .messages-dropdown .btn-light {
+nav .custom-dropdown .btn-light {
     border-radius: 50%;
-    padding: 0.3rem;
+    padding      : 0.3rem;
 }
 
 /* Message Items */
-nav .messages-dropdown .list-group-item {
-    border: none;
-    padding: 0.75rem 0.5rem;
+nav .custom-dropdown .list-group-item {
+    border    : none;
+    padding   : 0.75rem 0.5rem;
     transition: background-color 0.2s ease-in-out;
 }
 
-nav .messages-dropdown .list-group-item:hover {
+nav .custom-dropdown .list-group-item:hover {
     background-color: #f8f9fa;
 }
 
 /* Small text inside message items */
-nav .messages-dropdown .list-group-item small {
+nav .custom-dropdown .list-group-item small {
     font-size: 0.75rem;
 }
 
 /* Badge Styling */
-nav .messages-dropdown .badge {
+nav .custom-dropdown .badge {
     font-size: 0.8rem;
 }
 
 /* Message Item Images */
-nav .messages-dropdown .list-group-item img {
-    width: 60px;
-    height: 60px;
+nav .custom-dropdown .list-group-item img {
+    width        : 60px;
+    height       : 60px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit   : cover;
 }
 
-nav .messages-dropdown .messages-dropdown {
+nav .custom-dropdown .custom-dropdown {
     font-size: 20px;
 }
 
-nav .messages-dropdown .person-image {
-    width: 60px;
+nav .custom-dropdown .person-image {
+    width : 60px;
     height: 60px;
 }
 
-nav .messages-dropdown .person-name {
+nav .custom-dropdown .person-name {
     font-size: 20px !important;
-    color: #292C2D;
+    color    : #292C2D;
 }
 
-nav .messages-dropdown .online-icon {
-    width: 10px !important;
-    height: 10px !important;
-    margin: 0 !important;
+nav .custom-dropdown .online-icon {
+    width  : 10px !important;
+    height : 10px !important;
+    margin : 0 !important;
     padding: 0;
 }
 
-nav .messages-dropdown .message-text {
+nav .custom-dropdown .message-text {
     font-size: 16px;
-    color: #292C2D;
+    color    : #292C2D;
 }
 
-nav .messages-dropdown .message-time {
-    color: #707070;
+nav .custom-dropdown .message-time {
+    color    : #707070;
     font-size: 16px !important;
 }
 
-nav .messages-dropdown .heading-button {
+nav .custom-dropdown .heading-button {
     background-color: #D3CEBA;
-    border-radius: 50px;
-    width: 30px !important;
-    height: 30px !important;
-    padding: 0;
+    border-radius   : 50px;
+    width           : 30px !important;
+    height          : 30px !important;
+    padding         : 0;
 }
 
 /* Offline status icon adjustments */
-nav .messages-dropdown .off-line .online-icon {
+nav .custom-dropdown .off-line .online-icon {
     /* Custom styles for offline icons can be added here */
 }
 
 /* Rounded Scrollbar Styling */
-nav .messages-dropdown .list-group::-webkit-scrollbar {
+nav .custom-dropdown .list-group::-webkit-scrollbar {
     width: 8px;
     /* Width of the scrollbar */
 }
 
-nav .messages-dropdown .list-group::-webkit-scrollbar-track {
-    background: #f1f1f1;
+nav .custom-dropdown .list-group::-webkit-scrollbar-track {
+    background   : #f1f1f1;
     /* Background of the scrollbar track */
     border-radius: 50px;
     /* Rounded corners for the track */
 }
 
-nav .messages-dropdown .list-group::-webkit-scrollbar-thumb {
+nav .custom-dropdown .list-group::-webkit-scrollbar-thumb {
     background-color: #888;
     /* Color of the scrollbar thumb */
-    border-radius: 50px;
+    border-radius   : 50px;
     /* Rounded corners for the thumb */
-    border: 20px solid #f1f1f1;
-    /* Optional: Adds a border to separate the thumb from the track */
+    border          : 20px solid #f1f1f1;
+    /* Optional     : Adds a border to separate the thumb from the track */
 }
 
-nav .messages-dropdown .list-group::-webkit-scrollbar-thumb:hover {
+nav .custom-dropdown .list-group::-webkit-scrollbar-thumb:hover {
     background-color: #555;
     /* Darker color on hover */
 }
@@ -152,13 +153,13 @@ nav .messages-dropdown .list-group::-webkit-scrollbar-thumb:hover {
 /* Centered for larger screens */
 @media (max-width: 992px) {
     .dropdown-menu-end[data-bs-popper] {
-        left: 0;
-        right: 0;
+        left     : 50% !important;
+        right    : 0;
+        transform: translateX(-40%);
     }
 
-    nav .messages-dropdown {
+    nav .custom-dropdown {
         position: absolute !important;
-        transform: translateX(-30%) !important;
     }
 }
 
@@ -167,34 +168,55 @@ nav .messages-dropdown .list-group::-webkit-scrollbar-thumb:hover {
 /* Adjustments for small screens */
 @media (max-width: 767px) {
 
-    nav .messages-dropdown,
+    nav .custom-dropdown,
     .account-dropdown {
         position: absolute;
-        width: 90vw;
+        width   : 90vw;
         /* Almost full width on small screens */
-        padding: 0.5rem;
+        padding : 0.5rem;
     }
 
-    nav .messages-dropdown .person-image {
-        width: 50px;
+    nav .custom-dropdown .person-image {
+        width : 50px;
         height: 50px;
     }
 
-    nav .messages-dropdown .person-name {
+    nav .custom-dropdown .person-name {
         font-size: 16px;
     }
 
-    nav .messages-dropdown .message-text,
-    nav .messages-dropdown .message-time {
+    nav .custom-dropdown .message-text,
+    nav .custom-dropdown .message-time {
         font-size: 14px;
     }
 }
 
 /* end messages dropdown Styling */
+/* start notifications dropdown Styling */
+nav .notifications-dropdown .btn.active {
+    border-radius   : 15px;
+    color           : #2387C2;
+    background-color: rgba(35, 135, 194, 0.25);
+    border          : none;
+}
+
+nav .notifications-dropdown .list-heading {
+    color    : #292C2D;
+    font-size: 20px;
+}
+
+nav .notifications-dropdown .list-group {
+    max-height: 103px !important;
+    overflow-y: auto;
+}
+
+/* end notifications dropdown Styling */
+
+/*  */
 /* Start account dropdown Styling */
 nav .account-dropdown {
-    height: 85vh;
-    width: 27vw;
+    height    : 85vh;
+    width     : 27vw;
     background: #F6F6F6;
 }
 
@@ -204,9 +226,9 @@ nav .account-dropdown .account-heading {
 
 nav .account-dropdown .account-type-container {
     background-color: white;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 40vh;
-    border-radius: 10px;
+    box-shadow      : 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height          : 40vh;
+    border-radius   : 10px;
 }
 
 nav .account-dropdown .account-type-container .account-type-heading {}
@@ -216,14 +238,14 @@ nav .account-dropdown .account-type-container .account-type-heading h5 {
 }
 
 nav .account-dropdown .account-type-container .account-type-img img {
-    height: 60px;
-    width: 60px;
+    height       : 60px;
+    width        : 60px;
     border-radius: 50px;
-    object-fit: cover;
+    object-fit   : cover;
 }
 
 nav .account-dropdown .account-type-container .account-type-subheading {
-    color: rgba(41, 44, 45, 1);
+    color    : rgba(41, 44, 45, 1);
     font-size: 20px;
 
 }
@@ -238,19 +260,19 @@ nav .account-dropdown .settings {
 }
 
 .arrow {
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    position       : absolute;
+    width          : 70px;
+    height         : 70px;
     background-size: contain;
-    transition: transform 0.3s ease-in-out;
+    transition     : transform 0.3s ease-in-out;
     /* Smooth transition */
 }
 
 .arrow-left {
     background: url('/images/website icon/home/navbar/Arrow.svg') no-repeat center center;
-    left: -1%;
-    transform: translateY(-30%);
-    animation: rotate-left 2s linear infinite;
+    left      : -1%;
+    transform : translateY(-30%);
+    animation : rotate-left 2s linear infinite;
 }
 
 .account-type:hover .arrow-left {
@@ -260,7 +282,7 @@ nav .account-dropdown .settings {
 .arrow-right {
     background: url('/images/website icon/home/navbar/ArrowDown.svg') no-repeat center center;
 
-    left: -2%;
+    left     : -2%;
     transform: translateY(30%);
     animation: rotate-right 2s linear infinite;
 }
@@ -271,13 +293,14 @@ nav .account-dropdown .settings {
 
 @media (max-width: 992px) {
 
-    nav .messages-dropdown,
+    nav .custom-dropdown,
     .account-dropdown {
-        width: 80vh !important;
-        position: absolute !important;
+        width    : 80vh !important;
+        position : absolute !important;
         transform: translateX(-50%) !important;
     }
 }
+
 /* NavBar Styling End */
 
 /* Swiper Styling Start */
@@ -500,6 +523,7 @@ nav .account-dropdown .settings {
     position        : relative;
     transition      : transform 0.3s ease-in-out;
     margin-right    : 65px;
+    text-decoration: none;
 }
 
 .room-card:hover {
@@ -512,14 +536,14 @@ nav .account-dropdown .settings {
     overflow: hidden;
 }
 
-.room-image {
+.room-card .room-image {
     width     : 100%;
     height    : auto;
     display   : block;
     transition: opacity 0.3s ease-in-out;
 }
 
-.room-image-hover {
+.room-card .room-image-hover {
     position  : absolute;
     top       : 0;
     left      : 0;
@@ -612,7 +636,9 @@ nav .account-dropdown .settings {
 }
 
 .recommendation-swiper .swiper-button-next,
-.recommendation-swiper .swiper-button-prev {
+.recommendation-swiper .swiper-button-prev,
+.room-swiper .swiper-button-next,
+.room-swiper .swiper-button-prev {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius   : 50%;
     width           : 50px;
@@ -626,27 +652,35 @@ nav .account-dropdown .settings {
 }
 
 .recommendation-swiper .swiper-button-next img,
-.recommendation-swiper .swiper-button-prev img {
+.recommendation-swiper .swiper-button-prev img,
+.room-swiper .swiper-button-next img,
+.room-swiper .swiper-button-prev img {
     width : 60%;
     height: 60%;
 }
 
 .recommendation-swiper .swiper-button-next:hover,
-.recommendation-swiper .swiper-button-prev:hover {
+.recommendation-swiper .swiper-button-prev:hover,
+.room-swiper .swiper-button-next:hover,
+.room-swiper .swiper-button-prev:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.recommendation-swiper .swiper-button-next {
+.recommendation-swiper .swiper-button-next,
+.room-swiper .swiper-button-next {
     right: 10px;
 }
 
-.recommendation-swiper .swiper-button-prev {
+.recommendation-swiper .swiper-button-prev,
+.room-swiper .swiper-button-prev {
     left: 10px;
 }
 
 /* Hide default navigation button icons */
 .recommendation-swiper .swiper-button-next::after,
-.recommendation-swiper .swiper-button-prev::after {
+.recommendation-swiper .swiper-button-prev::after,
+.room-swiper .swiper-button-next::after,
+.room-swiper .swiper-button-prev::after {
     content: "";
 }
 

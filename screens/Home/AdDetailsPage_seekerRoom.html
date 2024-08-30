@@ -3,16 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/homeStyle/home.css">
-    <link rel="stylesheet" href="/css/indexStyle/navbar.css">
-    <link rel="stylesheet" href="/css/chatStyle/chat.css">
-    <title>RoomyCo Chat</title>
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="../../css/font.css">
+    <link rel="stylesheet" href="../../css/indexStyle/navbar.css">
+    <link rel="stylesheet" href="../../css/indexStyle/footer.css">
+    <link rel="stylesheet" href="../../css/homeStyle/home.css">
+    <link rel="stylesheet" href="/css/AdDetailsStyle/AdDetails.css">
+    <title>RoomyCo</title>
+    <style>
+       
+
+
+        .lifestyle-container {
+            font-size: 16px;
+            color: #292C2D;
+        }
+
+        .lifestyle-item::after {
+            content: "-";
+            /* Add a hyphen after each item */
+            margin-left: 5px;
+            /* Optional: space between the word and the hyphen */
+        }
+
+        .lifestyle-item:last-child::after {
+            content: "";
+            /* Remove hyphen after the last item */
+        }
+
+        .message {
+            width: 100%;
+        }
+
+        #message {
+            background-color: transparent;
+            border: 1px solid #CAC6B7;
+            border-radius: 20px;
+            text-align: start;
+            resize: none;
+            color: #AEAEAE;
+            font-size: 16px;
+            width: 100%;
+        }
+
+       
     </style>
 </head>
 
@@ -503,148 +547,295 @@
             </div>
         </div>
     </nav>
+
     <main>
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Chat List -->
-
-                <div class="col-12 col-md-3 chat-list">
-                    <div class="header">
-                        <h5>Chats</h5>
-                        <div class="btn-group">
-                            <button class="btn">
-                                <img src="/images/website icon/chat/three_dots.svg" alt="">
-
-                            </button>
-                            <button class="btn">
-                                <img src="/images/website icon/chat/plus.svg" alt="">
-                            </button>
+        <div class="container-fluid mt-3">
+            <div class="row mx-0 ms-4">
+                <div class="room-specifications col-md-8 ">
+                    <div
+                        class="swiper room-swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+                        <div class="swiper-wrapper">
+                            <div
+                                class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Room image"
+                                    class="img-fluid room-image">
+                            </div>
+                            <div class="swiper-slide swiper-slide-next">
+                                <img src="/images/homePage/select-room/room_2.png" alt="Room image"
+                                    class="img-fluid room-image">
+                            </div>
+                            <div class=" swiper-slide">
+                                <img src="/images/homePage/select-room/room_3.png" alt="Room image"
+                                    class="img-fluid room-image">
+                            </div>
+                            <div class=" swiper-slide">
+                                <img src="/images/homePage/select-room/room_4.png" alt="Room image"
+                                    class="img-fluid room-image">
+                            </div>
                         </div>
-                    </div>
-                    <div class="search-bar">
-                        <!-- <i class="fas fa-search"></i> -->
-                        <img class="search-icon" src="/images/website icon/chat/search.svg" alt="">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <div class="chat active">
-                        <img class="chat-image" src="/images/homePage/available_roomate/1.jpg" alt="Rama Kita">
-                        <div>
-                            <h6 class="chat-name poppins-medium">Rama Kita</h6>
-                            <p class="chat-message poppins-light">You: I need roommate t...</p>
+                        <div class="recomendation-btn-next swiper-button-next" role="button">
+                            <img src="/images/website icon/home/body/ArrowCard.svg" alt="">
                         </div>
+                        <div class="recomendation-btn-prev swiper-button-prev" " role=" button">
+                            <img src="/images/website icon/home/body/ArrowCardReversed.svg" alt="">
+                        </div>
+                        <span class="swiper-notification"></span>
+                        <span class="swiper-notification"></span>
                     </div>
-                    <div class="chat">
-                        <img class="chat-image" src="/images/homePage/available_roomate/2.jpg" alt="Jane Doe">
-                        <div>
-                            <h6 class="chat-name poppins-medium">Jane Doe</h6>
-                            <p class="chat-message poppins-light">Jane: When will you mo...</p>
+                    <div class="room-details d-flex flex-column gap-3">
+                        <div class="listing-header py-4 d-flex flex-column align-items-start">
+                            <h1 class="poppins-bold">Hi there, I have apartment!</h1>
+                            <div class="rating">
+                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
+                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
+                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
+                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
+                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
+                            </div>
+                        </div>
+                        <div class="property-overview py-4 d-flex flex-row justify-content-between">
+                            <div
+                                class="property col-md-4 d-flex flex-row align-items-center justify-content-start gap-4">
+                                <img src="/images/website icon/AdListing/bed.svg" alt="">
+                                <p class="poppins-light">2 Bed room</p>
+                            </div>
+                            <div
+                                class="property col-md-4 d-flex flex-row  align-items-center justify-content-center gap-4">
+                                <img src="/images/website icon/AdListing/bathtub.svg" alt="">
+                                <p class="poppins-light">1 Bathroom</p>
+                            </div>
+                            <div
+                                class="property col-md-4 d-flex flex-row align-items-center justify-content-center gap-4">
+                                <img src="/images/website icon/AdListing/buildings.svg" alt="">
+                                <p class="poppins-light">Apartment</p>
+                            </div>
+                        </div>
+                        <div class="availability-budget row">
+                            <div class="section-title poppins-medium">Availability and Budget</div>
+                            <div class="col-md-6">
+                                <p>
+                                    <strong class="d-block poppins-light">Rent:</strong>
+                                    $1,000 / month
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <strong class="d-block poppins-light">Availability:</strong>
+                                    1st August
+                                </p>
+                            </div>
+                        </div>
+                        <div class="map d-flex flex-column gap-4">
+                            <div class="section-title poppins-medium'">Location</div>
+                            <p class="location poppins-light">Al Jazzat, Al Sharjah</p>
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
+                                marginwidth="0"
+                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                    href="https://www.gps.ie/">gps systems</a></iframe>
+                        </div>
+                        <div class="amenities d-flex flex-column gap-3 py-3">
+                            <div class="section-title">Amenities</div>
+                            <div class="row amenities-icons">
+                                <div
+                                    class="col-md-4 col-4 d-flex flex-row text-start justify-content-start align-items-center gap-md-4">
+                                    <img src="/images/website icon/AdListing/router.svg" alt="">
+                                    <p> Wi-Fi</p>
+                                </div>
+                                <div
+                                    class="col-md-4 col-4 d-flex flex-row text-center justify-content-center align-items-md-center gap-md-4">
+                                    <img src="/images/website icon/AdListing/p-circle.svg" alt="">
+                                    <p>Parking</p>
+                                </div>
+                                <div
+                                    class="col-md-4 col-4 d-flex flex-row text-center justify-content-center align-items-md-center gap-md-4">
+                                    <img src="/images/website icon/AdListing/display.svg" alt="">
+                                    <p>
+                                        Television
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="suitable">
+                            <div class="section-title">Suitable for</div>
+                            <div class="row suitable-icons py-3">
+                                <div
+                                    class="col-md-4 col-3 d-flex flex-row justify-content-start align-items-center text-start gap-md-4">
+                                    <img src="/images/website icon/AdListing/person.svg" alt="">
+                                    <p>
+                                        Woman
+                                    </p>
+                                </div>
+                                <div
+                                    class="col-md-4 col-3 d-flex flex-row justify-content-center align-items-center text-center gap-md-4">
+                                    <img src="/images/website icon/AdListing/pawprint.fill.svg" alt="">
+                                    <p> Pet-allowed</p>
+                                </div>
+                                <div
+                                    class="col-md-4 col-3 d-flex flex-row justify-content-center align-items-center text-center gap-md-4">
+                                    <img src="/images/website icon/AdListing/smoking_rooms.svg" alt="">
+                                    <p> Smoking</p>
+                                </div>
+                                <div
+                                    class="col-md-4 col-3 d-flex flex-row justify-content-start align-items-center text-start gap-md-4">
+                                    <img src="/images/website icon/AdListing/folded_hands.svg" alt="">
+                                    <p>Islam</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="owner-specifications col-md-4 ps-xl-4 px-md-0 mb-5 mb-lg-0">
+                    <div class="person-card  d-flex flex-column align-items-start gap-4 p-xl-4 p-2 py-sm-3 ps-4">
+                        <div class="owner-image d-flex justify-content-center align-items-center gap-2">
+                            <img src="/images/homePage/available_roomate/2.jpg" alt="Rama Kita">
+                            <h3 class="owner-name poppins-medium">Ali Saebe</h3>
+                        </div>
 
-                <!-- Chat Box -->
-                <!-- Chat Box -->
-                <div class="col-12 col-md-6 chat-box pt-2">
-                    <!-- Chat Header -->
-                    <div class="header">
-                        <button class="btn  chat-list-btn" onclick="toggleChatList()">chats</button>
-
-                        <div class="user-info">
-                            <img class="user-info-img" src="/images/homePage/available_roomate/2.jpg" alt="User">
-                            <div>
-                                <h5 class="poppins-medium user-name">Rama Kita</h5>
-                                <span class="status poppins-light">Active Now</span>
+                        <div class="info dob d-flex justify-content-center align-items-center gap-2">
+                            <h5 class="label poppins-light">Date of Birth:</h5>
+                            <small>32 years old</small>
+                        </div>
+                        <div class="lifestyle  d-flex align-items-start justify-content-start">
+                            <h5 class="label poppins-light col-3 text-start">Life style:</h5>
+                            <div class="lifestyle-container poppins-bold text-start">
+                                <span class="lifestyle-item col-4"><strong>Bets Lover</strong></span>
+                                <span class="lifestyle-item col-4"><strong>Bets Lover</strong></span>
+                                <span class="lifestyle-item col-4"><strong>Bets Lover</strong></span>
+                                <span class="lifestyle-item"><strong>Bets Lover</strong></span>
+                                <span class="lifestyle-item"><strong>Bets Lover</strong></span>
+                                <span class="lifestyle-item"><strong>Smoking</strong></span>
+                                <span class="lifestyle-item"><strong>Islamic</strong></span>
                             </div>
                         </div>
-                        <img class="call-icon" src="/images/chatPage/telephone.svg" alt="">
-                        <button class="btn  chat-profile-btn" onclick="toggleChatProfile()">☰</button>
 
-                    </div>
-
-                    <!-- Messages Container -->
-                    <div class="messages-container">
-                        <div class="message-box received">
-                            <div class="message poppins-medium">
-                                Hi, when are you moving in?
-                            </div>
-                            <span class="time poppins-medium">10:30 AM</span>
+                        <div class="message">
+                            <textarea name="w3review" id="message" rows="4" class="txtarea-msg p-2"
+                                placeholder="Write messge to Ali"></textarea>
                         </div>
-                        <div class="message-box sent">
-                            <div class="message poppins-medium">
-                                I'm planning to move in next week.
-                            </div>
-                            <span class="time poppins-medium">10:32 AM</span>
-                        </div>
-                        <div class="message-box sent">
-                            <div class="message image-group ">
-                                <img src="https://via.placeholder.com/80" alt="Image 1">
-                                <img src="https://via.placeholder.com/80" alt="Image 2">
-                                <img src="https://via.placeholder.com/80" alt="Image 3">
-                            </div>
-                            <span class="time poppins-medium">10:35 AM</span>
-                        </div>
-                    </div>
-
-                    <!-- Chat Input Section -->
-                    <div class="chat-input gap-2">
-                        <button class="btn attach-btn">
-                            <!-- <i class="fas fa-paperclip"></i> -->
-                            <img class="paperclip-icon" src="/images/website icon/chat/paper-clip.svg" alt="">
-                        </button>
-                        <div class="input-group">
-                            <input type="text" placeholder="Type something">
-                            <button class="btn"><i class="fas fa-smile"></i></button>
-                        </div>
-                        <button class="btn send-btn">
-                            <img class="arrowUp-icon" src="/images/website icon/chat/arrowUp.svg" alt="">
-                            <!-- <i class="fas fa-arrow-up"></i> -->
-                        </button>
-                    </div>
-                </div>
-
-
-                <!-- Chat Profile -->
-                <div class="col-12 col-md-3 chat-profile p-5">
-                    <div class="pt-5">
-                        <img class="chat-profile-img" src="/images/homePage/available_roomate/2.jpg" alt="Rama Kita">
-                        <h5 class="chat-profile-name poppins-medium">Rama Kita</h5>
-                        <div class="profile-actions w-75 justify-content-evenly mt-5">
-                            <div>
-                                <button class="btn">
-                                    <!-- <i class="fas fa-user"></i> -->
-                                    <img src="/images/website icon/chat/person.svg" alt="">
-                                </button>
-                                <div class="btn-label">Profile</div>
-                            </div>
-                            <div>
-                                <button class="btn">
-                                    <img src="/images/website icon/chat/bell.svg" alt="">
-
-                                </button>
-                                <div class="btn-label">Mute</div>
-                            </div>
+                        <div class="button-container w-100 d-flex flex-column gap-3">
+                            <button class="btn btn-primary profile-action-button poppins-medium p-lg-3">Send
+                                message</button>
+                            <button class="btn btn-outline-primary profile-action-button poppins-medium p-lg-3">Follow
+                                request
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <script>
-        function toggleChatList() {
-            const chatList = document.querySelector('.chat-list');
-            const chatBox = document.querySelector('.chat-box');
-            chatList.classList.toggle('show');
-            chatBox.classList.toggle('shift-left');
-        }
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 bg-dark">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 socials">
+                    <div>
+                        <img class="footer-logo me-2" src="../../images/website icon/home/navbar/nav-logo.svg" alt="">
+                        <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span></h5>
+                    </div>
+                    <p>Find your preferred room and <br> choose a roommate who agree.</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item ">
+                            <a href="#">
+                                <img src="/images/website icon/home/footer/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5"><a href="#">
+                                <img src="/images/website icon/home/footer/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5"><a href="#">
+                                <img src="/images/website icon/home/footer/twitter.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5">
+                            <a href="#">
+                                <img src="/images/website icon/home/footer/tiktok.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-lg-5">
+                            <a href="#">
+                                <img src="/images/website icon/home/footer/whatsapp.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <p><a href="https://www.Romm.com" class=" text-decoration-none">www.Romm.com</a></p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 Policies d-flex  justify-content-lg-center ">
+                    <div>
+                        <h5>Terms & policies</h5>
+                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="#" class=" text-decoration-none">Terms of Service</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class=" text-decoration-none">Privacy Policy</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class=" text-decoration-none">Cookie Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-md-12 Contact d-flex justify-content-lg-end align-items-lg-start justify-content-lg-center">
+                    <div>
+                        <h5>Contact</h5>
+                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <img class="me-3" src="/images/website icon/home/footer/envelope.svg" alt="">
+                                <a href="mailto:roomyco@room.com" class=" text-decoration-none">roomyco@room.com</a>
+                            </li>
+                            <li class="mb-3">
+                                <img class="me-3" src="/images/website icon/home/footer/telephone.svg" alt="">
+                                <a href="tel:+971586834566" class=" text-decoration-none">+971 586 834 566</a>
+                            </li>
+                            <li class="mb-3">
+                                <img class="me-3" src="/images/website icon/home/footer/location.svg" alt="">
+                                <span>Emirates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" ">
+                    <div class="rights col-12 text-center p-4">
+                        <p>All rights are save 2024 by company.com</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
 
-        function toggleChatProfile() {
-            const chatProfile = document.querySelector('.chat-profile');
-            const chatBox = document.querySelector('.chat-box');
-            chatProfile.classList.toggle('show');
-            chatBox.classList.toggle('shift-right');  // This shifts the chat box to the left
-        }
+    <!-- popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- JQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- BG Carousel JS -->
+    <script>
+        var swiper = new Swiper(".room-swiper", {
+            loop: true,
+            slidesPerView: 1,
+            centeredSlides: false,
+            spaceBetween: 10,
+            slidesOffsetAfter: 0,
+            effect: 'fade',
+            speed: 1000, // Set the transition speed to 1000ms (1 second)
+
+            navigation: {
+                nextEl: ".recomendation-btn-next",
+                prevEl: ".recomendation-btn-prev",
+            },
+        });
+
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

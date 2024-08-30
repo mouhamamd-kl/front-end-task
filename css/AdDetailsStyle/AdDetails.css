@@ -1,0 +1,206 @@
+body {
+    background: linear-gradient(180deg, #F8F4DB 8.73%, #FFFFFE 100%);
+}
+
+main {
+    height: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+main .room-specifications .room-swiper {
+    width: 100%;
+    height: auto !important;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+main .room-specifications .room-swiper .swiper-wrapper {
+    height: auto;
+    width: auto;
+}
+
+
+main .room-specifications .room-swiper .swiper-wrapper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .room-specifications .room-swiper .swiper-wrapper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 87.5vh;
+    object-fit: cover;
+}
+
+main .room-specifications .room-swiper .swiper-button-next,
+main .room-specifications .room-swiper .swiper-button-prev {
+    width: 60px;
+    height: 60px;
+}
+
+main .room-specifications .room-swiper .swiper-button-next {
+    right: 20px;
+}
+
+
+main .room-specifications .room-swiper .swiper-button-prev {
+    left: 20px;
+}
+
+main .room-specifications .room-details .listing-header {
+    text-align: center;
+}
+
+main .room-specifications .room-details .listing-header h1 {
+    font-size: 24px;
+}
+
+.listing-header,
+.property-overview,
+.availability-budget,
+.amenities {
+    border-bottom: 1px solid rgba(218, 214, 200, 1)
+}
+
+main .room-specifications .room-details .property-overview .property p {
+    font-size: 16px;
+    margin: 0;
+}
+
+main .room-specifications .section-title {
+    font-size: 20px;
+}
+
+main .room-specifications .map {
+    height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+main .room-specifications .location {
+    margin: 0;
+    font-size: 16px;
+    color: #707070;
+}
+
+main .room-specifications .availability-budget p {
+    font-size: 20px;
+    color: #292C2D;
+}
+
+main .room-specifications .availability-budget p strong {
+    font-size: 16px;
+    color: #707070;
+}
+
+main .room-specifications .amenities-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+main .room-specifications .suitable .suitable-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+/* owner speicication section */
+
+main .owner-specifications .person-card {
+    background-color: #F2EACC;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+main .owner-specifications .person-card .info {
+    font-size: 16px;
+    color: #5F6368;
+}
+
+main .owner-specifications .person-card .owner-image img {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main .owner-specifications .person-card .owner-name {
+    font-size: 20px;
+    color: #333;
+}
+
+main .owner-specifications .person-card .label {
+    font-size: 16px;
+    color: #333;
+    margin: 0px;
+}
+
+main .owner-specifications .person-card .location .location-icon {
+    width: 16px;
+    height: 16px;
+}
+
+main .owner-specifications .person-card .lifestyle .tags .tag {
+    color: #2387C2;
+    border-radius: 11px;
+    padding: 4px 12px;
+    font-size: 16px;
+    margin-right: 8px;
+    border: 1px solid #2387C2;
+}
+
+main .owner-specifications .person-card .description p {
+    font-size: 16px;
+    color: #292C2D;
+}
+
+main .owner-specifications .person-card .description span {
+    color: #5F6368;
+}
+
+main .owner-specifications .person-card .button-container .profile-action-button {
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+main .owner-specifications .person-card .button-container .btn-primary {
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+}
+
+main .owner-specifications .person-card .button-container .btn-outline-primary {
+    border: 2px solid #008CBA;
+    color: #008CBA;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    main .room-specifications {
+        order: 2 !important;
+    }
+
+    main .owner-specifications {
+        order: 1 !important;
+    }
+
+    main .owner-specifications .person-card {
+        position: relative;
+        top: auto;
+    }
+}

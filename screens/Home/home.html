@@ -37,7 +37,7 @@
                     <!-- Centered Links -->
                     <div class="ms-lg-auto d-flex justify-content-evenly">
                         <li class="nav-item">
-                            <a class="nav-link active"  aria-current="page" href="/screens/Home/home.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/screens/Home/home.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">See More</a>
@@ -58,7 +58,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/images/website icon/home/navbar/messages.svg" alt="Messages Icon">
                             </a>
-                            <div class="dropdown-menu messages-dropdown dropdown-menu-end px-4  pb-2 pt-3"
+                            <div class="dropdown-menu custom-dropdown  dropdown-menu-end px-4  pb-2 pt-3"
                                 aria-labelledby="messagesDropdown">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="poppins-medium messages-heading">Chats</span>
@@ -152,10 +152,279 @@
 
                         </li>
 
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                        <li class="nav-item dropdown me-3">
+                            <a class="nav-link position-relative " href="#" data-bs-toggle="dropdown"
+                                aria-expanded="true">
                                 <img src="/images/website icon/home/navbar/bell.svg" alt="Notifications Icon">
                             </a>
+                            <div class="dropdown-menu custom-dropdown notifications-dropdown dropdown-menu-end px-4 pb-2 pt-3 "
+                                aria-labelledby="messagesDropdown" data-bs-popper="static">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="poppins-bold notifictions-heading">Notifications</span>
+                                    <button class="btn heading-button">
+                                        <img src="/images/website icon/home/navbar/three_dots.svg" alt="">
+
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center mb-2 gap-2 poppins-medium">
+
+                                    <button class="btn active px-3 poppins-medium">
+                                        All
+
+                                    </button>
+                                    <button class="btn poppins-medium">
+                                        Unread
+
+
+                                    </button>
+                                </div>
+                                <div class="new-msg-list">
+                                    <h4 class="list-heading poppins-medium">New</h4>
+                                    <div class="list-group">
+
+                                        <!-- Message Item 1 -->
+                                        <a href="#"
+                                            class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        I
+                                                        need roommate
+                                                        to sh...</p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+
+                                        <!-- Message Item 2 -->
+                                        <a href="#"
+                                            class="message online list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Rama Kita</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        <span class="poppins-light">You: </span>I
+                                                        need roommate
+                                                        to sh...
+                                                    </p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+
+                                        <!-- Message Item 3 -->
+                                        <a href="#"
+                                            class="message list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/3.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Bana Dogo</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        I
+                                                        need roommate
+                                                        to sh...</p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="today-msg-list">
+                                    <h4 class="list-heading poppins-medium">Today</h4>
+                                    <div class="list-group">
+
+                                        <!-- Message Item 1 -->
+                                        <a href="#"
+                                            class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        I
+                                                        need roommate
+                                                        to sh...</p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+
+                                        <!-- Message Item 2 -->
+                                        <a href="#"
+                                            class="message online list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Rama Kita</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        <span class="poppins-light">You: </span>I
+                                                        need roommate
+                                                        to sh...
+                                                    </p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+
+                                        <!-- Message Item 3 -->
+                                        <a href="#"
+                                            class="message list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/3.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Bana Dogo</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        I
+                                                        need roommate
+                                                        to sh...</p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="new-msg-list">
+                                    <h4 class="list-heading poppins-medium">Older</h4>
+                                    <div class="list-group">
+
+                                        <!-- Message Item 1 -->
+                                        <a href="#"
+                                            class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        I
+                                                        need roommate
+                                                        to sh...</p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+
+                                        <!-- Message Item 2 -->
+                                        <a href="#"
+                                            class="message online list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Rama Kita</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        <span class="poppins-light">You: </span>I
+                                                        need roommate
+                                                        to sh...
+                                                    </p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+
+                                        <!-- Message Item 3 -->
+                                        <a href="#"
+                                            class="message list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
+                                            <div class="person-image me-md-2 me-4">
+                                                <img src="/images/homePage/available_roomate/3.jpg" alt="Bana Dogo"
+                                                    class="rounded-circle">
+                                            </div>
+                                            <div class="w-75">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h6 class="person-name poppins-medium">Bana Dogo</h6>
+                                                    <img class="online-icon"
+                                                        src="/images/website icon/home/navbar/blue_circle.svg">
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p
+                                                        class="mb-0 message-time poppins-light text-truncate message-text">
+                                                        I
+                                                        need roommate
+                                                        to sh...</p>
+                                                    <small class="text-muted">3d</small>
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item dropdown me-3">
                             <a class="nav-link" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown">
@@ -342,7 +611,7 @@
             <div class="swiper recommendation-swiper">
                 <div class="swiper-wrapper">
 
-                    <div class="card room-card swiper-slide">
+                    <a class="card room-card swiper-slide" href="AdDetailsPage_listPlace.html">
                         <div class="card-img-top">
                             <img src="/images/homePage/select-room/room_1.png" alt="Room image"
                                 class="img-fluid room-image">
@@ -379,7 +648,7 @@
                                     1 Bathroom</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class="recomendation-btn-next swiper-button-next">
@@ -400,7 +669,7 @@
                     need</h1>
                 <div class="col-md-9 swiper rommate-swiper d-flex">
                     <div class="swiper-wrapper">
-                        <div class="card swiper-slide">
+                        <a class="card swiper-slide" href="AdDetailsPage_seekerRoom.html">
                             <div class="image" style="background-image: url(/images/homePage/available_roomate/1.jpg);">
                             </div>
                             <div class="info w-100">
@@ -424,7 +693,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
