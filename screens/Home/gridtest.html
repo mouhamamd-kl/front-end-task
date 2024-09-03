@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Photo Grid with Vertical Scrolling Carousel</title>
+    <style>
+        /* styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .photo-grid {
+            display: grid;
+            gap: 10px;
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .photo-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Layouts for different numbers of images */
+        .photo-grid.one-image {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        .photo-grid.two-images {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+        .photo-grid.three-images {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr;
+        }
+
+        .photo-grid.three-images .photo-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .photo-grid.four-plus-images {
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .photo-grid.four-plus-images .photo-item:first-child {
+            grid-row: span 3;
+        }
+
+        .photo-grid.four-plus-images .photo-item:nth-child(2),
+        .photo-grid.four-plus-images .photo-item:nth-child(3),
+        .photo-grid.four-plus-images .photo-item:nth-child(4) {
+            grid-column: 2;
+        }
+
+        /* "View more" overlay */
+        .view-more {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .view-more:hover {
+            opacity: 1;
+        }
+
+        /* Carousel styles */
+        .carousel {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-inner {
+            display: flex;
+            flex-direction: column;
+            /* Change to column for vertical scrolling */
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            /* Change to overflow-y for vertical scroll */
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory;
+            /* Scroll-snap for vertical direction */
+        }
+
+        .carousel-inner img {
+            scroll-snap-align: center;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 10px 0;
+            /* Adjust margin for vertical layout */
+        }
+
+        .carousel-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .carousel-close:hover,
+        .carousel-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photo-grid" id="photo-grid">
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+        <div class="photo-item">
+            <img src="/images/homePage/available_roomate/1.jpg" alt="Image 1">
+        </div>
+    </div>
+
+    <!-- Carousel for hidden images -->
+    <div id="carousel" class="carousel">
+        <div class="carousel-inner" id="carousel-inner"></div>
+        <span class="carousel-close">&times;</span>
+    </div>
+
+    <script>
+        // script.js
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const photoGrid = document.getElementById("photo-grid");
+            const photoItems = photoGrid.querySelectorAll(".photo-item");
+            const maxVisibleImages = 4;
+
+            photoItems.forEach((item, index) => {
+                if (index >= maxVisibleImages) {
+                    item.style.display = 'none';
+                }
+
+                // Handle the "view more" overlay if there are more than 4 images
+                if (index === maxVisibleImages - 1 && photoItems.length > maxVisibleImages) {
+                    const viewMoreOverlay = document.createElement('div');
+                    viewMoreOverlay.classList.add('view-more');
+                    viewMoreOverlay.innerHTML = `+${photoItems.length - maxVisibleImages}`;
+                    viewMoreOverlay.addEventListener('click', () => openCarousel(photoItems, maxVisibleImages));
+                    item.appendChild(viewMoreOverlay);
+                }
+            });
+
+            // Determine the layout class based on the number of images
+            switch (photoItems.length) {
+                case 1:
+                    photoGrid.classList.add('one-image');
+                    break;
+                case 2:
+                    photoGrid.classList.add('two-images');
+                    break;
+                case 3:
+                    photoGrid.classList.add('three-images');
+                    break;
+                default:
+                    photoGrid.classList.add('four-plus-images');
+                    break;
+            }
+
+            // Carousel functionality
+            const carousel = document.getElementById("carousel");
+            const carouselInner = document.getElementById("carousel-inner");
+            const closeBtn = document.getElementsByClassName("carousel-close")[0];
+
+            function openCarousel(photoItems, startFrom) {
+                carouselInner.innerHTML = ''; // Clear any existing images
+                photoItems.forEach((item, index) => {
+                    if (index >= startFrom) {
+                        const imgClone = item.querySelector('img').cloneNode();
+                        carouselInner.appendChild(imgClone);
+                    }
+                });
+                carousel.style.display = "flex";
+            }
+
+            // Close carousel
+            closeBtn.onclick = function () {
+                carousel.style.display = "none";
+            }
+
+            // Close carousel when clicking outside the image
+            carousel.onclick = function (event) {
+                if (event.target === carousel) {
+                    carousel.style.display = "none";
+                }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

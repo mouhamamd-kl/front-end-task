@@ -85,10 +85,236 @@
 
                     <!-- Right-aligned Icons -->
                     <div class="ms-lg-auto d-flex align-items-center justify-content-center">
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item dropdown me-3">
+                            <a class="nav-link position-relative" href="#" role="button" id="favoriteDropdown"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                 <img src="/images/website icon/home/navbar/heart.svg" alt="Heart Icon">
                             </a>
+                            <div class="dropdown-menu favourite-dropdown custom-dropdown dropdown-menu-end px-5 my-4 mx-0 "
+                                data-bs-popper="static">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="poppins-bold notifictions-heading">My favourite</span>
+                                    <button class="btn heading-button">
+                                        <img src="/images/website icon/home/navbar/three_dots.svg" alt="">
+                                    </button>
+                                </div>
+
+                                <!-- Nav Pills for Tabs -->
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button id="favorite-tab" data-bs-toggle="pill" data-bs-target="#favorite"
+                                            type="button" role="tab" aria-controls="favorite" aria-selected="true"
+                                            class="nav-link poppins-medium active">Favorite</button>
+                                    </li>
+                                    <li class="nav-item " role="presentation">
+                                        <button id="overlooked-tab" data-bs-toggle="pill" data-bs-target="#overlooked"
+                                            type="button" role="tab" aria-controls="overlooked" aria-selected="false"
+                                            class="nav-link poppins-medium" tabindex="-1">Overlooked</button>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="pills-tabContent">
+                                    <!-- Favorite Tab -->
+                                    <div class="tab-pane fade active show" id="favorite" role="tabpanel"
+                                        aria-labelledby="favorite-tab">
+                                        <div class="card mb-3 p-3">
+                                            <div class="row p-md-0">
+                                                <div class="col-4 col-md-3">
+                                                    <img class="main-img" src="/images/homePage/select-room/room_1.png"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-8 col-md-9 d-flex align-items-center p-md-3">
+                                                    <div class="card-body d-flex flex-column gap-md-3">
+                                                        <div
+                                                            class="d-md-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Shared bedroom,
+                                                                Sharjah</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <p class="price poppins-light">$1,000 <span
+                                                                class="text-muted">/month</span></p>
+                                                        <div class="details d-flex  align-items-center gap-5">
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bed.svg"
+                                                                    alt="">
+                                                                2 Bedroom</span>
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bathtub.svg"
+                                                                    alt="">
+                                                                1 Bathroom</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-card card mb-3 p-1 p-md-3">
+                                            <div class="row align-items-center g-0">
+                                                <div
+                                                    class="img-container col-3 d-flex justify-content-center align-items-center">
+                                                    <img class="main-img" src="/images/homePage/available_roomate/1.jpg"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-9 p-md-3">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Ali Saebe</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="details d-flex justify-content-between align-items-center">
+                                                            <p class="poppins-light">Hi there, I'm looking for
+                                                                apartment! I prefer it to be
+                                                                sunny.</p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Overlooked Tab -->
+                                    <div class="tab-pane fade" id="overlooked" role="tabpanel"
+                                        aria-labelledby="overlooked-tab">
+                                        <div class="card mb-3 p-3">
+                                            <div class="row p-md-0">
+                                                <div class="col-4 col-md-3">
+                                                    <img class="main-img" src="/images/homePage/select-room/room_1.png"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-8 col-md-9 d-flex align-items-center p-md-3">
+                                                    <div class="card-body d-flex flex-column gap-md-3">
+                                                        <div
+                                                            class="d-md-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Shared bedroom,
+                                                                Sharjah</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <p class="price poppins-light">$1,000 <span
+                                                                class="text-muted">/month</span></p>
+                                                        <div class="details d-flex  align-items-center gap-5">
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bed.svg"
+                                                                    alt="">
+                                                                2 Bedroom</span>
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bathtub.svg"
+                                                                    alt="">
+                                                                1 Bathroom</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-card card mb-3 p-1 p-md-3">
+                                            <div class="row g-0">
+                                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                                    <img class="main-img" src="/images/homePage/available_roomate/1.jpg"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-9 p-md-3">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Ali Saebe</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="details d-flex justify-content-between align-items-center">
+                                                            <p class="poppins-light">Hi there, I'm looking for
+                                                                apartment! I prefer it to be
+                                                                sunny.</p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
                         <!-- Messages Dropdown -->
@@ -97,7 +323,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/images/website icon/home/navbar/messages.svg" alt="Messages Icon">
                             </a>
-                            <div class="dropdown-menu custom-dropdown  dropdown-menu-end px-4  pb-2 pt-3"
+                            <div class="dropdown-menu custom-dropdown messages-dropdown  dropdown-menu-end px-4  pb-2 pt-3"
                                 aria-labelledby="messagesDropdown">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="poppins-medium messages-heading">Chats</span>
@@ -526,7 +752,7 @@
 
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/screens/Home/myProfile.html">
                                 <img src="/images/website icon/home/navbar/userPhoto.svg" alt="User Photo">
                             </a>
                         </li>

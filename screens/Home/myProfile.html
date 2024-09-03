@@ -3,25 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Profile Page</title>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/font.css">
     <link rel="stylesheet" href="../../css/indexStyle/navbar.css">
     <link rel="stylesheet" href="../../css/indexStyle/footer.css">
     <link rel="stylesheet" href="../../css/homeStyle/home.css">
-    <style>
-       
-    </style>
-    <title>RoomyCo</title>
+    <link rel="stylesheet" href="/css/profileStyle/profile.css">
+    <link rel="stylesheet" href="/css/profileStyle/photoGrid.css">
 </head>
 
 <body>
@@ -49,10 +43,236 @@
 
                     <!-- Right-aligned Icons -->
                     <div class="ms-lg-auto d-flex align-items-center justify-content-center">
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item dropdown me-3">
+                            <a class="nav-link position-relative" href="#" role="button" id="favoriteDropdown"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                 <img src="/images/website icon/home/navbar/heart.svg" alt="Heart Icon">
                             </a>
+                            <div class="dropdown-menu favourite-dropdown custom-dropdown dropdown-menu-end px-5 my-4 mx-0 "
+                                data-bs-popper="static">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="poppins-bold notifictions-heading">My favourite</span>
+                                    <button class="btn heading-button">
+                                        <img src="/images/website icon/home/navbar/three_dots.svg" alt="">
+                                    </button>
+                                </div>
+
+                                <!-- Nav Pills for Tabs -->
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button id="favorite-tab" data-bs-toggle="pill" data-bs-target="#favorite"
+                                            type="button" role="tab" aria-controls="favorite" aria-selected="true"
+                                            class="nav-link poppins-medium active">Favorite</button>
+                                    </li>
+                                    <li class="nav-item " role="presentation">
+                                        <button id="overlooked-tab" data-bs-toggle="pill" data-bs-target="#overlooked"
+                                            type="button" role="tab" aria-controls="overlooked" aria-selected="false"
+                                            class="nav-link poppins-medium" tabindex="-1">Overlooked</button>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="pills-tabContent">
+                                    <!-- Favorite Tab -->
+                                    <div class="tab-pane fade active show" id="favorite" role="tabpanel"
+                                        aria-labelledby="favorite-tab">
+                                        <div class="card mb-3 p-3">
+                                            <div class="row p-md-0">
+                                                <div class="col-4 col-md-3">
+                                                    <img class="main-img" src="/images/homePage/select-room/room_1.png"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-8 col-md-9 d-flex align-items-center p-md-3">
+                                                    <div class="card-body d-flex flex-column gap-md-3">
+                                                        <div
+                                                            class="d-md-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Shared bedroom,
+                                                                Sharjah</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <p class="price poppins-light">$1,000 <span
+                                                                class="text-muted">/month</span></p>
+                                                        <div class="details d-flex  align-items-center gap-5">
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bed.svg"
+                                                                    alt="">
+                                                                2 Bedroom</span>
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bathtub.svg"
+                                                                    alt="">
+                                                                1 Bathroom</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-card card mb-3 p-1 p-md-3">
+                                            <div class="row align-items-center g-0">
+                                                <div
+                                                    class="img-container col-3 d-flex justify-content-center align-items-center">
+                                                    <img class="main-img" src="/images/homePage/available_roomate/2.jpg"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-9 p-md-3">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Raneem Doghouz</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="details d-flex justify-content-between align-items-center">
+                                                            <p class="poppins-light">Hi there, I'm looking for
+                                                                apartment! I prefer it to be
+                                                                sunny.</p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Overlooked Tab -->
+                                    <div class="tab-pane fade" id="overlooked" role="tabpanel"
+                                        aria-labelledby="overlooked-tab">
+                                        <div class="card mb-3 p-3">
+                                            <div class="row p-md-0">
+                                                <div class="col-4 col-md-3">
+                                                    <img class="main-img" src="/images/homePage/select-room/room_1.png"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-8 col-md-9 d-flex align-items-center p-md-3">
+                                                    <div class="card-body d-flex flex-column gap-md-3">
+                                                        <div
+                                                            class="d-md-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Shared bedroom,
+                                                                Sharjah</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <p class="price poppins-light">$1,000 <span
+                                                                class="text-muted">/month</span></p>
+                                                        <div class="details d-flex  align-items-center gap-5">
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bed.svg"
+                                                                    alt="">
+                                                                2 Bedroom</span>
+                                                            <span>
+
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/body/recommendation/bathtub.svg"
+                                                                    alt="">
+                                                                1 Bathroom</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-card card mb-3 p-1 p-md-3">
+                                            <div class="row g-0">
+                                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                                    <img class="main-img" src="/images/homePage/available_roomate/2.jpg"
+                                                        alt="Room Image">
+                                                </div>
+                                                <div class="col-9 p-md-3">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <h5 class="card-title poppins-medium">Raneem Doghouz</h5>
+                                                            <div class="rating">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/full-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/half-star.svg"
+                                                                    alt="">
+                                                                <img class="logo-img"
+                                                                    src="/images/website icon/home/navbar/empty-star.svg"
+                                                                    alt="">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="details d-flex justify-content-between align-items-center">
+                                                            <p class="poppins-light">Hi there, I'm looking for
+                                                                apartment! I prefer it to be
+                                                                sunny.</p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
                         <!-- Messages Dropdown -->
@@ -61,7 +281,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/images/website icon/home/navbar/messages.svg" alt="Messages Icon">
                             </a>
-                            <div class="dropdown-menu custom-dropdown  dropdown-menu-end px-4  pb-2 pt-3"
+                            <div class="dropdown-menu custom-dropdown messages-dropdown  dropdown-menu-end px-4  pb-2 pt-3"
                                 aria-labelledby="messagesDropdown">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="poppins-medium messages-heading">Chats</span>
@@ -83,12 +303,12 @@
                                     <a href="#"
                                         class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
                                         <div class="person-image me-md-2 me-4">
-                                            <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                            <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
                                                 class="rounded-circle">
                                         </div>
                                         <div class="w-75">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                <h6 class="person-name poppins-medium">Raneem Doghouz</h6>
                                                 <img class="online-icon"
                                                     src="/images/website icon/home/navbar/blue_circle.svg">
                                             </div>
@@ -156,11 +376,11 @@
                         </li>
 
                         <li class="nav-item dropdown me-3">
-                            <a class="nav-link position-relative show" href="#" data-bs-toggle="dropdown"
+                            <a class="nav-link position-relative " href="#" data-bs-toggle="dropdown"
                                 aria-expanded="true">
                                 <img src="/images/website icon/home/navbar/bell.svg" alt="Notifications Icon">
                             </a>
-                            <div class="dropdown-menu custom-dropdown notifications-dropdown dropdown-menu-end px-4 pb-2 pt-3 show"
+                            <div class="dropdown-menu custom-dropdown notifications-dropdown dropdown-menu-end px-4 pb-2 pt-3 "
                                 aria-labelledby="messagesDropdown" data-bs-popper="static">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="poppins-bold notifictions-heading">Notifications</span>
@@ -189,12 +409,12 @@
                                         <a href="#"
                                             class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
                                             <div class="person-image me-md-2 me-4">
-                                                <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
                                                     class="rounded-circle">
                                             </div>
                                             <div class="w-75">
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                    <h6 class="person-name poppins-medium">Raneem Doghouz</h6>
                                                     <img class="online-icon"
                                                         src="/images/website icon/home/navbar/blue_circle.svg">
                                                 </div>
@@ -271,12 +491,12 @@
                                         <a href="#"
                                             class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
                                             <div class="person-image me-md-2 me-4">
-                                                <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
                                                     class="rounded-circle">
                                             </div>
                                             <div class="w-75">
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                    <h6 class="person-name poppins-medium">Raneem Doghouz</h6>
                                                     <img class="online-icon"
                                                         src="/images/website icon/home/navbar/blue_circle.svg">
                                                 </div>
@@ -353,12 +573,12 @@
                                         <a href="#"
                                             class="message off-line list-group-item list-group-item-action p-3 px-0 d-flex align-items-start">
                                             <div class="person-image me-md-2 me-4">
-                                                <img src="/images/homePage/available_roomate/1.jpg" alt="Bana Dogo"
+                                                <img src="/images/homePage/available_roomate/2.jpg" alt="Bana Dogo"
                                                     class="rounded-circle">
                                             </div>
                                             <div class="w-75">
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <h6 class="person-name poppins-medium">Ali Saebe</h6>
+                                                    <h6 class="person-name poppins-medium">Raneem Doghouz</h6>
                                                     <img class="online-icon"
                                                         src="/images/website icon/home/navbar/blue_circle.svg">
                                                 </div>
@@ -490,7 +710,7 @@
 
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/screens/Home/myProfile.html">
                                 <img src="/images/website icon/home/navbar/userPhoto.svg" alt="User Photo">
                             </a>
                         </li>
@@ -511,186 +731,184 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- Footer -->
-    <footer class="footer mt-5 pt-5 bg-dark">
-        <div class="container-fluid px-5">
-            <div class="row">
-
-                <div class="col-lg-4 col-md-6 mb-4 socials">
-                    <div>
-                        <img class="footer-logo me-2" src="../../images/website icon/home/navbar/nav-logo.svg" alt="">
-                        <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span></h5>
-
+    <main class="container-fluid">
+        <!-- Profile Info Section -->
+        <div class="header-section row mb-3 gap-5">
+            <div class="col-3">
+                <img src="/images/homePage/available_roomate/2.jpg" alt="Profile Image"
+                    class="profile-img align-self-start">
+            </div>
+            <div class=" col-8     p-0">
+                <div class="d-flex  nav-links flex-row">
+                    <div
+                        class=" d-flex align-items-center justify-content-center text-center p-3 px-4 link link-active">
+                        <a href="#" class="text-decoration-none ">About</a>
                     </div>
-                    <p>Find your preferred room and <br> choose a roommate who agree.</p>
-                    <ul class="list-inline">
-                        <li class="list-inline-item ">
-                            <a href="#">
-
-                                <img src="/images/website icon/home/footer/instagram.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5"><a href="#">
-
-                                <img src="/images/website icon/home/footer/facebook.svg" alt="">
-
-
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5"><a href="#">
-
-                                <img src="/images/website icon/home/footer/twitter.svg" alt="">
-
-
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5">
-                            <a href="#">
-
-                                <img src="/images/website icon/home/footer/tiktok.svg" alt="">
-
-
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5">
-                            <a href="#">
-
-                                <img src="/images/website icon/home/footer/whatsapp.svg" alt="">
-
-
-                            </a>
-                        </li>
-                    </ul>
-                    <p><a href="https://www.Romm.com" class=" text-decoration-none">www.Romm.com</a></p>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 Policies d-flex  justify-content-lg-center ">
-                    <div>
-                        <h5>Terms & policies</h5>
-                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <a href="#" class=" text-decoration-none">Terms of Service</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="#" class=" text-decoration-none">Privacy Policy</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="#" class=" text-decoration-none">Cookie Policy</a>
-                            </li>
-                        </ul>
+                    <div class="d-flex align-items-center justify-content-center text-center p-3 px-4 link">
+                        <a href="#" class="text-decoration-none ">Contact info</a>
                     </div>
-                </div>
-
-
-                <div
-                    class="col-lg-4 col-md-12 Contact d-flex justify-content-lg-end align-items-lg-start justify-content-lg-center">
-                    <div>
-                        <h5>Contact</h5>
-                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
-
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-
-                                <img class="me-3" src="/images/website icon/home/footer/envelope.svg" alt="">
-
-                                <a href="mailto:roomyco@room.com" class=" text-decoration-none">roomyco@room.com</a>
-                            </li>
-                            <li class="mb-3">
-
-                                <img class="me-3" src="/images/website icon/home/footer/telephone.svg" alt="">
-
-                                <a href="tel:+971586834566" class=" text-decoration-none">+971 586 834 566</a>
-                            </li>
-                            <li class="mb-3">
-                                <img class="me-3" src="/images/website icon/home/footer/location.svg" alt="">
-
-                                <span>Emirates</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class=" ">
-                    <div class="rights col-12 text-center p-4">
-                        <p>All rights are save 2024 by company.com</p>
+                    <div class="d-flex align-items-center justify-content-center text-center p-3 px-4 link">
+                        <a href="#" class="text-decoration-none ">Advertisements</a>
                     </div>
                 </div>
             </div>
-    </footer>
-    <!-- popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        </div>
+        <div class="row">
+            <div
+                class="profile-section col-md-3 d-flex flex-column justify-content-start align-items-center gap-4 p-0 ps-3">
+                <div
+                    class="profile-header d-flex flex-column justify-content-start align-items-start text-start gap-3 p-0">
+                    <div class="d-flex flex-row justify-content-between profile-header-info w-100">
+                        <h3 class="profile-name p-0 m-0 d-flex poppins-medium">Raneem Doghouz</h3>
+                        <div class="rating poppins-medium d-flex align-items-center gap-2">
+                            4.5
+                            <img src="/images/website icon/profile/star.svg" alt="">
+                        </div>
+                    </div>
+                    <p class="nationality poppins-light m-0">Egyptian</p>
+                    <p class="personal-introduction poppins-light m-0">Hi there, I am mouhmmad. I recently moved to Dubai
+                        for
+                        working and looking for a roommate
+                    </p>
+                </div>
+                <div class="profile-actions justify-content-center row  gap-4 poppins-medium w-100">
+                    <a href="#" class="btn btn-primary p-3">Edit Profile Info</a>
+                    <a href="#" class="btn btn-outline-primary p-3">Add ad</a>
+                </div>
+                <div class="info-section p-3 d-flex flex-column align-items-start justify-content-center gap-3 w-100">
+                    <h5 class="section-header poppins-medium m-0 text-start ps-3">About</h5>
+                    <div class=" info-list w-100 d-flex flex-column gap-3 p-3">
+                        <div class="info-item d-flex flex-row gap-5">
+                            <img src="/images/website icon/profile/location.svg">
+                            Dubai, Al Aweer
+                        </div>
+                        <div class="info-item d-flex flex-row gap-5">
+                            <img src="/images/website icon/profile/person.svg">
+                            Male
+                        </div>
+                        <div class="info-item d-flex flex-row gap-5">
+                            <img src="/images/website icon/profile/cake.svg">
+                            June 3, 1993
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section w-100">
+                    <h5 class="section-header poppins-medium">Contact</h5>
+                    <ul class="list-unstyled contact-list d-flex flex-column gap-3 contact-info poppins-light">
+                        <li class="info-item d-flex gap-4">
+                            <img src="/images/website icon/profile/envelope.svg">
+                            mouhmmad-kl@gmail.com
+                        </li>
+                        <li class="info-item d-flex gap-4">
+                            <img src="/images/website icon/profile/telephone.svg">
+                            +971 586 834 566
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="col-md-9 advertisements-section  d-flex flex-column  gap-3 align-items-start justify-content-start px-5">
+                <div class="head ">
+                    <h5 class="heading text-start  poppins-medium m-0 p-0">mouhmmad's Advertisements</h5>
+                </div>
+                <div class="d-flex ads justify-content-between w-100">
+                    <div class="advertisement-card col-5 d-flex flex-column gap-3">
+                        <div class="profile-header d-flex justify-content-between align-items-center">
+                            <div class="profile-info d-flex align-items-center">
+                                <img src="/images/homePage/available_roomate/2.jpg" alt="Profile Image"
+                                    class="profile-image">
+                                <strong class="profile-name">Raneem Doghouz</strong>
+                            </div>
+                            <button class="btn action-button">
+                                <img src="/images/website icon/profile/vertical-dots.svg" alt="More Options"
+                                    class="icon">
+                            </button>
+                        </div>
+                        <div class="photo-grid img-card-body" id="photo-grid">
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_2.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_3.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_4.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_5.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <!-- Carousel for hidden images -->
+                        <div id="carousel" class="carousel">
+                            <div class="carousel-inner" id="carousel-inner"></div>
+                            <span class="carousel-close">&times;</span>
+                        </div>
+                        <p class="m-0">Hi there, I have an apartment and I'm looking for a roommate!</p>
+                        <small class="text-muted">Dubai, Al Aweer</small>
+                        <div class="card-btn-group row poppins-light">
+                            <a href="#" class="btn btn-sm col-6">
+                                <img src="/images/website icon/profile/heart.svg" alt="">
+                                Favorite
+                            </a>
+                            <a href="#" class="btn  btn-sm col-6">
+                                <img src="/images/website icon/profile/messages.svg" alt="">
+                                Message</a>
+                        </div>
+                    </div>
+                    <div class="advertisement-card col-5 d-flex flex-column gap-3">
+                        <div class="profile-header d-flex justify-content-between align-items-center">
+                            <div class="profile-info d-flex align-items-center">
+                                <img src="/images/homePage/available_roomate/2.jpg" alt="Profile Image"
+                                    class="profile-image">
+                                <strong class="profile-name">Raneem Doghouz</strong>
+                            </div>
+                            <button class="btn action-button">
+                                <img src="/images/website icon/profile/vertical-dots.svg" alt="More Options"
+                                    class="icon">
+                            </button>
+                        </div>
+                        <div class="photo-grid img-card-body" id="photo-grid">
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_5.jpg" alt="Image 1">
+                            </div>
 
-    <!-- BootStrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!-- JQuery JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- BG Carousel JS -->
-    <script src="/js/home/background_carousel.js"> </script>
-    <!-- locationFinder JS -->
-    <script src="/js/home/locationFinder.js"></script>
-    <!-- Explore JS -->
-    <script src="/js/home/explore_carousel.js"></script>
-    <script src="/js/home/recomendation_carousel.js"></script>
-    <script src="/js/home/duplicate_room_card.js"></script>
-    <script>
-        function getImageNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        document.addEventListener('DOMContentLoaded', function () {
-            const swiperWrapper = document.querySelector('.rommate-swiper .swiper-wrapper');
-            const cardTemplate = document.querySelector('.rommate-swiper .swiper-wrapper .card');
+                        </div>
+                        <!-- Carousel for hidden images -->
+                        <div id="carousel" class="carousel">
+                            <div class="carousel-inner" id="carousel-inner"></div>
+                            <span class="carousel-close">&times;</span>
+                        </div>
+                        <p class="m-0">Hi there, I have an apartment and I'm looking for a roommate!</p>
+                        <small class="text-muted">Dubai, Al Aweer</small>
+                        <div class="card-btn-group row poppins-light">
+                            <a href="#" class="btn btn-sm col-6">
+                                <img src="/images/website icon/profile/heart.svg" alt="">
+                                Favorite
+                            </a>
+                            <a href="#" class="btn  btn-sm col-6">
+                                <img src="/images/website icon/profile/messages.svg" alt="">
+                                Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-            for (let i = 1; i <= 20; i++) {
-                // Clone the card element
-                const cardClone = cardTemplate.cloneNode(true);
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Code injected-->
 
-                // Change the background image based on the loop index
-                const imageDiv = cardClone.querySelector('.image');
-                imageDiv.style.backgroundImage = `url(/images/homePage/available_roomate/${getImageNumber(1, 5)}.jpg)`;
-
-                // Append the clone to the swiper-wrapper
-                swiperWrapper.appendChild(cardClone);
-            }
-
-            var swiper = new Swiper(".rommate-swiper", {
-                slidesPerView: "auto",
-                centeredSlides: false,
-                spaceBetween: 30,
-                slidesOffsetAfter: 0,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    // when window width is <= 768px
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    // when window width is > 768px and <= 1024px
-                    1024: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    // when window width is > 1024px
-                    1200: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                },
-            });
-
-        });
-
+    <script src="/js/Profile/photoGrid.js">
     </script>
-    <script src="/js/home/responsiveRommateCardToggle.js"></script>
 </body>
 
 </html>

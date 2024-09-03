@@ -1,0 +1,130 @@
+.header-section {
+    margin-top: 20vh;
+}
+
+body {
+    background: linear-gradient(to bottom, #F2EACC, #8C8776) !important;
+}
+
+main {
+    background: linear-gradient(to bottom, #F8F4DB, #FFFFFE) !important;
+}
+
+.header-section .profile-header {
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.header-section .profile-img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-top: -60px;
+}
+
+.profile-section .profile-name {
+    font-size: 24px;
+}
+
+.profile-section .profile-rating {
+    font-size: 16px;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.profile-section .nationality {
+    font-size: 16px;
+    color: #707070;
+}
+
+.profile-section .personal-introduction {
+    font-size: 16px;
+    color: #707070;
+}
+
+.profile-section .profile-actions .btn {
+    border-radius: 20px;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.nav-links {
+    border-bottom: 1px solid #DAD6C8;
+}
+
+.nav-links .link {
+    border-bottom: 1px solid #000;
+}
+
+.nav-links .link a {
+    color: #161720;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.nav-links .link-active a {
+    font-weight: 500;
+}
+
+.profile-section .info-section {
+    border: 1px solid rgba(218, 214, 200, 1);
+    border-radius: 20px;
+}
+
+.profile-section .contact-list {
+    font-size: 16px;
+    color: #292C2D;
+}
+
+.advertisements-section .heading {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.advertisements-section .advertisement-card {
+
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 249, 1);
+    width: 440px;
+    height: 472px;
+}
+
+
+
+.advertisements-section .profile-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.advertisements-section .profile-info .card-btn-group {
+    margin-left: auto;
+}
+
+.advertisements-section .card-btn-group {
+    border-top: 1px solid rgba(234, 234, 234, 1);
+
+}
+
+.advertisements-section .card-btn-group a {
+    font-size: 16px !important;
+    color: #035781 !important;
+}
+
+.advertisements-section .card-btn-group a:first-child {
+
+    border-right: 1px solid rgb(234, 234, 234);
+
+}

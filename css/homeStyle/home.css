@@ -23,7 +23,6 @@ body {
 
 nav .custom-dropdown,
 nav .account-dropdown {
-    transform    : translateX(50%);
     border-radius: 15px;
     box-shadow   : 0 5px 15px rgba(0, 0, 0, 0.1);
     padding      : 1rem;
@@ -116,10 +115,7 @@ nav .custom-dropdown .heading-button {
     padding         : 0;
 }
 
-/* Offline status icon adjustments */
-nav .custom-dropdown .off-line .online-icon {
-    /* Custom styles for offline icons can be added here */
-}
+
 
 /* Rounded Scrollbar Styling */
 nav .custom-dropdown .list-group::-webkit-scrollbar {
@@ -148,56 +144,22 @@ nav .custom-dropdown .list-group::-webkit-scrollbar-thumb:hover {
     /* Darker color on hover */
 }
 
-
-
-/* Centered for larger screens */
-@media (max-width: 992px) {
-    .dropdown-menu-end[data-bs-popper] {
-        left     : 50% !important;
-        right    : 0;
-        transform: translateX(-40%);
-    }
-
-    nav .custom-dropdown {
-        position: absolute !important;
-    }
+nav .custom-dropdown,
+nav .dropdown-menu {
+    position: absolute !important;
 }
 
 
 
-/* Adjustments for small screens */
-@media (max-width: 767px) {
-
-    nav .custom-dropdown,
-    .account-dropdown {
-        position: absolute;
-        width   : 90vw;
-        /* Almost full width on small screens */
-        padding : 0.5rem;
-    }
-
-    nav .custom-dropdown .person-image {
-        width : 50px;
-        height: 50px;
-    }
-
-    nav .custom-dropdown .person-name {
-        font-size: 16px;
-    }
-
-    nav .custom-dropdown .message-text,
-    nav .custom-dropdown .message-time {
-        font-size: 14px;
-    }
-}
 
 /* end messages dropdown Styling */
 /* start notifications dropdown Styling */
-nav .notifications-dropdown .btn.active {
-    border-radius   : 15px;
-    color           : #2387C2;
-    background-color: rgba(35, 135, 194, 0.25);
-    border          : none;
+nav .notifications-dropdown .btn.active,
+nav .favourite-dropdown .nav-pills button.active {
+    border-radius   : 15px !important;
+    color           : #2387C2 !important;
+    background-color: rgba(35, 135, 194, 0.25) !important;
+    border          : none !important;
 }
 
 nav .notifications-dropdown .list-heading {
@@ -231,7 +193,6 @@ nav .account-dropdown .account-type-container {
     border-radius   : 10px;
 }
 
-nav .account-dropdown .account-type-container .account-type-heading {}
 
 nav .account-dropdown .account-type-container .account-type-heading h5 {
     font-size: 16px;
@@ -254,6 +215,104 @@ nav .account-dropdown .settings {
     height: 30vh;
 }
 
+/* end account sdropdown styling */
+
+/* start favourite dropdown styling */
+nav .favourite-dropdown {
+    background-color: white;
+    max-width       : none !important;
+
+}
+
+/* Ensure the tab content area is scrollable */
+.favourite-dropdown .tab-content {
+    max-height: 400px;
+    /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+
+
+nav .favourite-dropdown .card {
+    border          : none;
+    border-radius   : 15px;
+    background-color: #F2EACC;
+}
+
+nav .favourite-dropdown .card .card-body {
+    padding: 15px;
+}
+
+nav .favourite-dropdown .card img.main-img {
+    border-radius: 10px;
+    width        : 100%;
+    height       : 100%;
+    object-fit   : cover;
+}
+
+nav .favourite-dropdown .card .rating img.logo-img {
+    width : 18px;
+    height: 18px;
+}
+
+nav .favourite-dropdown .card .details img.logo-img {
+    width : 25px;
+    height: 25px;
+}
+
+nav .favourite-dropdown .card .card-title {
+    font-size: 20px;
+}
+
+nav .favourite-dropdown .card .price {
+    font-size: 16px;
+}
+
+nav .favourite-dropdown .card .details {
+    font-size: 16px;
+    color    : #292C2D;
+}
+
+nav .favourite-dropdown .card.profile-card img.main-img {
+    border-radius: 50%;
+    height       : 150px;
+    width        : 150px;
+    object-fit   : cover;
+}
+
+@media (max-width: 992px) {
+    .dropdown-menu {
+        transform: translateX(70%);
+    }
+}
+
+@media (max-width: 992px) {
+    nav .favourite-dropdown.dropdown-menu-end[data-bs-popper] {
+        width: 90vw !important;
+    }
+
+    .favourite-dropdown {
+        /* left : 50% !important;
+        right: 0 !important; */
+        width: 90vw !important;
+    }
+
+    nav .favourite-dropdown .card img.main-img {
+        border-radius: 10px;
+        width        : 100%;
+        height       : 100%;
+        object-fit   : fill;
+    }
+
+    nav .favourite-dropdown .card.profile-card img.main-img {
+        border-radius: 89%;
+        height       : 100px;
+        width        : 100px;
+        object-fit   : cover;
+    }
+}
+
+/* end favourite dropdown styling */
 /* Rotating Arrows around the Image */
 .account-type {
     position: relative;
@@ -291,15 +350,7 @@ nav .account-dropdown .settings {
     transform: scale(-1, 1) translateY(30%);
 }
 
-@media (max-width: 992px) {
 
-    nav .custom-dropdown,
-    .account-dropdown {
-        width    : 80vh !important;
-        position : absolute !important;
-        transform: translateX(-50%) !important;
-    }
-}
 
 /* NavBar Styling End */
 
@@ -523,7 +574,7 @@ nav .account-dropdown .settings {
     position        : relative;
     transition      : transform 0.3s ease-in-out;
     margin-right    : 65px;
-    text-decoration: none;
+    text-decoration : none;
 }
 
 .room-card:hover {

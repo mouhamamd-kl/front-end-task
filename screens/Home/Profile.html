@@ -3,24 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Profile Page</title>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/font.css">
     <link rel="stylesheet" href="../../css/indexStyle/navbar.css">
     <link rel="stylesheet" href="../../css/indexStyle/footer.css">
     <link rel="stylesheet" href="../../css/homeStyle/home.css">
-    <link rel="stylesheet" href="/css/AdDetailsStyle/AdDetails.css">
-    <title>RoomyCo</title>
-
+    <link rel="stylesheet" href="/css/profileStyle/profile.css">
+    <link rel="stylesheet" href="/css/profileStyle/photoGrid.css">
 </head>
 
 <body>
@@ -736,300 +731,193 @@
             </div>
         </div>
     </nav>
-
-    <main>
-        <div class="container-fluid mt-3">
-            <div class="row mx-0 ms-4">
-                <div class="room-specifications col-md-8 ">
+    <main class="container-fluid">
+        <!-- Profile Info Section -->
+        <div class="header-section row mb-3 gap-5">
+            <div class="col-3">
+                <img src="/images/homePage/available_roomate/1.jpg" alt="Profile Image"
+                    class="profile-img align-self-start">
+            </div>
+            <div class=" col-8     p-0">
+                <div class="d-flex  nav-links flex-row">
                     <div
-                        class="swiper room-swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
-                        <div class="swiper-wrapper">
-                            <div
-                                class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active">
-                                <img src="/images/homePage/select-room/room_1.png" alt="Room image"
-                                    class="img-fluid room-image">
-                            </div>
-                            <div class="swiper-slide swiper-slide-next">
-                                <img src="/images/homePage/select-room/room_2.png" alt="Room image"
-                                    class="img-fluid room-image">
-                            </div>
-                            <div class=" swiper-slide">
-                                <img src="/images/homePage/select-room/room_3.png" alt="Room image"
-                                    class="img-fluid room-image">
-                            </div>
-                            <div class=" swiper-slide">
-                                <img src="/images/homePage/select-room/room_4.png" alt="Room image"
-                                    class="img-fluid room-image">
-                            </div>
-                        </div>
-                        <div class="recomendation-btn-next swiper-button-next" role="button">
-                            <img src="/images/website icon/home/body/ArrowCard.svg" alt="">
-                        </div>
-                        <div class="recomendation-btn-prev swiper-button-prev" " role=" button">
-                            <img src="/images/website icon/home/body/ArrowCardReversed.svg" alt="">
-                        </div>
-                        <span class="swiper-notification"></span>
-                        <span class="swiper-notification"></span>
+                        class=" d-flex align-items-center justify-content-center text-center p-3 px-4 link link-active">
+                        <a href="#" class="text-decoration-none ">About</a>
                     </div>
-                    <div class="room-details d-flex flex-column gap-3">
-                        <div class="listing-header py-4 d-flex flex-column align-items-start">
-                            <h1 class="poppins-bold">Hi there, I have apartment!</h1>
-                            <div class="rating">
-                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
-                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
-                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
-                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
-                                <img src="/images/website icon/home/body/recommendation/half_start.svg">
-                            </div>
+                    <div class="d-flex align-items-center justify-content-center text-center p-3 px-4 link">
+                        <a href="#" class="text-decoration-none ">Contact info</a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center text-center p-3 px-4 link">
+                        <a href="#" class="text-decoration-none ">Advertisements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div
+                class="profile-section col-md-3 d-flex flex-column justify-content-start align-items-center gap-4 p-0 ps-3">
+                <div
+                    class="profile-header d-flex flex-column justify-content-start align-items-start text-start gap-3 p-0">
+                    <div class="d-flex flex-row justify-content-between profile-header-info w-100">
+                        <h3 class="profile-name p-0 m-0 d-flex poppins-medium">Ali Saebe</h3>
+                        <div class="rating poppins-medium d-flex align-items-center gap-2">
+                            4.5
+                            <img src="/images/website icon/profile/star.svg" alt="">
                         </div>
-                        <div class="property-overview py-4 d-flex flex-row justify-content-between">
-                            <div
-                                class="property col-md-4 d-flex flex-row align-items-center justify-content-start gap-4">
-                                <img src="/images/website icon/AdListing/bed.svg" alt="">
-                                <p class="poppins-light">2 Bed room</p>
-                            </div>
-                            <div
-                                class="property col-md-4 d-flex flex-row  align-items-center justify-content-center gap-4">
-                                <img src="/images/website icon/AdListing/bathtub.svg" alt="">
-                                <p class="poppins-light">1 Bathroom</p>
-                            </div>
-                            <div
-                                class="property col-md-4 d-flex flex-row align-items-center justify-content-center gap-4">
-                                <img src="/images/website icon/AdListing/buildings.svg" alt="">
-                                <p class="poppins-light">Apartment</p>
-                            </div>
+                    </div>
+                    <p class="nationality poppins-light m-0">Egyptian</p>
+                    <p class="personal-introduction poppins-light m-0">Hi there, I am Raneem. I recently moved to Dubai
+                        for
+                        working and looking for a roommate
+                    </p>
+                </div>
+                <div class="profile-actions justify-content-center row  gap-4 poppins-medium w-100">
+                    <button href="#" class="btn btn-primary p-3">Send message</button>
+                    <button href="#" class="btn btn-outline-primary p-3" id="followButton">Follow request</button>
+                </div>
+                <div class="info-section p-3 d-flex flex-column align-items-start justify-content-center gap-3 w-100">
+                    <h5 class="section-header poppins-medium m-0 text-start ps-3">About</h5>
+                    <div class=" info-list w-100 d-flex flex-column gap-3 p-3">
+                        <div class="info-item d-flex flex-row gap-5">
+                            <img src="/images/website icon/profile/location.svg">
+                            Dubai, Al Aweer
                         </div>
-                        <div class="availability-budget row">
-                            <div class="section-title poppins-medium">Availability and Budget</div>
-                            <div class="col-md-6">
-                                <p>
-                                    <strong class="d-block poppins-light">Rent:</strong>
-                                    $1,000 / month
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <p>
-                                    <strong class="d-block poppins-light">Availability:</strong>
-                                    1st August
-                                </p>
-                            </div>
+                        <div class="info-item d-flex flex-row gap-5">
+                            <img src="/images/website icon/profile/person.svg">
+                            Male
                         </div>
-                        <div class="map d-flex flex-column gap-4">
-                            <div class="section-title poppins-medium'">Location</div>
-                            <p class="location poppins-light">Al Jazzat, Al Sharjah</p>
-                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
-                                marginwidth="0"
-                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                                    href="https://www.gps.ie/">gps systems</a></iframe>
-                        </div>
-                        <div class="amenities d-flex flex-column gap-3 py-3">
-                            <div class="section-title">Amenities</div>
-                            <div class="row amenities-icons">
-                                <div
-                                    class="col-md-4 col-4 d-flex flex-row text-start justify-content-start align-items-center gap-md-4">
-                                    <img src="/images/website icon/AdListing/router.svg" alt="">
-                                    <p> Wi-Fi</p>
-                                </div>
-                                <div
-                                    class="col-md-4 col-4 d-flex flex-row text-center justify-content-center align-items-md-center gap-md-4">
-                                    <img src="/images/website icon/AdListing/p-circle.svg" alt="">
-                                    <p>Parking</p>
-                                </div>
-                                <div
-                                    class="col-md-4 col-4 d-flex flex-row text-center justify-content-center align-items-md-center gap-md-4">
-                                    <img src="/images/website icon/AdListing/display.svg" alt="">
-                                    <p>
-                                        Television
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="suitable">
-                            <div class="section-title">Suitable for</div>
-                            <div class="row suitable-icons py-3">
-                                <div
-                                    class="col-md-4 col-3 d-flex flex-row justify-content-start align-items-center text-start gap-md-4">
-                                    <img src="/images/website icon/AdListing/person.svg" alt="">
-                                    <p>
-                                        Woman
-                                    </p>
-                                </div>
-                                <div
-                                    class="col-md-4 col-3 d-flex flex-row justify-content-center align-items-center text-center gap-md-4">
-                                    <img src="/images/website icon/AdListing/pawprint.fill.svg" alt="">
-                                    <p> Pet-allowed</p>
-                                </div>
-                                <div
-                                    class="col-md-4 col-3 d-flex flex-row justify-content-center align-items-center text-center gap-md-4">
-                                    <img src="/images/website icon/AdListing/smoking_rooms.svg" alt="">
-                                    <p> Smoking</p>
-                                </div>
-                                <div
-                                    class="col-md-4 col-3 d-flex flex-row justify-content-start align-items-center text-start gap-md-4">
-                                    <img src="/images/website icon/AdListing/folded_hands.svg" alt="">
-                                    <p>Islam</p>
-                                </div>
-                            </div>
+                        <div class="info-item d-flex flex-row gap-5">
+                            <img src="/images/website icon/profile/cake.svg">
+                            June 3, 1993
                         </div>
                     </div>
                 </div>
-                <div class="owner-specifications col-md-4 ps-xl-5 px-md-0 mb-5 mb-lg-0">
-                    <div class="person-card  d-flex flex-column align-items-start gap-4 p-xl-4 p-md-1 py-sm-3 ps-4">
-                        <div class="owner-image d-flex justify-content-center align-items-center gap-2">
-                            <img src="/images/homePage/available_roomate/2.jpg" alt="Rama Kita">
-                            <h3 class="owner-name poppins-medium">Rama Kita</h3>
-                        </div>
-                        <div class="location d-flex justify-content-center align-items-center gap-2 poppins-light">
-                            <h5 class="label poppins-light">Location:</h5>
-                            <div class="d-flex align-items-center gap-2 info">
-                                <img src="/images/website icon/home/footer/location.svg" alt="Location Icon"
-                                    class="location-icon">
-                                <small class="poppins-light">Al Sharjah</small>
+                <div class="contact-section w-100">
+                    <h5 class="section-header poppins-medium">Contact</h5>
+                    <ul class="list-unstyled contact-list d-flex flex-column gap-3 contact-info poppins-light">
+                        <li class="info-item d-flex gap-4">
+                            <img src="/images/website icon/profile/envelope.svg">
+                            Ali.Saebe@gmail.com
+                        </li>
+                        <li class="info-item d-flex gap-4">
+                            <img src="/images/website icon/profile/telephone.svg">
+                            +971 586 834 566
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="col-md-9 advertisements-section  d-flex flex-column  gap-3 align-items-start justify-content-start px-5">
+                <div class="head ">
+                    <h5 class="heading text-start  poppins-medium m-0 p-0">Ali's Advertisements</h5>
+                </div>
+                <div class="d-flex ads justify-content-between w-100">
+                    <div class="advertisement-card col-5 d-flex flex-column gap-3">
+                        <div class="profile-header d-flex justify-content-between align-items-center">
+                            <div class="profile-info d-flex align-items-center">
+                                <img src="/images/homePage/available_roomate/1.jpg" alt="Profile Image"
+                                    class="profile-image">
+                                <strong class="profile-name">Ali Saebe</strong>
                             </div>
-                        </div>
-                        <div class="info dob d-flex justify-content-center align-items-center gap-2">
-                            <h5 class="label poppins-light">Date of Birth:</h5>
-                            <small>25 years old</small>
-                        </div>
-                        <div class="lifestyle  d-flex align-items-center justify-content-center gap-3">
-                            <h5 class="label poppins-light">Life style:</h5>
-                            <div class="tags d-flex poppins-light">
-                                <span class="tag  py-2 px-1">Book lover</span>
-                                <span class="tag py-2 px-1">Photography</span>
-                            </div>
-                        </div>
-                        <div class="description  d-flex justify-content-center align-items-start
-                       text-start">
-                            <p class="">Description
-                                <span class="description-text
-                             ">We have a 2 bedrooms available and 1 bathroom. The department is sunny and have special
-                                    location.
-                                </span>
-                            </p>
-                        </div>
-                        <div class="button-container w-100 d-flex flex-column gap-3 px-2">
-                            <button class="btn btn-primary profile-action-button poppins-medium p-lg-3">Send
-                                message</button>
-                            <button class="btn btn-outline-primary profile-action-button poppins-medium p-lg-3">Follow
-                                request
+                            <button class="btn action-button">
+                                <img src="/images/website icon/profile/vertical-dots.svg" alt="More Options"
+                                    class="icon">
                             </button>
+                        </div>
+                        <div class="photo-grid img-card-body" id="photo-grid">
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_2.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_3.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_4.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_5.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
+                            </div>
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <!-- Carousel for hidden images -->
+                        <div id="carousel" class="carousel">
+                            <div class="carousel-inner" id="carousel-inner"></div>
+                            <span class="carousel-close">&times;</span>
+                        </div>
+                        <p class="m-0">Hi there, I have an apartment and I'm looking for a roommate!</p>
+                        <small class="text-muted">Dubai, Al Aweer</small>
+                        <div class="card-btn-group row poppins-light">
+                            <a href="#" class="btn btn-sm col-6">
+                                <img src="/images/website icon/profile/heart.svg" alt="">
+                                Favorite
+                            </a>
+                            <a href="#" class="btn  btn-sm col-6">
+                                <img src="/images/website icon/profile/messages.svg" alt="">
+                                Message</a>
+                        </div>
+                    </div>
+                    <div class="advertisement-card col-5 d-flex flex-column gap-3">
+                        <div class="profile-header d-flex justify-content-between align-items-center">
+                            <div class="profile-info d-flex align-items-center">
+                                <img src="/images/homePage/available_roomate/1.jpg" alt="Profile Image"
+                                    class="profile-image">
+                                <strong class="profile-name">Ali Saebe</strong>
+                            </div>
+                            <button class="btn action-button">
+                                <img src="/images/website icon/profile/vertical-dots.svg" alt="More Options"
+                                    class="icon">
+                            </button>
+                        </div>
+                        <div class="photo-grid img-card-body" id="photo-grid">
+                            <div class="photo-item">
+                                <img src="/images/homePage/select-room/room_5.jpg" alt="Image 1">
+                            </div>
+
+                        </div>
+                        <!-- Carousel for hidden images -->
+                        <div id="carousel" class="carousel">
+                            <div class="carousel-inner" id="carousel-inner"></div>
+                            <span class="carousel-close">&times;</span>
+                        </div>
+                        <p class="m-0">Hi there, I have an apartment and I'm looking for a roommate!</p>
+                        <small class="text-muted">Dubai, Al Aweer</small>
+                        <div class="card-btn-group row poppins-light">
+                            <a href="#" class="btn btn-sm col-6">
+                                <img src="/images/website icon/profile/heart.svg" alt="">
+                                Favorite
+                            </a>
+                            <a href="#" class="btn  btn-sm col-6">
+                                <img src="/images/website icon/profile/messages.svg" alt="">
+                                Message</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <!-- Footer -->
-    <footer class="footer mt-5 pt-5 bg-dark">
-        <div class="container-fluid px-5">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 socials">
-                    <div>
-                        <img class="footer-logo me-2" src="../../images/website icon/home/navbar/nav-logo.svg" alt="">
-                        <h5 class="text-uppercase poppins-bold">RoomyCo <span class="poppins-light">ROOMMATE</span></h5>
-                    </div>
-                    <p>Find your preferred room and <br> choose a roommate who agree.</p>
-                    <ul class="list-inline">
-                        <li class="list-inline-item ">
-                            <a href="#">
-                                <img src="/images/website icon/home/footer/instagram.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5"><a href="#">
-                                <img src="/images/website icon/home/footer/facebook.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5"><a href="#">
-                                <img src="/images/website icon/home/footer/twitter.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5">
-                            <a href="#">
-                                <img src="/images/website icon/home/footer/tiktok.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="list-inline-item ms-lg-5">
-                            <a href="#">
-                                <img src="/images/website icon/home/footer/whatsapp.svg" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                    <p><a href="https://www.Romm.com" class=" text-decoration-none">www.Romm.com</a></p>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 Policies d-flex  justify-content-lg-center ">
-                    <div>
-                        <h5>Terms & policies</h5>
-                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <a href="#" class=" text-decoration-none">Terms of Service</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="#" class=" text-decoration-none">Privacy Policy</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="#" class=" text-decoration-none">Cookie Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    class="col-lg-4 col-md-12 Contact d-flex justify-content-lg-end align-items-lg-start justify-content-lg-center">
-                    <div>
-                        <h5>Contact</h5>
-                        <img class="img-fluid" src="/images/website icon/home/footer/footer-breaker2.svg" alt="">
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <img class="me-3" src="/images/website icon/home/footer/envelope.svg" alt="">
-                                <a href="mailto:roomyco@room.com" class=" text-decoration-none">roomyco@room.com</a>
-                            </li>
-                            <li class="mb-3">
-                                <img class="me-3" src="/images/website icon/home/footer/telephone.svg" alt="">
-                                <a href="tel:+971586834566" class=" text-decoration-none">+971 586 834 566</a>
-                            </li>
-                            <li class="mb-3">
-                                <img class="me-3" src="/images/website icon/home/footer/location.svg" alt="">
-                                <span>Emirates</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class=" ">
-                    <div class="rights col-12 text-center p-4">
-                        <p>All rights are save 2024 by company.com</p>
-                    </div>
-                </div>
-            </div>
-    </footer>
 
-    <!-- popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Code injected-->
 
-    <!-- BootStrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!-- JQuery JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- BG Carousel JS -->
+    <script src="/js/Profile/photoGrid.js">
+    </script>
     <script>
-        var swiper = new Swiper(".room-swiper", {
-            loop: true,
-            slidesPerView: 1,
-            centeredSlides: false,
-            spaceBetween: 10,
-            slidesOffsetAfter: 0,
-            effect: 'fade',
-            speed: 1000, // Set the transition speed to 1000ms (1 second)
-
-            navigation: {
-                nextEl: ".recomendation-btn-next",
-                prevEl: ".recomendation-btn-prev",
-            },
-        });
-
+        function toggleFollow() {
+            const followButton = document.getElementById('followButton');
+            if (followButton.innerText === 'Follow request') {
+                followButton.innerText = 'Cancel';
+            } else {
+                followButton.innerText = 'Follow request';
+            }
+        }
     </script>
 </body>
 
