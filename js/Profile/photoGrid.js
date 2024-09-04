@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const viewMoreOverlay = document.createElement('div');
             viewMoreOverlay.classList.add('view-more');
             viewMoreOverlay.innerHTML = `+${photoItems.length - maxVisibleImages}`;
-            viewMoreOverlay.addEventListener('click', () => openCarousel(photoItems, maxVisibleImages));
+            viewMoreOverlay.addEventListener('click', () => openCarousel(photoItems));
             item.appendChild(viewMoreOverlay);
         }
     });
@@ -39,13 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const carouselInner = document.getElementById("carousel-inner");
     const closeBtn = document.getElementsByClassName("carousel-close")[0];
 
-    function openCarousel(photoItems, startFrom) {
+    function openCarousel(photoItems) {
         carouselInner.innerHTML = ''; // Clear any existing images
-        photoItems.forEach((item, index) => {
-            if (index >= startFrom) {
-                const imgClone = item.querySelector('img').cloneNode();
-                carouselInner.appendChild(imgClone);
-            }
+        photoItems.forEach((item) => {
+            const imgClone = item.querySelector('img').cloneNode();
+            carouselInner.appendChild(imgClone);
         });
         carousel.style.display = "flex";
     }
