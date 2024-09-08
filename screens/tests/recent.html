@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Bedroom Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/font.css">
+    <style>
+        /* Custom card styling */
+        .recent-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            color: #fff;
+            background-image: url("/images/homePage/select-room/room_1.png");
+            width: 337px;
+            height: 483px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .recent-card .heart-icon,
+        .recent-card .recent-card-elements,
+        .recent-card .recent-card-bg {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            /* Smooth transition for fading */
+        }
+
+        .recent-card:hover .recent-card-bg {
+            opacity: 0.7;
+        }
+
+        /* Show heart icon and card elements on hover */
+        .recent-card:hover .heart-icon,
+        .recent-card:hover .recent-card-elements {
+            opacity: 1;
+        }
+
+
+
+
+
+        .recent-card .recent-card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #EEEBD3 0%, rgb(41, 44, 45) 48%, rgb(41, 44, 45) 100%);
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+        }
+
+        .recent-card .recent-card-elements {
+            z-index: 1;
+        }
+
+        .recent-card .heart-icon {
+            background-color: #F6F6F6;
+            border-radius: 20px;
+            /*! color: red; */
+        }
+
+        .recent-card .card-title {
+            font-size: 20px !important;
+        }
+
+        /* Price and location styling */
+        .recent-card .price {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+            color: #ffca28;
+        }
+
+        .recent-card .price span {
+            color: #F6F6F6;
+        }
+
+        .recent-card .location {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .recent-card .location i {
+            margin-right: 8px;
+            color: #ffca28;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row mt-5 mx-0 justify-content-evenly">
+        <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+            <div class="position-relative">
+                <!-- Card Image -->
+
+
+                <!-- Heart Icon -->
+                <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                    <img src="/images/website icon/seemore/heart.svg" alt="">
+                </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="recent-card-body text-white d-flex flex-column justify-content-end p-3 position-relative">
+                <div class="recent-card-bg"></div>
+                <div class="recent-card-elements">
+                    <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                        <div class="d-flex flex-row gap-1">
+                            <img src="/images/website icon/seemore/location.svg" alt="">
+                            <p class="location m-0 poppins-light ">
+                                Dubai
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+            <div class="position-relative">
+                <!-- Card Image -->
+
+
+                <!-- Heart Icon -->
+                <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                    <img src="/images/website icon/seemore/heart.svg" alt="">
+                </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="recent-card-body text-white d-flex flex-column justify-content-end p-3 position-relative">
+                <div class="recent-card-bg"></div>
+                <div class="recent-card-elements">
+                    <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                        <div class="d-flex flex-row gap-1">
+                            <img src="/images/website icon/seemore/location.svg" alt="">
+                            <p class="location m-0 poppins-light ">
+                                Dubai
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+            <div class="position-relative">
+                <!-- Card Image -->
+
+
+                <!-- Heart Icon -->
+                <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                    <img src="/images/website icon/seemore/heart.svg" alt="">
+                </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="recent-card-body text-white d-flex flex-column justify-content-end p-3 position-relative">
+                <div class="recent-card-bg"></div>
+                <div class="recent-card-elements">
+                    <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                        <div class="d-flex flex-row gap-1">
+                            <img src="/images/website icon/seemore/location.svg" alt="">
+                            <p class="location m-0 poppins-light ">
+                                Dubai
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.js"></script>
+</body>
+
+</html>

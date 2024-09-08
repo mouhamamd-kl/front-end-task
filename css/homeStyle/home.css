@@ -564,7 +564,7 @@ nav .favourite-dropdown .card.profile-card img.main-img {
     font-size: 20px;
 }
 
-.room-card {
+.recomendation .room-card {
     width           : 275px !important;
     border          : none;
     border-radius   : 15px;
@@ -577,24 +577,24 @@ nav .favourite-dropdown .card.profile-card img.main-img {
     text-decoration : none;
 }
 
-.room-card:hover {
+.recomendation .room-card:hover {
     transform: scale(1.01);
 
 }
 
-.card-img-top {
+.recomendation .card-img-top {
     position: relative;
     overflow: hidden;
 }
 
-.room-card .room-image {
+.recomendation .room-card .room-image {
     width     : 100%;
     height    : auto;
     display   : block;
     transition: opacity 0.3s ease-in-out;
 }
 
-.room-card .room-image-hover {
+.recomendation .room-card .room-image-hover {
     position  : absolute;
     top       : 0;
     left      : 0;
@@ -606,17 +606,17 @@ nav .favourite-dropdown .card.profile-card img.main-img {
 
 }
 
-.room-card:hover .room-image {
+.recomendation .room-card:hover .room-image {
     opacity: 0;
 }
 
-.room-card:hover .room-image-hover {
+.recomendation .room-card:hover .room-image-hover {
     opacity: 1;
     filter : blur(2px);
     /* Slight blur effect */
 }
 
-.heart-icon {
+.recomendation .heart-icon {
     position        : absolute;
     top             : 50%;
     left            : 50%;
@@ -630,53 +630,53 @@ nav .favourite-dropdown .card.profile-card img.main-img {
     border-radius   : 10px;
 }
 
-.room-card:hover .heart-icon {
+.recomendation .room-card:hover .heart-icon {
     opacity: 1;
 }
 
-.card-body {
+.recomendation .card-body {
     padding-top: 25px;
     padding-top: 2px;
 }
 
-.card-title {
+.recomendation .card-title {
     font-size    : 1.25rem;
     margin-bottom: 10px;
     color        : #333;
 }
 
-.price-rating {
+.recomendation .price-rating {
     margin-bottom: 15px;
 }
 
-.price {
+.recomendation .price {
     font-size: 1.5rem;
     color    : #e74c3c;
 }
 
-.month {
+.recomendation .month {
     font-size: 0.875rem;
     color    : #999;
 }
 
-.rating .fa-star {
+.recomendation .rating .fa-star {
     color: #ffd700;
 }
 
-.rating .fa-star.checked {
+.recomendation .rating .fa-star.checked {
     color: #ffd700;
 }
 
-.rating .fa-star:not(.checked) {
+.recomendation .rating .fa-star:not(.checked) {
     color: #ccc;
 }
 
-.details {
+.recomendation .details {
     font-size: 0.875rem;
     color    : #666;
 }
 
-.details i {
+.recomendation .details i {
     margin-right: 5px;
     color       : #333;
 }

@@ -7,14 +7,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/libs/Bootstrap/bootstrap.min.css">
-
-
+    <!-- Google Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="/libs/noUiSlider/nouislider.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/loginStyle/login.css">
     <link rel="stylesheet" href="/css/signUpStyle/signup.css">
     <link rel="stylesheet" href="/css/signUpStyle/signup2.css">
     <link rel="stylesheet" href="/css/signUpStyle/signup3.css">
     <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/listPlaceStyle/listPlace.css">
     <title>RoomyCo</title>
 </head>
 
@@ -53,48 +59,18 @@
                             onclick="loadPage('./signupThirdScreen.html')">
                             3</div>
                     </div>
-                    <form class="page-form ps-md-5 pe-2 ms-5 needs-validation" id="signup3-form" novalidate>
-                        <div class="mb-3">
-                            <label for="locationEmirate" class="form-label">What is your location?</label>
-                            <div class="d-flex   justify-content-start align-items-evenly gap-2 ">
+                    <form action="./screens/Home/home.html" id="signup3-form" novalidate=""
+                        class="page-form d-flex flex-column gap-3 ps-md-5 pe-2 ms-5 needs-validation w-50">
 
-                                <select required id="locationEmirate"
-                                    class="form-select custom-select poppins-light me-3 p-3">
-                                    <option disabled>Location</option>
-                                    <option value="">Syria</option>
 
-                                    <!-- Add options here -->
-                                </select>
-                                <div class="valid-feedback">
-                                    look good
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please select a valid Location.
-                                </div>
-
-                                <select required id="locationCity" class="form-select custom-select poppins-light p-3">
-                                    <option disabled>City</option>
-                                    <option value="">damascus</option>
-
-                                    <!-- Add options here -->
-                                </select>
-                                <div class="valid-feedback">
-                                    look good
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please select a valid City.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-start align-items-evenly gap-2 mb-3">
+                        <div class="d-flex flex-row justify-content-start align-items-evenly gap-2">
                             <div class="col-auto me-md-5 d-flex justify-content-center align-items-center">
-                                <label for="originCountry" class="form-label">Where are you from?</label>
+                                <label for="originCountry" class="form-label">i am looking for</label>
                             </div>
-                            <div class="col">
-                                <select required id="originCountry"
+                            <div class="col-4">
+                                <select required="" id="originCountry"
                                     class="form-select custom-select poppins-light  p-3">
-                                    <option value="" disabled>Origin</option>
+                                    <option value="" disabled="">Origin</option>
                                     <option value="">syria</option>
 
                                 </select>
@@ -106,72 +82,43 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-start align-items-evenly gap-2">
-                            <div class="col-auto me-md-5 d-flex justify-content-center align-items-center">
-                                <label for="originCountry" class="form-label">What's your religion?</label>
+
+
+
+                        <div class="price-slider">
+                            <h5>Price range</h5>
+                            <span class="text-muted">Monthly prices before fees and taxes</span>
+                            <div class="histogram-container">
+                                <canvas class="w-100" id="priceHistogram"></canvas>
                             </div>
-                            <div class="col">
-                                <select required id="originCountry"
-                                    class="form-select custom-select poppins-light  p-3">
-                                    <option value="" disabled>religion</option>
-                                    <option value="">muslim</option>
-                                    <!-- Add options here -->
-                                </select>
-                                <div class="valid-feedback">
-                                    look good
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please select a valid religion.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Date of birth</label>
-                            <div class="row g-2">
-                                <div class="col">
-                                    <select required class="form-select custom-select poppins-light p-3" id="day">
-                                        <option value="" disabled>Day</option>
-                                    </select>
-                                    <div class="valid-feedback">
-                                        look good
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please select a valid Day.
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <select required class="form-select custom-select poppins-light p-3" id="month">
-                                        <option value="" disabled>Month</option>
-                                        <option value="1">January</option>
-                                        <option value="2">February</option>
-                                        <option value="3">March</option>
-                                        <option value="4">April</option>
-                                        <option value="5">May</option>
-                                        <option value="6">June</option>
-                                        <option value="7">July</option>
-                                        <option value="8">August</option>
-                                        <option value="9">September</option>
-                                        <option value="10">October</option>
-                                        <option value="11">November</option>
-                                        <option value="12">December</option>
-                                    </select>
-                                    <div class="valid-feedback">
-                                        look good
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please select a valid Month.
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <select required class="form-select custom-select poppins-light p-3" id="year">
-                                        <option value="" disabled>Year</option>
-                                    </select>
-                                </div>
+
+                            <!-- Price Range Slider -->
+                            <div class="slider-container">
+                                <div id="priceSlider"></div>
                             </div>
                         </div>
 
-                        <div class="row justify-content-center align-items-center mb-3">
+                        <!-- Min and Max Price Inputs -->
+
+                        <div class="input-container">
+                            <label for="minPriceInput">Min Price:</label>
+                            <input class="form-control input-group input-group-sm w-50 me-4" type="number"
+                                id="minPriceInput" min="100" max="500" value="100">
+                            <label for="maxPriceInput">Max Price:</label>
+                            <input class="form-control input-group input-group-sm w-50 me-4"="number" id="maxPriceInput"
+                                min="100" max="500" value="500">
+                        </div>
+
+                        <div class="row justify-content-center align-items-center">
                             <label class="form-label col-8 mb-0">Count of people prefer to live with</label>
+                            <div class="d-flex align-items-center col-4 qty ">
+                                <span class="d-flex justify-content-center align-items-center minus me-3">-</span>
+                                <input type="number" class="count Poppins-medium" name="qty" value="1" min="1">
+                                <span class="d-flex justify-content-center align-items-center plus ms-3">+</span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <label class="form-label col-8 mb-0">Count of people living with you</label>
                             <div class="d-flex align-items-center col-4 qty ">
                                 <span class="d-flex justify-content-center align-items-center minus me-3">-</span>
                                 <input type="number" class="count Poppins-medium" name="qty" value="1" min="1">
@@ -183,18 +130,18 @@
                         <div class="row ">
                             <label class="col-6 form-label mb-3">Do you prefer any pets?</label>
                             <div class="col-6">
-                                <input type="checkbox" id="petsToggle" class="toggleCheckbox " />
-                                <label for="petsToggle" class='toggleContainer w-75'>
+                                <input type="checkbox" id="petsToggle" class="toggleCheckbox ">
+                                <label for="petsToggle" class="toggleContainer w-75">
                                     <div class="poppins-light">Yes</div>
                                     <div class="poppins-light">No</div>
                                 </label>
                             </div>
                         </div>
-                        <div class="row mb-2">
+                        <div class="row">
                             <label class="col-6 form-label">Do you smoke?</label>
                             <div class="col-6">
-                                <input type="checkbox" id="smokeToggle" class="toggleCheckbox " />
-                                <label for="smokeToggle" class='toggleContainer w-75'>
+                                <input type="checkbox" id="smokeToggle" class="toggleCheckbox ">
+                                <label for="smokeToggle" class="toggleContainer w-75">
                                     <div class="poppins-light">Yes</div>
                                     <div class="poppins-light">No</div>
                                 </label>
@@ -204,7 +151,7 @@
 
                         <div class="row ">
                             <div class="button-container d-flex justify-content-center">
-                                <button type="submit" id="nxt-button"
+                                <button type="submit"
                                     class="fw-normal btn sign-in-button d-flex justify-content-evenly w-100 py-3">
                                     Next
                                 </button>
@@ -220,6 +167,9 @@
 
     <!-- JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js"
+        integrity="sha512-g/feAizmeiVKSwvfW0Xk3ZHZqv5Zs8PEXEBKzL15pM0SevEvoX8eJ4yFWbqakvRj7vtw1Q97bLzEpG2IVWX0Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- validating form -->
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -334,52 +284,133 @@
 
     </script>
     <script>
-        function handleNext() {
-            // Get the form element
-            const form = document.getElementById('signup3-form');
+        const priceHistogramCanvas = document.getElementById('priceHistogram');
+        const ctx = priceHistogramCanvas.getContext('2d');
 
-            // Check if the form is valid
-            if (form.checkValidity()) {
-                // If valid, prevent the default form submission
-                event.preventDefault();
+        // Initialize the slider
+        const priceSlider = document.getElementById('priceSlider');
 
-                // Get the checked radio button value
-                const selectedPurpose = sessionStorage.getItem('signup-form-purpose');
-                console.log(selectedPurpose);  // It will log the checked radio button value
+        noUiSlider.create(priceSlider, {
+            start: [100, 500],
+            connect: true,
+            range: {
+                'min': 100,
+                'max': 500
+            },
+            step: 1,
+            tooltips: false, // Disable tooltips
+        });
 
+        // Generate data with a normal distribution
+        function generateNormalData(count, mean, stdDev, minValue, maxValue) {
+            const data = [];
+            for (let i = 0; i < count; i++) {
+                let value;
+                do {
+                    // Generate a normal distribution value
+                    const u1 = Math.random();
+                    const u2 = Math.random();
+                    const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+                    value = mean + z * stdDev;
+                } while (value < minValue || value > maxValue);
 
-                // Check the value and navigate to the appropriate page
-                if (selectedPurpose === "Seeker of roommate") {
-                    window.location.href = '/screens/Home/home.html';
-                    console.log("seeker or roomate");
-                } else if (selectedPurpose === "Seeker of room") {
-                    loadPage('./signupForSeekerRoom.html');
-                    console.log("seeker or room");
+                data.push(value);
+            }
+            return data;
+        }
 
-                } else if (selectedPurpose === "I want to list my place only") {
-                    loadPage('./signupToListPlace.html');
-                    console.log("list place");
+        // Create 42 bins
+        const binCount = 42;
+        const minValue = 100;
+        const maxValue = 500;
+        const mean = 300; // Mean for normal distribution
+        const stdDev = 70; // Standard deviation
 
+        // Generate data and bin it
+        const rawData = generateNormalData(1000, mean, stdDev, minValue, maxValue);
+        const histogramData = Array(binCount).fill(0);
+
+        // Bin the data
+        const binWidth = (maxValue - minValue) / binCount;
+        for (let i = 0; i < rawData.length; i++) {
+            const value = rawData[i];
+            const binIndex = Math.floor((value - minValue) / binWidth);
+            histogramData[Math.min(binIndex, binCount - 1)]++;
+        }
+
+        // Draw Histogram function
+        function drawHistogram(minPrice, maxPrice) {
+            // Clear the canvas
+            ctx.clearRect(0, 0, priceHistogramCanvas.width, priceHistogramCanvas.height);
+
+            // Determine the maximum height of the bars
+            const maxBarHeight = priceHistogramCanvas.height;
+
+            // Draw bars
+            const barWidth = priceHistogramCanvas.width / histogramData.length;
+            const maxDataValue = Math.max(...histogramData);
+            const heightScale = maxBarHeight / maxDataValue;
+
+            for (let i = 0; i < histogramData.length; i++) {
+                const barHeight = histogramData[i] * heightScale; // Scale bar height to canvas height
+                const x = i * barWidth;
+                const y = priceHistogramCanvas.height - barHeight;
+
+                // Highlight the bars within the selected price range
+                const binLow = minValue + (i * (maxValue - minValue) / binCount);
+                const binHigh = minValue + ((i + 1) * (maxValue - minValue) / binCount);
+                if (binHigh >= minPrice && binLow <= maxPrice) {
+                    ctx.fillStyle = '#292C2D'; // Color for bars within range
                 } else {
-                    console.error("Unknown option selected");
+                    ctx.fillStyle = '#ddd'; // Gray color for bars outside range
                 }
-            } else {
-                // form.classList.add('was-validated');
+
+                ctx.fillRect(x, y, barWidth - 1, barHeight); // Draw bar with full height
             }
         }
 
-        // Attach the click event to the Next button
-        document.getElementById('nxt-button').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default submission
-            console.log("hello");
-            handleNext();
-        });
-    </script>
 
-    <!-- BootStrap JS -->
+
+        // Update the histogram when slider or inputs change
+        function updateHistogram() {
+            const minPrice = parseInt(priceSlider.noUiSlider.get()[0]);
+            const maxPrice = parseInt(priceSlider.noUiSlider.get()[1]);
+
+            // Update inputs
+            document.getElementById('minPriceInput').value = minPrice;
+            document.getElementById('maxPriceInput').value = maxPrice;
+
+            drawHistogram(minPrice, maxPrice);
+        }
+
+        // Attach event listener to slider
+        priceSlider.noUiSlider.on('update', updateHistogram);
+
+        // Attach event listeners to inputs
+        document.getElementById('minPriceInput').addEventListener('input', function () {
+            const minPrice = parseInt(this.value);
+            const maxPrice = parseInt(document.getElementById('maxPriceInput').value);
+
+            if (minPrice < maxPrice) {
+                priceSlider.noUiSlider.set([minPrice, maxPrice]);
+            }
+        });
+
+        document.getElementById('maxPriceInput').addEventListener('input', function () {
+            const maxPrice = parseInt(this.value);
+            const minPrice = parseInt(document.getElementById('minPriceInput').value);
+
+            if (minPrice < maxPrice) {
+                priceSlider.noUiSlider.set([minPrice, maxPrice]);
+            }
+        });
+
+        // Initial render
+        updateHistogram();
+
+    </script>
     <script src="/libs/Bootstrap/bootstrap.bundle.min.js"></script>
-    <!-- JQuery JS -->
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="/js/Priceslider/pirceSlider.js"></script>
 
 </body>
 

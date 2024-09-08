@@ -1,0 +1,87 @@
+section.main-page .form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section.main-page .form-section .page-form {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.form-section .steps-indicator {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    position: absolute;
+    top: 15%;
+    right: 22%;
+    transform: translateY(-50%);
+
+}
+
+.slider-container {
+    width: 100%;
+    margin-top: -4px;
+}
+
+.noUi-target {
+    border: 1px solid #ddd;
+}
+
+/* Custom slider styles */
+.noUi-connect {
+    background: #F3704A;
+}
+
+.noUi-origin {
+    direction: rtl;
+}
+
+.noUi-handle {
+    border-radius: 50% !important;
+    background: #F3704A !important;
+    border: none !important;
+    width: 30px !important;
+    height: 30px !important;
+    box-shadow: none !important;
+    top: -19px !important;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    content: none;
+}
+
+.noUi-horizontal {
+    height: 10px;
+}
+
+.noUi-tooltip {
+    display: none;
+    /* Ensure tooltips are hidden */
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input-container input {
+    width: 80px;
+    margin: 0 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    section.main-page .form-section {
+
+        flex-direction: column;
+
+    }
+}

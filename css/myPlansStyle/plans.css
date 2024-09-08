@@ -1,0 +1,125 @@
+        /* Ensure the dropdown menu is scrollable if its content is too tall */
+        .custom-dropdown {
+            /* Adjust this value as needed */
+            overflow-y: auto !important;
+        }
+
+
+
+        /* Disable text selection for the entire body */
+        body {
+            user-select: none;
+
+            -webkit-user-select: none;
+
+            -moz-user-select: none;
+
+            -ms-user-select: none;
+
+        }
+
+        section.plans .plans-cards {
+            overflow-x        : scroll;
+            scroll-behavior   : smooth;
+            white-space       : nowrap;
+            width             : 100%;
+            -ms-overflow-style: none;
+            scrollbar-width   : none;
+        }
+
+        section.plans .plans-cards::-webkit-scrollbar {
+            display: none;
+        }
+
+
+
+
+        section.plans h1.plans-heading {
+            font-size: 24px;
+            color    : #035781;
+        }
+
+        section.plans h1.plans-heading span {
+            color: black
+        }
+
+        section.plans p.plans-details {
+            color: #707070;
+        }
+
+        /* General Styles */
+
+        section.plans .price-card {
+            border-radius: 12px;
+            box-shadow   : 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding      : 20px;
+        }
+
+        section.plans .price-card .price-card-header h5.card-title {
+            font-size: 20px;
+        }
+
+        section.plans .price-card .card-text {
+            font-size: 0.9rem;
+            color    : #666;
+        }
+
+        section.plans .price-card .details {
+            font-size: 16px;
+
+        }
+
+        section.plans .price-card .details img {
+            height: 10px;
+            width : 10px;
+        }
+
+        section.plans .price-card .badge {
+            background-color: #D9D9D9;
+            color           : #F3704A;
+            font-size       : 20px !important;
+        }
+
+
+
+        section.plans .price-card .btn {
+            width        : 100%;
+            padding      : 12px 0;
+            border-radius: 8px;
+            font-size    : 1rem;
+        }
+
+        /* Plan Specific Styles */
+        section.plans .starter-plan {
+            background-color: #F2EACC;
+        }
+
+        section.plans .golden-plan {
+            background: rgba(255, 212, 51, 0.19);
+            border    : 1px solid rgba(255, 212, 51, 1)
+        }
+
+        section.plans .golden-plan .badge {
+            background: rgba(243, 112, 74, 0.12);
+        }
+
+        section.plans .silver-plan,
+        section.plans .bronze-plan {
+            background: rgba(35, 135, 194, 0.19);
+            border    : 1px solid rgba(35, 135, 194, 1)
+        }
+
+        section.plans .silver-plan .btn,
+        section.plans .bronze-plan .btn {
+            background: #2387C2;
+        }
+
+        section.plans .starter-plan .price-card-header h5,
+        section.plans .silver-plan .price-card-header h5,
+        section.plans .bronze-plan .price-card-header h5 {
+            color: #005c99;
+        }
+
+        section.plans .golden-plan .price-card-header h5 {
+            color: #d4a300;
+        }

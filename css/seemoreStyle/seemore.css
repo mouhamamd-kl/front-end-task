@@ -1,0 +1,294 @@
+ /* recent section styling start */
+ /* Custom card styling */
+ section.recent h1.recent-heading,
+ section.highest-rating h1.highest-rating-heading,
+ section.area-room-seekers h1.area-room-seekers-heading {
+     font-size: 32px;
+ }
+
+ section.recent .recent-heading a,
+ section.highest-rating a,
+ section.area-room-seeker a {
+     color    : #2387C2;
+     font-size: 24px !important;
+ }
+
+ section.recent .recent-card {
+     position           : relative;
+     overflow           : hidden;
+     border-radius      : 20px;
+     color              : #fff;
+     background-image   : url("/images/homePage/select-room/room_1.png");
+     width              : 374px !important;
+     height             : 483px !important;
+     background-position: center;
+     background-repeat  : no-repeat;
+     background-size    : cover;
+ }
+
+ section.recent .recent-card .heart-icon,
+ section.recent .recent-card .recent-card-elements,
+ section.recent .recent-card .recent-card-bg {
+     opacity   : 0;
+     transition: opacity 0.5s ease;
+     /* Smooth transition for fading */
+ }
+
+ section.recent .recent-card:hover .recent-card-bg {
+     opacity: 0.7;
+ }
+
+ /* Show heart icon and card elements on hover */
+ section.recent .recent-card:hover .heart-icon,
+ section.recent .recent-card:hover .recent-card-elements {
+     opacity: 1;
+ }
+
+
+
+
+
+ section.recent .recent-card .recent-card-bg {
+     position  : absolute;
+     top       : 0;
+     left      : 0;
+     width     : 100%;
+     height    : 100%;
+     background: linear-gradient(to right, #EEEBD3 0%, rgb(41, 44, 45) 48%, rgb(41, 44, 45) 100%);
+     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+ }
+
+ section.recent .recent-card .recent-card-elements {
+     z-index: 1;
+ }
+
+ section.recent .recent-card .heart-icon {
+     background-color: #F6F6F6;
+     border-radius   : 20px;
+ }
+
+ section.recent .recent-card .card-title {
+     font-size: 20px !important;
+ }
+
+ /* Price and location styling */
+ section.recent .recent-card .price {
+     font-size    : 16px;
+     margin-bottom: 0.5rem;
+     color        : #ffca28;
+ }
+
+ section.recent .recent-card .price span {
+     color: #F6F6F6;
+ }
+
+ section.recent .recent-card .location {
+     font-size  : 1.2rem;
+     display    : flex;
+     align-items: center;
+ }
+
+ section.recent .recent-card .location i {
+     margin-right: 8px;
+     color       : #ffca28;
+ }
+
+ /* recent section styling end */
+
+ /* highest rating section styling start  */
+ section.highest-rating .nav-tabs {
+     border-bottom: none;
+ }
+
+ section.highest-rating .tab-buttons-container {
+     margin-right: -2px !important;
+ }
+
+ section.highest-rating .tab-button {
+     background-color          : #2387C2 !important;
+     border-radius             : 50px !important;
+     border-bottom-right-radius: 0px !important;
+     border-top-right-radius   : 0px !important;
+ }
+
+ section.highest-rating .nav-link {
+     border-radius: 50px;
+     padding      : 10px 20px;
+     font-size    : 18px;
+     margin-bottom: 10px;
+ }
+
+ section.highest-rating .nav-link.active {
+     background-color: #007bff;
+     color           : white;
+ }
+
+ section.highest-rating .card-group {
+     display        : flex;
+     justify-content: space-between;
+     margin-top     : 20px;
+ }
+
+ section.highest-rating .tab-card {
+     background-color   : #222;
+     border             : none;
+     border-radius      : 15px;
+     overflow           : hidden;
+     width              : 30%;
+     object-fit         : cover;
+     background         : url('/images/homePage/available_roomate/1.jpg');
+     background-repeat  : no-repeat;
+     background-position: center;
+     background-size    : cover;
+     max-width          : 300px;
+     max-height         : 300px;
+     width              : 300px;
+     height             : 300px;
+
+     border-radius: 10px !important;
+ }
+
+
+ section.highest-rating .tab-card .card-body {
+     padding   : 20px;
+     text-align: center;
+ }
+
+ section.highest-rating .tab-card .card-body .card-title {
+     font-size    : 1.25rem;
+     margin-bottom: 10px;
+ }
+
+
+ section.highest-rating .tab-card .card-body .rating {
+     color                     : #f8d64e;
+     font-size                 : 1.2rem;
+     margin-top                : 10px;
+     background-color          : #F6F6F6;
+     border-radius             : 20px;
+     border-bottom-left-radius : 0px;
+     border-bottom-right-radius: 0px;
+     margin-bottom             : -2px !important;
+ }
+
+ section.highest-rating .tab-card .card-body .card-details {
+     background-color          : #F6F6F6;
+     border-radius             : 20px;
+     /* border-top-right-radius: 0px; */
+ }
+
+ section.highest-rating .tab-card .card-body .card-title {
+     font-size: 20px;
+     color    : #035781;
+ }
+
+ section.highest-rating .tab-card .card-body .card-text {
+     font-size: 16px !important;
+     color    : #292C2D !important;
+ }
+
+ /* highest rating section styling end */
+
+ /* seekers-area section styling start*/
+ section.area-room-seekers .area-seekers-swiper .swiper-button-next,
+ section.area-room-seekers .area-seekers-swiper .swiper-button-prev {
+     background-color: rgba(255, 255, 255, 0.6);
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     top: 50%;
+     transform: translateY(-50%);
+     transition: background-color 0.3s ease-in-out;
+ }
+
+ section.area-room-seekers .area-seekers-swiper .swiper-button-next img,
+ section.area-room-seekers .area-seekers-swiper .swiper-button-prev img {
+     width: 60%;
+     height: 60%;
+ }
+
+ section.area-room-seekers .area-seekers-swiper .swiper-button-next:hover,
+ section.area-room-seekers .area-seekers-swiper .swiper-button-prev:hover {
+     background-color: rgba(255, 255, 255, 0.8);
+ }
+
+ section.area-room-seekers .area-seekers-swiper .swiper-button-next {
+     right: 10px;
+ }
+
+ section.area-room-seekers .area-seekers-swiper .swiper-button-prev {
+     left: 10px;
+ }
+
+ /* Hide default navigation button icons */
+ section.area-room-seekers .area-seekers-swiper .swiper-button-next::after,
+ section.area-room-seekers .area-seekers-swiper .swiper-button-prev::after {
+     content: "";
+ }
+
+ section.area-room-seekers .seeker-card {
+     background-color: #f0f0f0;
+     border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     width: 650px;
+     height: 275px;
+     overflow: hidden;
+     border: none;
+ }
+
+ section.area-room-seekers .seeker-card .seeker-card-body {
+     width: 650px;
+     height: 275px;
+ }
+
+
+ section.area-room-seekers .seeker-card .seeker-photo {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+     display: inline-block;
+     max-width: 100%;
+     max-height: 100% !important;
+ }
+
+
+ section.area-room-seekers .seeker-card .card-body {
+     padding: 20px;
+ }
+
+
+ section.area-room-seekers .seeker-card .card-body .card-title {
+     color: #003366;
+     font-size:20px;
+ }
+
+
+ section.area-room-seekers .seeker-card .card-body .price {
+     font-size: 12px;
+     color: #F3704A;
+ }
+
+
+ section.area-room-seekers .seeker-card .card-body .card-text {
+     color: #292C2D;
+     margin-top: 10px;
+     font-size: 12px;
+ }
+
+ section.area-room-seekers .seeker-card .dots {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+ }
+
+ section.area-room-seekers .seeker-card .card-body .dot {
+     width: 8px;
+     height: 8px;
+     background-color: #004080;
+     border-radius: 50%;
+ }
+ /* seekers-area section styling end */
