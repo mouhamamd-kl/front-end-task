@@ -38,12 +38,12 @@
     color: rgba(3, 87, 129, 1) !important;
 }
 
-.navbar-nav>.nav-item:nth-last-child(3)>a::after {
+.custom-navbar .navbar-nav>.nav-item:nth-last-child(3)>a::after {
     content     : '|';
     padding-left: 3rem;
 }
 
-.navbar-nav .nav-item .nav-btn {
+.custom-navbar .navbar-nav .nav-item .nav-btn {
     font-size    : 20px;
     border-radius: 50px;
 }

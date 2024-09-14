@@ -734,7 +734,7 @@
         </div>
     </nav>
     <main class="mt-3 px-md-5">
-        <div class="container w-75 px-md-5">
+        <div class="container w-lg-75 px-md-5">
             <div class="d-flex  create-post flex-column ">
                 <div class="create-post-header d-flex justify-content-center align-items-center position-relative p-4">
                     <h1 class="recent-heading text-center poppins-bold mx-auto">Create Post</h1>
@@ -848,7 +848,7 @@
                                         class="d-flex flex-md-row flex-column justify-content-center justify-content-md-start align-items-md-start align-items-center w-100 py-3">
 
                                         <div class="col-md-2 ps-4  me-2">
-                                            <label class="form-label text-muted text-nowrap w-75 poppins-light">Price
+                                            <label class="form-label text-muted text-lg-nowrap w-75 poppins-light">Price
                                                 Range</label>
                                         </div>
                                         <div style="border-bottom: 1px solid #DAD6C8;"
@@ -866,9 +866,7 @@
 
                                                 <!-- Price Range Slider -->
                                                 <div class="slider-container">
-                                                    <div class="slider-container">
-                                                        <div id="priceSlider"></div>
-                                                    </div>
+                                                    <div id="priceSlider"></div>
                                                 </div>
                                                 <div
                                                     class="mt-5 input-container d-flex flex-row justify-content-between align-items-start">
@@ -895,9 +893,8 @@ justify-content-center align-items-center
 ">
 
                                         <div
-                                            class="col-2 d-flex  ps-md-4 me-2 py-md-4 align-items-start justify-content-start">
-                                            <label
-                                                class="form-label text-muted text-md-wrap text-nowrap poppins-light m-0">more
+                                            class="col-md-2 d-flex  ps-md-4 me-2 py-md-4 align-items-start justify-content-start">
+                                            <label class="form-label text-muted text-lg-nowrap poppins-light m-0">more
                                                 info</label>
                                         </div>
                                         <div class="col-md-8 d-flex flex-column gap-4 py-3 px-4 px-md-0">
@@ -931,27 +928,26 @@ justify-content-center align-items-center
                                             <div
                                                 class="d-flex flex-md-row flex-column justify-content-evenly align-items-center w-100">
                                                 <label
-                                                    class="form-label col-md-5 text-nowrap mb-0 p-0 poppins-regular">I
+                                                    class="form-label col-md-5 text-lg-nowrap mb-0 p-0 poppins-regular">I
                                                     want to move before a date</label>
                                                 <div
-                                                    class="d-flex  justify-content-end  align-items-center col-md-7 qty ">
-                                                    <input type="text" class="date-picker" id="date-picker"
-                                                        placeholder="MM/DD/YY" readonly="">
+                                                    class="d-flex  justify-content-between align-items-center col-md-7 qty">
+                                                    <input type="text" id="date-picker" placeholder="MM/DD/YY"
+                                                        readonly="" class="date-picker w-50">
                                                     <img src="/images/website icon/createPost/calendar.svg">
                                                 </div>
                                             </div>
                                             <div
                                                 class="d-flex flex-md-row flex-column justify-content-evenly align-items-center w-100">
                                                 <label
-                                                    class="form-label col-md-5 text-nowrap mb-0 p-0 poppins-regular">Number
+                                                    class="form-label col-md-5 text-lg-nowrap mb-0 p-0 poppins-regular">Number
                                                     of people
                                                     who live with you</label>
                                                 <div
                                                     class="d-flex  justify-content-end  align-items-center col-md-7 qty ">
                                                     <span
                                                         class="d-flex justify-content-center align-items-center minus me-3">-</span>
-                                                    <input type="number" class="count Poppins-medium" name="qty"
-                                                        value="0" min="0">
+                                                    <input type="number" class="count Poppins-medium" value="0" min="0">
                                                     <span
                                                         class="d-flex justify-content-center align-items-center plus ms-3">+</span>
                                                 </div>
@@ -959,14 +955,13 @@ justify-content-center align-items-center
                                             <div
                                                 class="d-flex flex-md-row flex-column justify-content-evenly align-items-center w-100">
                                                 <label
-                                                    class="form-label col-md-5 text-nowrap mb-0 p-0 poppins-regular">Number
+                                                    class="form-label col-md-5 text-lg-nowrap mb-0 p-0 poppins-regular">Number
                                                     of people prefer to live with</label>
                                                 <div
                                                     class="d-flex  justify-content-end  align-items-center col-md-7 qty ">
                                                     <span
                                                         class="d-flex justify-content-center align-items-center minus me-3">-</span>
-                                                    <input type="number" class="count Poppins-medium" name="qty"
-                                                        value="0" min="0">
+                                                    <input type="number" class="count Poppins-medium" value="0" min="0">
                                                     <span
                                                         class="d-flex justify-content-center align-items-center plus ms-3">+</span>
                                                 </div>
@@ -1071,8 +1066,8 @@ justify-content-center align-items-center
     <script src="/libs/datePicker/air-datepicker.min.js"></script>
     <script src="/libs/Bootstrap/bootstrap.bundle.min.js"></script>
 
-    <script src="/js/Priceslider/pirceSlider.js"></script>
     <script src="/js/loginThirdScreen/counter.js"></script>
+    <script src="/js/Priceslider/pirceSlider.js"></script>
     <script>
         // Initialize the datepicker
         const datepicker = new AirDatepicker('#date-picker', {

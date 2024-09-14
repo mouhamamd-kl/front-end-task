@@ -90,3 +90,11 @@ main .create-post .page-form .slider-controller {
     width: 75%;
   }
 }
+@media (min-width: 992px) {
+  .text-lg-nowrap {
+    white-space: nowrap !important;
+  }
+  .w-lg-75 {
+    width: 75%;
+  }
+}
