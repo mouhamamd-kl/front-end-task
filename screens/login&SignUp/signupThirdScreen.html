@@ -59,7 +59,7 @@
                             <div class="d-flex   justify-content-start align-items-evenly gap-2 ">
 
                                 <select required id="locationEmirate"
-                                    class="form-select custom-select poppins-light me-3 p-3">
+                                    class="form-select custom-select poppins-light me-3 p-3" name="location">
                                     <option disabled>Location</option>
                                     <option value="">Syria</option>
 
@@ -72,7 +72,8 @@
                                     Please select a valid Location.
                                 </div>
 
-                                <select required id="locationCity" class="form-select custom-select poppins-light p-3">
+                                <select required id="locationCity" class="form-select custom-select poppins-light p-3"
+                                    name="locationCity">
                                     <option disabled>City</option>
                                     <option value="">damascus</option>
 
@@ -92,8 +93,8 @@
                                 <label for="originCountry" class="form-label">Where are you from?</label>
                             </div>
                             <div class="col">
-                                <select required id="originCountry"
-                                    class="form-select custom-select poppins-light  p-3">
+                                <select required id="originCountry" class="form-select custom-select poppins-light  p-3"
+                                    name="originCountry">
                                     <option value="" disabled>Origin</option>
                                     <option value="">syria</option>
 
@@ -108,11 +109,11 @@
                         </div>
                         <div class="row justify-content-start align-items-evenly gap-2">
                             <div class="col-auto me-md-5 d-flex justify-content-center align-items-center">
-                                <label for="originCountry" class="form-label">What's your religion?</label>
+                                <label for="relegion" class="form-label">What's your religion?</label>
                             </div>
                             <div class="col">
-                                <select required id="originCountry"
-                                    class="form-select custom-select poppins-light  p-3">
+                                <select required id="relegion" class="form-select custom-select poppins-light  p-3"
+                                    name="relegion">
                                     <option value="" disabled>religion</option>
                                     <option value="">muslim</option>
                                     <!-- Add options here -->
@@ -126,10 +127,11 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Date of birth</label>
+                            <label class="form-label" for="day">Date of birth</label>
                             <div class="row g-2">
                                 <div class="col">
-                                    <select required class="form-select custom-select poppins-light p-3" id="day">
+                                    <select required class="form-select custom-select poppins-light p-3" id="day"
+                                        name="day">
                                         <option value="" disabled>Day</option>
                                     </select>
                                     <div class="valid-feedback">
@@ -140,7 +142,8 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <select required class="form-select custom-select poppins-light p-3" id="month">
+                                    <select required class="form-select custom-select poppins-light p-3" id="month"
+                                        name="month">
                                         <option value="" disabled>Month</option>
                                         <option value="1">January</option>
                                         <option value="2">February</option>
@@ -163,7 +166,8 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <select required class="form-select custom-select poppins-light p-3" id="year">
+                                    <select required class="form-select custom-select poppins-light p-3" id="year"
+                                        name="year">
                                         <option value="" disabled>Year</option>
                                     </select>
                                 </div>
@@ -183,7 +187,7 @@
                         <div class="row ">
                             <label class="col-6 form-label mb-3">Do you prefer any pets?</label>
                             <div class="col-6">
-                                <input type="checkbox" id="petsToggle" class="toggleCheckbox " />
+                                <input type="checkbox" id="petsToggle" name="petsToggle" class="toggleCheckbox " />
                                 <label for="petsToggle" class='toggleContainer w-75'>
                                     <div class="poppins-light">Yes</div>
                                     <div class="poppins-light">No</div>
@@ -193,7 +197,7 @@
                         <div class="row mb-2">
                             <label class="col-6 form-label">Do you smoke?</label>
                             <div class="col-6">
-                                <input type="checkbox" id="smokeToggle" class="toggleCheckbox " />
+                                <input type="checkbox" id="smokeToggle" name="smokeToggle" class="toggleCheckbox " />
                                 <label for="smokeToggle" class='toggleContainer w-75'>
                                     <div class="poppins-light">Yes</div>
                                     <div class="poppins-light">No</div>
@@ -320,6 +324,7 @@
     <script>
         document.addEventListener('change', (event) => {
             const form = event.target.closest('form');
+            form = document.getElementById('signup3-form');
             if (form && form.id) {
                 saveData(form.id);
             }
@@ -327,6 +332,7 @@
 
         document.addEventListener('submit', (event) => {
             const form = event.target.closest('form');
+            form = document.getElementById('signup3-form');
             if (form && form.id) {
                 saveData(form.id);
             }
@@ -335,20 +341,13 @@
     </script>
     <script>
         function handleNext() {
-            // Get the form element
             const form = document.getElementById('signup3-form');
 
-            // Check if the form is valid
             if (form.checkValidity()) {
-                // If valid, prevent the default form submission
                 event.preventDefault();
-
-                // Get the checked radio button value
                 const selectedPurpose = sessionStorage.getItem('signup-form-purpose');
-                console.log(selectedPurpose);  // It will log the checked radio button value
+                console.log(selectedPurpose);
 
-
-                // Check the value and navigate to the appropriate page
                 if (selectedPurpose === "Seeker of roommate") {
                     window.location.href = '/screens/Home/home.html';
                     console.log("seeker or roomate");
@@ -364,14 +363,14 @@
                     console.error("Unknown option selected");
                 }
             } else {
-                // form.classList.add('was-validated');
+                form.classList.add('was-validated');
             }
         }
 
         // Attach the click event to the Next button
         document.getElementById('nxt-button').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default submission
             console.log("hello");
+            event.preventDefault(); 
             handleNext();
         });
     </script>
@@ -379,6 +378,7 @@
     <!-- BootStrap JS -->
     <script src="/libs/Bootstrap/bootstrap.bundle.min.js"></script>
     <!-- JQuery JS -->
+    <script src="/libs/noUiSlider/nouislider.min.js"></script>
     <script src="/libs/jquery/jquery.min.js"></script>
 
 </body>

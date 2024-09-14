@@ -1,0 +1,20 @@
+
+main .create-post .page-form .lifestyle-container.poppins-bold.text-start {
+  font-size: 16px;
+  color: #292c2d;
+}
+
+main .create-post .page-form .lifestyle-item::after {
+  content: "-";
+  margin-left: 5px;
+}
+
+main .create-post .page-form .lifestyle-item:last-child::after {
+  content: "";
+}
+
+main .create-post .page-form .date-picker,
+main .create-post .page-form .date-picker:focus {
+  border: none;
+  outline: none;
+}

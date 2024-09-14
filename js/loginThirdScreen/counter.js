@@ -1,29 +1,34 @@
-$(document).ready(function () { // Get the input element
-    const countInput = document.querySelector('.qty .count');
+// Select all qty containers
+const qtyContainers = document.querySelectorAll('.qty');
+
+qtyContainers.forEach(container => {
+    const countInput = container.querySelector('.count'); // Find the input in the current container
+    const up = container.querySelector('.plus'); // Find the plus button in the current container
+    const down = container.querySelector('.minus'); // Find the minus button in the current container
 
     // Function to get the current value
     function getCountValue() {
-        return countInput.value;
+        return parseInt(countInput.value); // Ensure value is an integer
     }
 
-    // Example usage: you can call this function when you need to get the value
-    console.log("Count value:", getCountValue()); // This will print the current value of the input field
-
-    // Optionally, you can also listen to changes in the input
+    // Listen for changes in the input field
     countInput.addEventListener('input', () => {
         console.log("Updated count value:", getCountValue());
     });
-    $('.count').prop('disabled', true);
-    $(document).on('click', '.plus', function () {
-        $('.count').val(parseInt($('.count').val()) + 1);
-        console.log("Decreased count value:", getCountValue());
 
+    // Handle plus button click
+    up.addEventListener('click', () => {
+        let currentValue = getCountValue();
+        countInput.value = currentValue + 1; // Increment value
+        console.log("Increased count value:", getCountValue());
     });
-    $(document).on('click', '.minus', function () {
-        $('.count').val(parseInt($('.count').val()) - 1);
-        if ($('.count').val() == 0) {
-            $('.count').val(1);
-            console.log("Increased count value:", getCountValue());
+
+    // Handle minus button click
+    down.addEventListener('click', () => {
+        let currentValue = getCountValue();
+        if (currentValue > 1) { // Prevent going below 1
+            countInput.value = currentValue - 1;
         }
+        console.log("Decreased count value:", getCountValue());
     });
 });

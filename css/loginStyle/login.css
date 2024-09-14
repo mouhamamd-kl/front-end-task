@@ -13,6 +13,17 @@ body {
 
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin            : 0 !important;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
 main {
     height: 100%;
 }
@@ -115,7 +126,7 @@ section.main-page .form-section form.page-form input.form-control,
 section.main-page .form-section form.page-form input.form-control {
     font-size    : 18px !important;
     border-radius: 20px !important;
-    
+
 }
 
 section.main-page .form-section form.page-form input.number-input,

@@ -1,8 +1,10 @@
-const priceHistogramCanvas = document.getElementById('priceHistogram');
-const ctx = priceHistogramCanvas.getContext('2d');
+
+var priceHistogramCanvas = document.getElementById('priceHistogram');
+var ctx = priceHistogramCanvas.getContext('2d');
+ctx.imageSmoothingEnabled = true;
 
 // Initialize the slider
-const priceSlider = document.getElementById('priceSlider');
+var priceSlider = document.getElementById('priceSlider');
 
 noUiSlider.create(priceSlider, {
     start: [100, 500],
@@ -17,7 +19,7 @@ noUiSlider.create(priceSlider, {
 
 // Generate data with a normal distribution
 function generateNormalData(count, mean, stdDev, minValue, maxValue) {
-    const data = [];
+    var data = [];
     for (let i = 0; i < count; i++) {
         let value;
         do {
@@ -34,21 +36,21 @@ function generateNormalData(count, mean, stdDev, minValue, maxValue) {
 }
 
 // Create 42 bins
-const binCount = 42;
-const minValue = 100;
-const maxValue = 500;
-const mean = 300; // Mean for normal distribution
-const stdDev = 70; // Standard deviation
+var binCount = 42;
+var minValue = 100;
+var maxValue = 500;
+var mean = 300; // Mean for normal distribution
+var stdDev = 70; // Standard deviation
 
 // Generate data and bin it
-const rawData = generateNormalData(1000, mean, stdDev, minValue, maxValue);
-const histogramData = Array(binCount).fill(0);
+var rawData = generateNormalData(1000, mean, stdDev, minValue, maxValue);
+var histogramData = Array(binCount).fill(0);
 
 // Bin the data
-const binWidth = (maxValue - minValue) / binCount;
+var binWidth = (maxValue - minValue) / binCount;
 for (let i = 0; i < rawData.length; i++) {
-    const value = rawData[i];
-    const binIndex = Math.floor((value - minValue) / binWidth);
+    var value = rawData[i];
+    var binIndex = Math.floor((value - minValue) / binWidth);
     histogramData[Math.min(binIndex, binCount - 1)]++;
 }
 
@@ -58,21 +60,21 @@ function drawHistogram(minPrice, maxPrice) {
     ctx.clearRect(0, 0, priceHistogramCanvas.width, priceHistogramCanvas.height);
 
     // Determine the maximum height of the bars
-    const maxBarHeight = priceHistogramCanvas.height;
+    var maxBarHeight = priceHistogramCanvas.height;
 
     // Draw bars
-    const barWidth = priceHistogramCanvas.width / histogramData.length;
-    const maxDataValue = Math.max(...histogramData);
-    const heightScale = maxBarHeight / maxDataValue;
+    var barWidth = priceHistogramCanvas.width / histogramData.length;
+    var maxDataValue = Math.max(...histogramData);
+    var heightScale = maxBarHeight / maxDataValue;
 
     for (let i = 0; i < histogramData.length; i++) {
-        const barHeight = histogramData[i] * heightScale; // Scale bar height to canvas height
-        const x = i * barWidth;
-        const y = priceHistogramCanvas.height - barHeight;
+        var barHeight = histogramData[i] * heightScale; // Scale bar height to canvas height
+        var x = i * barWidth;
+        var y = priceHistogramCanvas.height - barHeight;
 
         // Highlight the bars within the selected price range
-        const binLow = minValue + (i * (maxValue - minValue) / binCount);
-        const binHigh = minValue + ((i + 1) * (maxValue - minValue) / binCount);
+        var binLow = minValue + (i * (maxValue - minValue) / binCount);
+        var binHigh = minValue + ((i + 1) * (maxValue - minValue) / binCount);
         if (binHigh >= minPrice && binLow <= maxPrice) {
             ctx.fillStyle = '#292C2D'; // Color for bars within range
         } else {
@@ -121,3 +123,5 @@ document.getElementById('maxPriceInput').addEventListener('input', function () {
 
 // Initial render
 updateHistogram();
+
+

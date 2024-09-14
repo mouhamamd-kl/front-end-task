@@ -1,0 +1,92 @@
+body {
+  background-color: linear-gradient(
+    180deg,
+    #f8f4db 8.73%,
+    #fffffe 100%
+  ) !important;
+}
+
+nav.custom-navbar {
+  background-color: white !important;
+}
+
+main .create-post {
+  background: rgba(255, 254, 249, 1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+main .create-post-header h1 {
+  font-size: 24px;
+  color: #292c2d;
+}
+
+main .create-post-header a {
+  background: rgba(234, 234, 234, 1);
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+main .post-body-header {
+  font-size: 20px;
+}
+
+main .nav-link.active {
+  border-bottom: 2px solid rgba(35, 135, 194, 1) !important;
+}
+
+main .nav-pills .nav-link {
+  background-color: unset !important;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(218, 214, 200, 1);
+  color: #161720 !important;
+  font-size: 20px;
+}
+
+main .create-post .create-post-body .page-form textarea.custom-textarea {
+  resize: vertical;
+  resize: none;
+  border-radius: 10px;
+  border: 0.5px solid #dad6c8;
+}
+
+main .page-form .custom-select {
+  border-radius: 15px !important;
+}
+
+main .create-post .page-form .upload-photo {
+  border: 1px solid #dad6c8;
+  border-radius: 10px;
+}
+
+main .create-post .page-form .big-button {
+  font-size: 20px !important;
+  border-radius: 19px !important;
+  color: white !important;
+  background-color: #2387c2 !important;
+}
+
+main .create-post .page-form .noUi-handle {
+  top: -13px !important;
+}
+
+main .create-post .page-form .input-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+main .create-post .page-form .button-check-group label {
+  font-size: 16px;
+}
+
+main .create-post .page-form .slider-controller {
+  -moz-appearance: textfield !important;
+}
+@media (min-width: 768px) {
+  /* Medium screens and above (adjust the breakpoint as needed) */
+  .w-md-75 {
+    width: 75%;
+  }
+}

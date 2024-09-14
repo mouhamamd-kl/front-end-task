@@ -1,0 +1,23 @@
+:root {
+  --error-heading-color: rgba(215, 59, 59, 1);
+  --modal-msg-color: rgba(22, 23, 32, 1);
+  --button-bg-color: rgba(229, 97, 97, 1);
+  --button-text-color: white;
+}
+
+.error-dialog .modal-content h4.modal-heading {
+  color: var(--error-heading-color);
+}
+
+.error-dialog .modal-text span.modal-msg {
+  color: var(--modal-msg-color);
+}
+
+span.modal-msg {
+  color: var(--modal-msg-color);
+}
+
+.modal-buttons .main-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}

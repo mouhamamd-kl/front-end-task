@@ -20,116 +20,119 @@
             opacity: 1;
         }
     </style>
-
 </head>
+
+
 
 <body>
 
-    <body>
 
-
-        <div id="content"></div>
-        <!--
+    <div id="content"></div>
+    <!--
          Script for making the login & sigup pages feels like they are in the same page 
         with animation for transition and saving form fields values when going from page to page
         -->
-        <script>
-            // Function to load page content dynamically
-            async function loadPage(page) {
-                try {
-                    const contentElement = document.getElementById('content');
 
-                    // Start fade-out effect
-                    contentElement.classList.add('fade-out');
+    <script>
+        // Function to load page content dynamically
+        async function loadPage(page) {
+            try {
+                const contentElement = document.getElementById('content');
 
-                    // Wait for the fade-out transition to complete
-                    await new Promise(resolve => setTimeout(resolve, 500));
+                // Start fade-out effect
+                contentElement.classList.add('fade-out');
 
-                    const response = await fetch(page);
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                // Wait for the fade-out transition to complete
+                await new Promise(resolve => setTimeout(resolve, 500));
 
-                    const content = await response.text();
+                const response = await fetch(page);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-                    // Replace content and start fade-in effect
-                    contentElement.innerHTML = content;
+                const content = await response.text();
 
-                    // Find the form(s) in the newly loaded content and populate them
-                    const forms = contentElement.querySelectorAll('form');
-                    forms.forEach(form => {
-                        if (form.id) {
-                            populateForm(form.id); // Populate form fields after loading content
-                            form.addEventListener('change', () => saveData(form.id)); // Add change listener for saving data
-                        }
-                    });
+                // Replace content and start fade-in effect
+                contentElement.innerHTML = content;
 
-                    // Execute scripts in the loaded content
-                    const scripts = contentElement.querySelectorAll('script');
-                    scripts.forEach(script => {
-                        const newScript = document.createElement('script');
-                        if (script.src) {
-                            newScript.src = script.src;
-                        } else {
-                            newScript.textContent = script.textContent;
-                        }
-                        document.body.appendChild(newScript);
-                    });
-                    contentElement.classList.remove('fade-out');
-                    contentElement.classList.add('fade-in');
-
-                    // Optionally, remove the fade-in class after the transition
-                    setTimeout(() => {
-                        contentElement.classList.remove('fade-in');
-                    }, 500);
-
-                } catch (error) {
-                    console.error("Failed to load page:", error);
-                    // Optionally, update UI to inform the user about the failure
-                }
-            }
-
-
-
-            // Function to populate form fields with data from sessionStorage
-            function populateForm(formId) {
-                const form = document.getElementById(formId);
-                if (!form) return; // Exit if the form doesn't exist
-
-                const inputs = form.querySelectorAll('input, select, textarea');
-                inputs.forEach(input => {
-                    const key = `${formId}-${input.name}`;
-                    if (input.type === 'radio' || input.type === 'checkbox') {
-                        input.checked = sessionStorage.getItem(key) === input.value;
-                    } else {
-                        if (sessionStorage.getItem(key)) {
-                            input.value = sessionStorage.getItem(key);
-                        }
+                // Find the form(s) in the newly loaded content and populate them
+                const forms = contentElement.querySelectorAll('form');
+                forms.forEach(form => {
+                    if (form.id) {
+                        populateForm(form.id); // Populate form fields after loading content
+                        form.addEventListener('change', () => saveData(form.id)); // Add change listener for saving data
                     }
                 });
-            }
-            function saveData(formId) {
-                const form = document.getElementById(formId);
-                const inputs = form.querySelectorAll('input, select, textarea');
-                inputs.forEach(input => {
-                    if (input.type === 'radio' || input.type === 'checkbox') {
-                        if (input.checked) {
-                            sessionStorage.setItem(`${formId}-${input.name}`, input.value);
-                        }
+
+                // Execute scripts in the loaded content
+                const scripts = contentElement.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    if (script.src) {
+                        newScript.src = script.src;
                     } else {
+                        newScript.textContent = script.textContent;
+                    }
+                    document.body.appendChild(newScript);
+                });
+                contentElement.classList.remove('fade-out');
+                contentElement.classList.add('fade-in');
+
+                // Optionally, remove the fade-in class after the transition
+                setTimeout(() => {
+                    contentElement.classList.remove('fade-in');
+                }, 500);
+
+            } catch (error) {
+                console.error("Failed to load page:", error);
+                // Optionally, update UI to inform the user about the failure
+            }
+        }
+
+
+
+        // Function to populate form fields with data from sessionStorage
+        function populateForm(formId) {
+            console.log(formId);
+            const form = document.getElementById(formId);
+            if (!form) return; // Exit if the form doesn't exist
+
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                const key = `${formId}-${input.name}`;
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    input.checked = sessionStorage.getItem(key) === input.value;
+                } else {
+                    if (sessionStorage.getItem(key)) {
+                        input.value = sessionStorage.getItem(key);
+                    }
+                }
+            });
+        }
+        function saveData(formId) {
+            console.log(formId);
+  
+            const form = document.getElementById(formId);
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    if (input.checked) {
                         sessionStorage.setItem(`${formId}-${input.name}`, input.value);
                     }
-                });
-            }
-            // Initial page load
-            window.addEventListener('DOMContentLoaded', (event) => {
-                // Load initial page content
-                loadPage('./loginScreen.html');
-                // Trigger background animation
-                const formSection = document.querySelector('main section.main-page .form-section');
-                formSection.classList.add('animate-bg');
+                } else {
+                    sessionStorage.setItem(`${formId}-${input.name}`, input.value);
+                }
             });
+        }
+        // Initial page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Load initial page content
+            loadPage('./loginScreen.html');
+            // Trigger background animation
+            const formSection = document.querySelector('main .form-section');
+            formSection.classList.add('animate-bg');
+        });
 
-        </script>
-        <!-- <script>
+    </script>
+    <!-- <script>
             // Function to load page content dynamically
             // Function to load page content dynamically with transitions
             async function loadPage(page) {
@@ -210,11 +213,11 @@
             document.body.addEventListener('change', saveData); // Save data on every change
 
         </script> -->
-        <!-- BootStrap JS -->
-        <script src="/libs/Bootstrap/bootstrap.bundle.min.js"></script>
-        <!-- JQuery JS -->
-        <script src="/libs/jquery/jquery.min.js"></script>
+    <!-- BootStrap JS -->
+    <script src="/libs/Bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- JQuery JS -->
+    <script src="/libs/jquery/jquery.min.js"></script>
 
-    </body>
+</body>
 
 </html>

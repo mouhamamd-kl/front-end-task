@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/Bootstrap/bootstrap.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../../css/font.css">
+
+    <style>
+        .error-dialog .modal-content h4.modal-heading {
+            color: rgba(215, 59, 59, 1);
+        }
+
+        .error-dialog .modal-text span.modal-msg {
+            color: rgba(22, 23, 32, 1);
+        }
+
+        span.modal-msg {
+            color: rgba(22, 23, 32, 1);
+        }
+
+        .modal-buttons .main-button {
+            background-color: rgba(229, 97, 97, 1);
+            color: white;
+        }
+    </style>
+    <title>RoomyCo</title>
+</head>
+
+
+<body>
+    <div id="verificationModal" tabindex="-1" aria-labelledby="verificationModalLabel"
+        style="display: block;/*! border-radius: 55px !important; */" aria-modal="true" role="dialog"
+        class="modal error-dialog fade show">
+        <div class="modal-dialog  modal-lg " style="/*! border-radius: 55px !important; */">
+            <div class="modal-content d-flex flex-column gap-5 p-5 align-items-center">
+
+
+                <div class="modal-img d-flex align-items-center justify-content-center">
+                    <img src="/images/website icon/addAdd/error.svg">
+                </div>
+                <div class="moda-text d-flex gap-4 flex-column align-items-center justify-content-center">
+                    <h4 class="poppins-bold modal-heading text-center">
+                        Oopps...
+                    </h4>
+                    <span class="poppins-regular modal-msg text-center text-wrap w-75 px-5">
+                        We can't post your ad because you didn't add the room address.
+                    </span>
+                </div>
+                <div class="modal-buttons w-75 d-flex flex-column gap-4  justify-content-center align-items-center">
+                    <button class="btn w-50 main-button poppins-medium">Edit and try agin</button><button
+                        class="btn poppins-medium">Not Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popper JS -->
+    <script src="/libs/popper/popper.min.js"></script>
+    <!-- BootStrap JS -->
+    <script src="/libs/Bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- JQuery JS -->
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+
+</body>
+
+</html>

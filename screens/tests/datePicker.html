@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Datepicker Example</title>
+
+    <!-- Include Air Datepicker CSS -->
+    <link rel="stylesheet" href="/libs/datePicker/air-datepicker.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .date-picker-container {
+            margin: 20px;
+        }
+
+        /* Remove border for normal and focus states */
+        #date-picker {
+            border: none;
+            outline: none;
+            cursor: pointer; /* Optional: shows that it's clickable */
+        }
+
+        #date-picker:focus {
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="date-picker-container">
+        <label for="date">Select a Date:</label>
+        <!-- Added the readonly attribute to prevent text changes -->
+        <input type="text" id="date-picker" placeholder="Pick a date" readonly>
+    </div>
+
+    <!-- Include Air Datepicker JS -->
+    <script src="/libs/datePicker/air-datepicker.min.js"></script>
+
+    <script>
+        // Initialize the datepicker
+        const datepicker = new AirDatepicker('#date-picker', {
+            // Customize options if needed
+            locale: {
+                days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                today: 'Today',
+                clear: 'Clear',
+                dateFormat: 'dd/MM/yy',
+                timeFormat: 'HH:mm',
+                firstDay: 0
+            },
+            autoClose: false,
+            dateFormat: 'dd/MM/yy', // Custom date format
+        });
+    </script>
+
+</body>
+
+</html>

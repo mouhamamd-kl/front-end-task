@@ -24,20 +24,20 @@ section.main-page .form-section .page-form {
 
 .slider-container {
     width: 100%;
-    margin-top: -4px;
+    margin-top: -4px !;
 }
 
 .noUi-target {
-    border: 1px solid #ddd;
+    border: 1px solid #ddd !important;
 }
 
 /* Custom slider styles */
 .noUi-connect {
-    background: #F3704A;
+    background: #F3704A !important;
 }
 
 .noUi-origin {
-    direction: rtl;
+    direction: rtl !important;
 }
 
 .noUi-handle {
@@ -52,36 +52,36 @@ section.main-page .form-section .page-form {
 
 .noUi-handle:before,
 .noUi-handle:after {
-    content: none;
+    content: none !important;
 }
 
 .noUi-horizontal {
-    height: 10px;
+    height: 10px !important;
 }
 
 .noUi-tooltip {
-    display: none;
+    display: none !important;
     /* Ensure tooltips are hidden */
 }
 
 .input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 10px !important;
 }
 
 .input-container input {
-    width: 80px;
-    margin: 0 10px;
-    padding: 5px;
-    text-align: center;
+    width: 80px !important;
+    margin: 0 10px !important;
+    padding: 5px !important;
+    text-align: center !important;
 }
 
 @media (max-width: 768px) {
     section.main-page .form-section {
 
-        flex-direction: column;
+        flex-direction: column ;
 
     }
 }

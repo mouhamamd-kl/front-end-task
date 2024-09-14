@@ -1,0 +1,9 @@
+/* Import the theme.css file */
+@import url("./errorModal.css");
+
+/* Override the CSS variables */
+:root {
+  --error-heading-color: rgba(35, 135, 194, 1);
+  --modal-msg-color: rgba(50, 50, 50, 1);
+  --button-bg-color: rgba(35, 135, 194, 1);
+}
