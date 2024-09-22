@@ -45,10 +45,11 @@ main .nav-pills .nav-link {
 }
 
 main .create-post .create-post-body .page-form textarea.custom-textarea {
-  resize: vertical;
   resize: none;
-  border-radius: 10px;
-  border: 0.5px solid #dad6c8;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #dad6c8;
+  border-radius: 0px;
 }
 
 main .page-form .custom-select {

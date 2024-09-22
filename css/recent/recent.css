@@ -1,0 +1,50 @@
+body {
+  background: linear-gradient(to bottom, #f8f4db, #ffffff);
+}
+
+section.recent .recent-card {
+  /* width: 374px !important; */
+  /* height: 483px !important; */
+  width: 297px !important;
+  height: 382px !important;
+}
+
+main .page-form .custom-select {
+  /* border-radius: 15px !important; */
+  border-radius: 20px !important;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #d9d9d7;
+}
+
+main .page-form .custom-select img {
+  width: 16px;
+  height: 16px;
+}
+
+main .page-form .custom-input {
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #d9d9d7;
+  box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0.1608);
+}
+
+#date-picker {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.custom-checkbox-label {
+  font-size: 16px;
+}
+
+.page-form .main-form-label {
+  font-size: 16px !important;
+}
+
+.filter-section,
+.section.recent {
+  height: 100vh;
+  overflow-y: scroll;
+}

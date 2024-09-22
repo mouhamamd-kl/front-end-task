@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="../../css/homeStyle/home.css">
     <link rel="stylesheet" href="/css/profileStyle/profile.css">
     <link rel="stylesheet" href="/css/profileStyle/photoGrid.css">
+    <link rel="stylesheet" href="/css/signUpStyle/signup.css">
+    <link rel="stylesheet" href="/css/signUpStyle/signup2.css">
+    <link rel="stylesheet" href="/css/signUpStyle/signup3.css">
+    <link rel="stylesheet" href="/css/createPost/createPost.css">
+    <link rel="stylesheet" href="/css/seemoreStyle/seemore.css">
+    <link rel="stylesheet" href="/css/recent/recent.css">
 </head>
 
 <body>
@@ -728,177 +734,501 @@
             </div>
         </div>
     </nav>
-    <main class="container-fluid">
-        <!-- Profile Info Section -->
-        <div class="header-section row mb-3 gap-5">
-            <div class="col-3">
-                <img src="/images/homePage/available_roomate/2.jpg" alt="Profile Image"
-                    class="profile-img align-self-start">
-            </div>
-            <div class=" col-8     p-0">
-                <div class="d-flex  nav-links flex-row">
-                    <div
-                        class=" d-flex align-items-center justify-content-center text-center p-3 px-4 link link-active">
-                        <a href="#" class="text-decoration-none ">About</a>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center text-center p-3 px-4 link">
-                        <a href="#" class="text-decoration-none ">Contact info</a>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center text-center p-3 px-4 link">
-                        <a href="#" class="text-decoration-none ">Advertisements</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div
-                class="profile-section col-md-3 d-flex flex-column justify-content-start align-items-center gap-4 p-0 ps-3">
-                <div
-                    class="profile-header d-flex flex-column justify-content-start align-items-start text-start gap-3 p-0">
-                    <div class="d-flex flex-row justify-content-between profile-header-info w-100">
-                        <h3 class="profile-name p-0 m-0 d-flex poppins-medium">Raneem Doghouz</h3>
-                        <div class="rating poppins-medium d-flex align-items-center gap-2">
-                            4.5
-                            <img src="/images/website icon/profile/star.svg" alt="">
-                        </div>
-                    </div>
-                    <p class="nationality poppins-light m-0">Egyptian</p>
-                    <p class="personal-introduction poppins-light m-0">Hi there, I am mouhmmad. I recently moved to
-                        Dubai
-                        for
-                        working and looking for a roommate
-                    </p>
-                </div>
-                <div class="profile-actions justify-content-center row  gap-4 poppins-medium w-100">
-                    <a href="./editMyProfile.html" class="btn btn-primary p-3">Edit Profile Info</a>
-                    <a href="#" class="btn btn-outline-primary p-3">Add ad</a>
-                </div>
-                <div class="info-section p-3 d-flex flex-column align-items-start justify-content-center gap-3 w-100">
-                    <h5 class="section-header poppins-medium m-0 text-start ps-3">About</h5>
-                    <div class=" info-list w-100 d-flex flex-column gap-3 p-3">
-                        <div class="info-item d-flex flex-row gap-5">
-                            <img src="/images/website icon/profile/location.svg">
-                            Dubai, Al Aweer
-                        </div>
-                        <div class="info-item d-flex flex-row gap-5">
-                            <img src="/images/website icon/profile/person.svg">
-                            Male
-                        </div>
-                        <div class="info-item d-flex flex-row gap-5">
-                            <img src="/images/website icon/profile/cake.svg">
-                            June 3, 1993
+    <main class="container-fluid mt-5 h-100" style="">
+        <div class="head d-flex justify-content-center w-75 ps-3">
+            <h2 class="heading text-center poppins-medium  p-0">Recent</h2>
+        </div><!-- Profile Info Section -->
+
+        <div class="row" style="">
+            <div class="filter-section col-md-3 d-flex flex-column justify-content-start align-items-center gap-4 p-0 px-5"
+                style="height: 100vh;">
+
+
+
+
+                <form style="overflow-y: scroll;" class="w-100 page-form d-flex flex-column gap-3 px-0 h-100">
+                    <h5 class="poppins-medium text-start">Filter
+                    </h5>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Where do you want to
+                            live </label>
+                        <div class="w-100 d-flex flex-column gap-4">
+                            <div class=" d-flex flex-column">
+
+                                <select required="" id="locationEmirate" name="location"
+                                    class="form-select custom-select poppins-light  p-3">
+                                    <option disabled="">Location</option>
+                                    <option value="">Syria</option>
+
+                                    <!-- Add options here -->
+                                </select>
+                                <div class="valid-feedback">
+                                    look good
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid Location.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+
+                                <select required="" id="locationCity" name="locationCity"
+                                    class="form-select custom-select poppins-light  p-3">
+                                    <option disabled="">City</option>
+                                    <option value="">damascus</option>
+
+                                    <!-- Add options here -->
+                                </select>
+                                <div class="valid-feedback">
+                                    look good
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid City.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-section w-100">
-                    <h5 class="section-header poppins-medium">Contact</h5>
-                    <ul class="list-unstyled contact-list d-flex flex-column gap-3 contact-info poppins-light">
-                        <li class="info-item d-flex gap-4">
-                            <img src="/images/website icon/profile/envelope.svg">
-                            mouhmmad-kl@gmail.com
-                        </li>
-                        <li class="info-item d-flex gap-4">
-                            <img src="/images/website icon/profile/telephone.svg">
-                            +971 586 834 566
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div
-                class="col-md-9 advertisements-section  d-flex flex-column  gap-3 align-items-start justify-content-start px-5">
-                <div class="head ">
-                    <h5 class="heading text-start  poppins-medium m-0 p-0">mouhmmad's Advertisements</h5>
-                </div>
-                <div class="d-flex flex-column flex-md-row align-items-center ads justify-content-between w-100">
-                    <div class="advertisement-card col-5 d-flex flex-column gap-3">
-                        <div class="profile-header d-flex justify-content-between align-items-center">
-                            <div class="profile-info d-flex align-items-center">
-                                <img src="/images/homePage/available_roomate/2.jpg" alt="Profile Image"
-                                    class="profile-image">
-                                <strong class="profile-name">Raneem Doghouz</strong>
-                            </div>
-                            <button class="btn action-button">
-                                <img src="/images/website icon/profile/vertical-dots.svg" alt="More Options"
-                                    class="icon">
-                            </button>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Available Date</label>
+
+                        <div class="d-flex flex-row justify-content-evenly align-items-center w-100 custom-select p-2">
+
+
+                            <input type="text" id="date-picker" placeholder="MM/DD/YY" readonly=""
+                                style="outline: none;border: none;background-color: transparent;" class=" p-2 w-75">
+                            <img src="/images/website icon/createPost/calendar.svg">
+
                         </div>
-                        <div class="photo-grid img-card-body" id="photo-grid">
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
-                            </div>
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_2.png" alt="Image 1">
-                            </div>
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_3.png" alt="Image 1">
-                            </div>
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_4.png" alt="Image 1">
-                            </div>
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_5.png" alt="Image 1">
-                            </div>
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
-                            </div>
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_1.png" alt="Image 1">
-                            </div>
-                        </div>
-                        <!-- Carousel for hidden images -->
-                        <div id="carousel" class="carousel">
-                            <div class="carousel-inner" id="carousel-inner"></div>
-                            <span class="carousel-close">&times;</span>
-                        </div>
-                        <p class="m-0">Hi there, I have an apartment and I'm looking for a roommate!</p>
-                        <small class="text-muted">Dubai, Al Aweer</small>
-                        <div class="card-btn-group row poppins-light">
-                            <a href="#" class="btn btn-sm col-6">
-                                <img src="/images/website icon/profile/heart.svg" alt="">
-                                Favorite
-                            </a>
-                            <a href="#" class="btn  btn-sm col-6">
-                                <img src="/images/website icon/profile/messages.svg" alt="">
-                                Message</a>
-                        </div>
+
                     </div>
-                    <div class="advertisement-card col-5 d-flex flex-column gap-3">
-                        <div class="profile-header d-flex justify-content-between align-items-center">
-                            <div class="profile-info d-flex align-items-center">
-                                <img src="/images/homePage/available_roomate/2.jpg" alt="Profile Image"
-                                    class="profile-image">
-                                <strong class="profile-name">Raneem Doghouz</strong>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Budget</label>
+                        <div class="w-100 d-flex flex-column gap-4">
+                            <div class=" d-flex flex-row align-items-center">
+                                <label class="form-label text-muted text-start w-50 poppins-light">Minimum</label>
+                                <input required="" id="locationEmirate" name="location"
+                                    class="w-50  custom-input poppins-light  px-3 py-2">
+
+
                             </div>
-                            <button class="btn action-button">
-                                <img src="/images/website icon/profile/vertical-dots.svg" alt="More Options"
-                                    class="icon">
-                            </button>
-                        </div>
-                        <div class="photo-grid img-card-body" id="photo-grid">
-                            <div class="photo-item">
-                                <img src="/images/homePage/select-room/room_5.jpg" alt="Image 1">
+                            <div class=" d-flex flex-row align-items-center">
+                                <label class="form-label  text-muted text-start w-50 poppins-light">Maximum</label>
+                                <input required="" id="locationEmirate" name="location"
+                                    class="custom-input w-50 h-25 poppins-light px-3 py-2">
+
+
                             </div>
 
                         </div>
-                        <!-- Carousel for hidden images -->
-                        <div id="carousel" class="carousel">
-                            <div class="carousel-inner" id="carousel-inner"></div>
-                            <span class="carousel-close">&times;</span>
+                    </div>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Room suitable for
+                            you</label>
+                        <div class="button-check-group  d-flex flex-column flex-wrap gap-3 w-100">
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input type="checkbox" value="Seeker of roommate" id="flexCheckSeekerRoommate"
+                                    name="WIFI" class="form-check-input custom-checkbox  me-2">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label poppins-light text-muted">WIFI</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="Television">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Television</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input type="checkbox" value="Seeker of roommate" id="flexCheckSeekerRoommate"
+                                    name="Parking" class="form-check-input custom-checkbox  me-2">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Parking</label>
+                            </div>
+
+
                         </div>
-                        <p class="m-0">Hi there, I have an apartment and I'm looking for a roommate!</p>
-                        <small class="text-muted">Dubai, Al Aweer</small>
-                        <div class="card-btn-group row poppins-light">
-                            <a href="#" class="btn btn-sm col-6">
-                                <img src="/images/website icon/profile/heart.svg" alt="">
-                                Favorite
-                            </a>
-                            <a href="#" class="btn  btn-sm col-6">
-                                <img src="/images/website icon/profile/messages.svg" alt="">
-                                Message</a>
+                    </div>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Who do you want to
+                            live with ?</label>
+                        <div class="button-check-group  d-flex flex-column flex-wrap gap-3 w-100">
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input type="checkbox" value="Seeker of roommate" id="flexCheckSeekerRoommate"
+                                    class="form-check-input custom-checkbox  me-2" name="male">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label poppins-light text-muted">Male</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="female">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Female</label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Religions</label>
+                        <div class="button-check-group  d-flex flex-column flex-wrap gap-3 w-100">
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input type="checkbox" value="Seeker of roommate" id="flexCheckSeekerRoommate"
+                                    class="form-check-input custom-checkbox  me-2" name="islam">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label poppins-light text-muted">Islam</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="christianity">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Christianity</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="other">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Other</label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="d-flex  flex-column justify-content-start align-items-center w-100">
+
+                        <label class="main-form-label form-label  text-start w-100 poppins-light">Roommate suitable for
+                            you</label>
+                        <div class="button-check-group  d-flex flex-column flex-wrap gap-3 w-100">
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input type="checkbox" value="Seeker of roommate" id="flexCheckSeekerRoommate"
+                                    class="form-check-input custom-checkbox  me-2" name="smoking">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label poppins-light text-muted">Smoking</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="student">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Student</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="pet-allowed">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Pet-allowed</label>
+                            </div>
+                            <div class="d-flex flex-row gap-4 align-items-center form-check option-seeker-roommate">
+                                <input class="form-check-input custom-checkbox  me-2" type="checkbox"
+                                    value="Seeker of roommate" id="flexCheckSeekerRoommate" name="other">
+                                <label for="flexCheckSeekerRoommate"
+                                    class="form-check-label custom-checkbox-label text-muted poppins-light">Other</label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <section style="overflow-y: scroll;height: 100vh;"
+                class="col-md-9 recent  d-flex flex-column  gap-3 align-items-start justify-content-start px-0">
+
+
+                <div class="row  mx-0 justify-content-between w-100 gap-3">
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-between p-0  recent-card">
+                        <div class="position-relative">
+                            <!-- Card Image -->
+
+
+                            <!-- Heart Icon -->
+                            <div class="heart-icon position-absolute top-0 end-0 m-3 px-2 py-1">
+                                <img src="/images/website icon/seemore/heart.svg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div
+                            class="recent-card-body text-white d-flex flex-column justify-content-end  position-relative h-25 p-3">
+                            <div class="recent-card-bg"></div>
+                            <div class="recent-card-elements d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title poppins-medium">Shared bedroom</h5>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p class="price poppins-light m-0">$ 1,000 <span>/month</span></p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="/images/website icon/seemore/location.svg" alt="">
+                                        <p class="location m-0 poppins-light ">
+                                            Dubai
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 

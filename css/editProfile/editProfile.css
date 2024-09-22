@@ -1,0 +1,101 @@
+.header-section {
+  margin-top: 10vh;
+}
+
+.header-buttons-container .btn {
+  border-radius: 20px;
+  color: white;
+}
+
+.header-buttons-container .btn.custom-btn-primary {
+  background: rgba(35, 135, 194, 1);
+}
+
+.header-buttons-container .custom-btn-secondary {
+  background: rgba(112, 112, 112, 1);
+}
+
+.section {
+  border: 1px solid rgba(218, 214, 200, 1);
+  background: rgba(255, 254, 249, 1);
+  border-radius: 11px;
+}
+
+.nav-section div:not(:last-child) {
+  border-bottom: 1px solid rgba(218, 214, 200, 1);
+}
+
+.nav-section div:has(> a.active) {
+  border-left: 5px solid rgba(35, 135, 194, 1);
+  color: rgba(35, 135, 194, 1);
+}
+
+.about-section .profile-img {
+  border-radius: 50%;
+  height: 135px;
+  width: 135px;
+  object-fit: cover;
+}
+
+.section .custom-textarea {
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.section .main-label {
+  color: rgba(112, 112, 112, 1);
+}
+
+.gender-container .gender-buttons .custom-radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff7043 !important;
+  border-radius: 50%;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.gender-container .gender-buttons .custom-radio-input:checked {
+  background-color: #ff7043 !important;
+  border-color: #ff7043 !important;
+}
+
+.page-form .date-picker,
+.page-form .date-picker:focus {
+  border: none;
+  outline: none;
+}
+
+.section .d-flex:not(:last-child) .w-md-75 {
+  border-bottom: 1px solid #dad6c8;
+}
+
+/* Ensure that the sticky element sticks to the top when scrolling */
+
+.main-page {
+  min-height: 100vh;
+  /* Ensure the row is tall enough to allow scrolling */
+}
+
+@media (min-width: 768px) {
+  .nav-section {
+    position: sticky;
+    /* Makes sure it aligns at the top inside its column */
+  }
+
+  .w-md-75 {
+    width: 75% !important;
+    max-width: 75% !important;
+  }
+
+  .w-md-25 {
+    width: 25% !important;
+    max-width: 25% !important;
+  }
+}
