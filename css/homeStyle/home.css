@@ -1,175 +1,168 @@
 body {
-
-    font-family: 'Poppins' !important;
-    background : #FAF7E3;
-
+  font-family: "Poppins" !important;
+  background: #faf7e3;
 }
 
 /* NavBar Styling Start */
 .custom-navbar {
-    background-color: rgba(255, 254, 249, 0.6) !important;
-    color           : black;
+  background-color: rgba(255, 254, 249, 0.6) !important;
+  color: black;
 }
 
 .custom-navbar {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter : blur(4px) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(4px) !important;
 }
 
-.navbar-nav>.nav-item:nth-last-child(3)>a::after {
-    content     : '|';
-    padding-left: 3rem;
+.navbar-nav > .nav-item:nth-last-child(3) > a::after {
+  content: "|";
+  padding-left: 3rem;
 }
 
 nav .custom-dropdown,
 nav .account-dropdown {
-    border-radius: 15px;
-    box-shadow   : 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding      : 1rem;
-    width        : 60vw;
-    /* Use viewport width for better responsiveness */
-    max-width    : 400px;
-    /* Limit max width on larger screens */
-    min-width    : 280px;
-    /* Ensure it's not too small on small screens */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 60vw;
+  /* Use viewport width for better responsiveness */
+  max-width: 400px;
+  /* Limit max width on larger screens */
+  min-width: 280px;
+  /* Ensure it's not too small on small screens */
 }
 
 /* Messages List Styling with Scroll */
 nav .custom-dropdown .list-group {
-    max-height: 300px !important;
-    /* Adjust height as necessary */
-    overflow-y: auto;
+  max-height: 300px !important;
+  /* Adjust height as necessary */
+  overflow-y: auto;
 }
 
 /* Chats header with buttons */
 nav .custom-dropdown .btn-light {
-    border-radius: 50%;
-    padding      : 0.3rem;
+  border-radius: 50%;
+  padding: 0.3rem;
 }
 
 /* Message Items */
 nav .custom-dropdown .list-group-item {
-    border    : none;
-    padding   : 0.75rem 0.5rem;
-    transition: background-color 0.2s ease-in-out;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  transition: background-color 0.2s ease-in-out;
 }
 
 nav .custom-dropdown .list-group-item:hover {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 /* Small text inside message items */
 nav .custom-dropdown .list-group-item small {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 /* Badge Styling */
 nav .custom-dropdown .badge {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 /* Message Item Images */
 nav .custom-dropdown .list-group-item img {
-    width        : 60px;
-    height       : 60px;
-    border-radius: 50%;
-    object-fit   : cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 nav .custom-dropdown .custom-dropdown {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 nav .custom-dropdown .person-image {
-    width : 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 nav .custom-dropdown .person-name {
-    font-size: 20px !important;
-    color    : #292C2D;
+  font-size: 20px !important;
+  color: #292c2d;
 }
 
 nav .custom-dropdown .online-icon {
-    width  : 10px !important;
-    height : 10px !important;
-    margin : 0 !important;
-    padding: 0;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 !important;
+  padding: 0;
 }
 
 nav .custom-dropdown .message-text {
-    font-size: 16px;
-    color    : #292C2D;
+  font-size: 16px;
+  color: #292c2d;
 }
 
 nav .custom-dropdown .message-time {
-    color    : #707070;
-    font-size: 16px !important;
+  color: #707070;
+  font-size: 16px !important;
 }
 
 nav .custom-dropdown .heading-button {
-    background-color: #D3CEBA;
-    border-radius   : 50px;
-    width           : 30px !important;
-    height          : 30px !important;
-    padding         : 0;
+  background-color: #d3ceba;
+  border-radius: 50px;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 0;
 }
-
-
 
 /* Rounded Scrollbar Styling */
 nav .custom-dropdown .list-group::-webkit-scrollbar {
-    width: 8px;
-    /* Width of the scrollbar */
+  width: 8px;
+  /* Width of the scrollbar */
 }
 
 nav .custom-dropdown .list-group::-webkit-scrollbar-track {
-    background   : #f1f1f1;
-    /* Background of the scrollbar track */
-    border-radius: 50px;
-    /* Rounded corners for the track */
+  background: #f1f1f1;
+  /* Background of the scrollbar track */
+  border-radius: 50px;
+  /* Rounded corners for the track */
 }
 
 nav .custom-dropdown .list-group::-webkit-scrollbar-thumb {
-    background-color: #888;
-    /* Color of the scrollbar thumb */
-    border-radius   : 50px;
-    /* Rounded corners for the thumb */
-    border          : 20px solid #f1f1f1;
-    /* Optional     : Adds a border to separate the thumb from the track */
+  background-color: #888;
+  /* Color of the scrollbar thumb */
+  border-radius: 50px;
+  /* Rounded corners for the thumb */
+  border: 20px solid #f1f1f1;
+  /* Optional     : Adds a border to separate the thumb from the track */
 }
 
 nav .custom-dropdown .list-group::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-    /* Darker color on hover */
+  background-color: #555;
+  /* Darker color on hover */
 }
 
 nav .custom-dropdown,
 nav .dropdown-menu {
-    position: absolute !important;
+  position: absolute !important;
 }
-
-
-
 
 /* end messages dropdown Styling */
 /* start notifications dropdown Styling */
 nav .notifications-dropdown .btn.active,
 nav .favourite-dropdown .nav-pills button.active {
-    border-radius   : 15px !important;
-    color           : #2387C2 !important;
-    background-color: rgba(35, 135, 194, 0.25) !important;
-    border          : none !important;
+  border-radius: 15px !important;
+  color: #2387c2 !important;
+  background-color: rgba(35, 135, 194, 0.25) !important;
+  border: none !important;
 }
 
 nav .notifications-dropdown .list-heading {
-    color    : #292C2D;
-    font-size: 20px;
+  color: #292c2d;
+  font-size: 20px;
 }
 
 nav .notifications-dropdown .list-group {
-    max-height: 103px !important;
-    overflow-y: auto;
+  max-height: 103px !important;
+  overflow-y: auto;
 }
 
 /* end notifications dropdown Styling */
@@ -177,554 +170,540 @@ nav .notifications-dropdown .list-group {
 /*  */
 /* Start account dropdown Styling */
 nav .account-dropdown {
-    height    : 85vh;
-    width     : 27vw;
-    background: #F6F6F6;
+  height: 85vh;
+  width: 27vw;
+  background: #f6f6f6;
 }
 
 nav .account-dropdown .account-heading {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 nav .account-dropdown .account-type-container {
-    background-color: white;
-    box-shadow      : 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height          : 40vh;
-    border-radius   : 10px;
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 40vh;
+  border-radius: 10px;
 }
 
-
 nav .account-dropdown .account-type-container .account-type-heading h5 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 nav .account-dropdown .account-type-container .account-type-img img {
-    height       : 60px;
-    width        : 60px;
-    border-radius: 50px;
-    object-fit   : cover;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  object-fit: cover;
 }
 
 nav .account-dropdown .account-type-container .account-type-subheading {
-    color    : rgba(41, 44, 45, 1);
-    font-size: 20px;
-
+  color: rgba(41, 44, 45, 1);
+  font-size: 20px;
 }
 
 nav .account-dropdown .settings {
-    height: 30vh;
+  height: 30vh;
 }
-
+.account-dropdown a {
+  text-decoration: none;
+  color: #292c2d;
+}
 /* end account sdropdown styling */
 
 /* start favourite dropdown styling */
 nav .favourite-dropdown {
-    background-color: white;
-    max-width       : none !important;
-
+  background-color: white;
+  max-width: none !important;
 }
 
 /* Ensure the tab content area is scrollable */
 .favourite-dropdown .tab-content {
-    max-height: 400px;
-    /* Adjust this value as needed */
-    overflow-y: auto;
+  max-height: 400px;
+  /* Adjust this value as needed */
+  overflow-y: auto;
 }
 
-
-
 nav .favourite-dropdown .card {
-    border          : none;
-    border-radius   : 15px;
-    background-color: #F2EACC;
+  border: none;
+  border-radius: 15px;
+  background-color: #f2eacc;
 }
 
 nav .favourite-dropdown .card .card-body {
-    padding: 15px;
+  padding: 15px;
 }
 
 nav .favourite-dropdown .card img.main-img {
-    border-radius: 10px;
-    width        : 100%;
-    height       : 100%;
-    object-fit   : cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 nav .favourite-dropdown .card .rating img.logo-img {
-    width : 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 nav .favourite-dropdown .card .details img.logo-img {
-    width : 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 nav .favourite-dropdown .card .card-title {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 nav .favourite-dropdown .card .price {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 nav .favourite-dropdown .card .details {
-    font-size: 16px;
-    color    : #292C2D;
+  font-size: 16px;
+  color: #292c2d;
 }
 
 nav .favourite-dropdown .card.profile-card img.main-img {
-    border-radius: 50%;
-    height       : 150px;
-    width        : 150px;
-    object-fit   : cover;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
 }
 
 @media (max-width: 992px) {
-    .dropdown-menu {
-        transform: translateX(70%);
-    }
+  .dropdown-menu {
+    transform: translateX(70%);
+  }
 }
 
 @media (max-width: 992px) {
-    nav .favourite-dropdown.dropdown-menu-end[data-bs-popper] {
-        width: 90vw !important;
-    }
+  nav .favourite-dropdown.dropdown-menu-end[data-bs-popper] {
+    width: 90vw !important;
+  }
 
-    .favourite-dropdown {
-        /* left : 50% !important;
+  .favourite-dropdown {
+    /* left : 50% !important;
         right: 0 !important; */
-        width: 90vw !important;
-    }
+    width: 90vw !important;
+  }
 
-    nav .favourite-dropdown .card img.main-img {
-        border-radius: 10px;
-        width        : 100%;
-        height       : 100%;
-        object-fit   : fill;
-    }
+  nav .favourite-dropdown .card img.main-img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
 
-    nav .favourite-dropdown .card.profile-card img.main-img {
-        border-radius: 89%;
-        height       : 100px;
-        width        : 100px;
-        object-fit   : cover;
-    }
+  nav .favourite-dropdown .card.profile-card img.main-img {
+    border-radius: 89%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
 }
 
 /* end favourite dropdown styling */
 /* Rotating Arrows around the Image */
 .account-type {
-    position: relative;
+  position: relative;
 }
 
 .arrow {
-    position       : absolute;
-    width          : 70px;
-    height         : 70px;
-    background-size: contain;
-    transition     : transform 0.3s ease-in-out;
-    /* Smooth transition */
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition */
 }
 
 .arrow-left {
-    background: url('/images/website icon/home/navbar/Arrow.svg') no-repeat center center;
-    left      : -1%;
-    transform : translateY(-30%);
-    animation : rotate-left 2s linear infinite;
+  background: url("/images/website icon/home/navbar/Arrow.svg") no-repeat center
+    center;
+  left: -1%;
+  transform: translateY(-30%);
+  animation: rotate-left 2s linear infinite;
 }
 
 .account-type:hover .arrow-left {
-    transform: scale(-1, 1) translateY(-30%) translateX(5%);
+  transform: scale(-1, 1) translateY(-30%) translateX(5%);
 }
 
 .arrow-right {
-    background: url('/images/website icon/home/navbar/ArrowDown.svg') no-repeat center center;
+  background: url("/images/website icon/home/navbar/ArrowDown.svg") no-repeat
+    center center;
 
-    left     : -2%;
-    transform: translateY(30%);
-    animation: rotate-right 2s linear infinite;
+  left: -2%;
+  transform: translateY(30%);
+  animation: rotate-right 2s linear infinite;
 }
 
 .account-type:hover .arrow-right {
-    transform: scale(-1, 1) translateY(30%);
+  transform: scale(-1, 1) translateY(30%);
 }
-
-
 
 /* NavBar Styling End */
 
 /* Swiper Styling Start */
 
-
 .mySwiper .swiper-pagination-bullet-active {
-    width: 2% !important;
+  width: 2% !important;
 }
 
 .mySwiper .swiper-pagination-bullet {
-    border-radius: var(--swiper-pagination-bullet-border-radius, 25px) !important;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 25px) !important;
 }
 
 /* Swiper Styling End */
 
 /* LocationFinder Styling Start */
 .carousel-section .search-container {
-    position : absolute;
-    position : absolute;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
-    z-index  : 3;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .carousel-section .search-bar {
-    display         : flex;
-    align-items     : center;
-    background-color: #D9D9D7;
-    border-radius   : 10px;
-    padding         : 5px;
-    width           : 120%;
-    border          : 1px solid #e0e0e0;
-    z-index         : 3;
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d7;
+  border-radius: 10px;
+  padding: 5px;
+  width: 120%;
+  border: 1px solid #e0e0e0;
+  z-index: 3;
 }
 
 .carousel-section .search-bar .input-container {
-    background-color: white;
-    justify-content : center !important;
-    align-items     : center !important;
-    border-radius   : 10px !important;
+  background-color: white;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 10px !important;
 }
 
 .carousel-section .search-bar input {
-    border      : none;
-    background  : white;
-    outline     : none;
-    flex        : 1;
-    padding-left: 10px;
-    font-size   : 16px;
+  border: none;
+  background: white;
+  outline: none;
+  flex: 1;
+  padding-left: 10px;
+  font-size: 16px;
 }
 
 .carousel-section .search-bar .btn-close {
-    background-color: transparent;
-    border          : none;
-    font-size       : 18px;
-    color           : #888;
-    cursor          : pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
 }
 
 .carousel-section .search-bar .btn-close:hover {
-    color: #333;
+  color: #333;
 }
 
 .carousel-section .search-bar .btn-search {
-    background   : linear-gradient(to right, #2387C2, #11405C);
-    color        : white;
-    border       : none;
-    border-radius: 10px;
-    padding      : 5px 15px;
-    font-size    : 16px;
+  background: linear-gradient(to right, #2387c2, #11405c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 16px;
 }
 
 .carousel-section .swiper-slide img {
-    z-index: 1 !important;
-    /* Lower z-index for the images */
+  z-index: 1 !important;
+  /* Lower z-index for the images */
 }
 
 .carousel-section .search-container .search-text {
-    font-size       : 20px;
-    color           : white;
-    border-radius   : 25px;
-    background-color: rgba(255, 255, 255, 0.2) !important;
+  font-size: 20px;
+  color: white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .carousel-section .search-container .search-text p {
-    margin: 0;
+  margin: 0;
 }
-
 
 /* LocationFinder Styling End */
 
 /* explore section Styling Start */
 .explore .explore-heading {
-    font-size: 32px;
-    color    : #292C2D;
+  font-size: 32px;
+  color: #292c2d;
 }
 
 .explore-carousel {
-    position: relative;
-    width   : 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .explore-carousel .carousel-inner {
-    display : flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .explore-carousel .carousel-inner .carousel-item {
-    display        : none;
-    flex           : 0 0 100%;
-    justify-content: center;
-    align-items    : center;
-    opacity        : 0;
-    transition     : opacity 0.5s ease-in;
+  display: none;
+  flex: 0 0 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
 .explore-carousel .active {
-    display: flex;
-    opacity: 1;
+  display: flex;
+  opacity: 1;
 }
 
 .explore-carousel .city-card {
-    width        : 200px !important;
-    text-align   : center;
-    border-radius: 15px;
-    overflow     : hidden;
+  width: 200px !important;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .explore-carousel .city-card img {
-    width        : 100%;
-    height       : auto;
-    border-radius: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
 .explore-carousel .city-card .card-body {
-    padding: 10px;
+  padding: 10px;
 }
 
 .explore-carousel .city-card .card-title {
-    font-size: 24px;
-    margin   : 10px 0 0;
+  font-size: 24px;
+  margin: 10px 0 0;
 }
 
 /* Default styles for larger screens */
 .explore-carousel .carousel-inner .city-card {
-    display      : none;
-    /* Hidden by default */
-    width        : 200px !important;
-    text-align   : center;
-    border-radius: 15px;
-    overflow     : hidden;
-    margin       : 0 10px;
-    /* Space between cards */
-    opacity      : 0;
-    transition   : opacity 0.75s ease-in-out;
-    /* Smooth fade transition */
+  display: none;
+  /* Hidden by default */
+  width: 200px !important;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 10px;
+  /* Space between cards */
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+  /* Smooth fade transition */
 }
 
 /* Styles for small screens */
-
-
 
 /* styles.css */
 
 /* Previous styles remain the same */
 
-
 .carousel-control {
-    position        : relative;
-    background-color: #2387C2;
-    color           : #fff;
-    border-radius   : 50%;
-    width           : 50px;
-    height          : 50px;
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-    transition      : background-color 0.3s ease-in-out;
-    z-index         : 100;
-
+  position: relative;
+  background-color: #2387c2;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 100;
 }
 
 .carousel-control img {
-    width : 60%;
-    height: 60%;
+  width: 60%;
+  height: 60%;
 }
 
 .carousel-control:hover {
-    background-color: #2387C2;
+  background-color: #2387c2;
 }
 
 /* Other styles remain the same */
 
 /* Media Query for Small Screens */
 
-
-
-
 /* explore section Styling End */
 /*Start recommendation Secton styling */
 .recomendation .recomendation-heading {
-    color    : #292C2D;
-    font-size: 32px;
+  color: #292c2d;
+  font-size: 32px;
 }
 
 .recomendation .recomendation-subheading {
-    color    : #292C2D;
-    font-size: 20px;
+  color: #292c2d;
+  font-size: 20px;
 }
 
 .recomendation .room-card {
-    width           : 275px !important;
-    border          : none;
-    border-radius   : 15px;
-    box-shadow      : 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow        : hidden;
-    background-color: #F2EACC;
-    position        : relative;
-    transition      : transform 0.3s ease-in-out;
-    margin-right    : 65px;
-    text-decoration : none;
+  width: 275px !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #f2eacc;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  margin-right: 65px;
+  text-decoration: none;
 }
 
 .recomendation .room-card:hover {
-    transform: scale(1.01);
-
+  transform: scale(1.01);
 }
 
 .recomendation .card-img-top {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .recomendation .room-card .room-image {
-    width     : 100%;
-    height    : auto;
-    display   : block;
-    transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .recomendation .room-card .room-image-hover {
-    position  : absolute;
-    top       : 0;
-    left      : 0;
-    width     : 100%;
-    height    : auto;
-    opacity   : 0;
-    filter    : blur(0px);
-    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  filter: blur(0px);
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .recomendation .room-card:hover .room-image {
-    opacity: 0;
+  opacity: 0;
 }
 
 .recomendation .room-card:hover .room-image-hover {
-    opacity: 1;
-    filter : blur(2px);
-    /* Slight blur effect */
+  opacity: 1;
+  filter: blur(2px);
+  /* Slight blur effect */
 }
 
 .recomendation .heart-icon {
-    position        : absolute;
-    top             : 50%;
-    left            : 50%;
-    transform       : translate(-50%, -50%);
-    font-size       : 2rem;
-    color           : white;
-    opacity         : 0;
-    transition      : opacity 0.3s ease-in-out;
-    z-index         : 10;
-    background-color: rgba(255, 254, 249, 0.6) !important;
-    border-radius   : 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+  background-color: rgba(255, 254, 249, 0.6) !important;
+  border-radius: 10px;
 }
 
 .recomendation .room-card:hover .heart-icon {
-    opacity: 1;
+  opacity: 1;
 }
 
 .recomendation .card-body {
-    padding-top: 25px;
-    padding-top: 2px;
+  padding-top: 25px;
+  padding-top: 2px;
 }
 
 .recomendation .card-title {
-    font-size    : 1.25rem;
-    margin-bottom: 10px;
-    color        : #333;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .recomendation .price-rating {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .recomendation .price {
-    font-size: 1.5rem;
-    color    : #e74c3c;
+  font-size: 1.5rem;
+  color: #e74c3c;
 }
 
 .recomendation .month {
-    font-size: 0.875rem;
-    color    : #999;
+  font-size: 0.875rem;
+  color: #999;
 }
 
 .recomendation .rating .fa-star {
-    color: #ffd700;
+  color: #ffd700;
 }
 
 .recomendation .rating .fa-star.checked {
-    color: #ffd700;
+  color: #ffd700;
 }
 
 .recomendation .rating .fa-star:not(.checked) {
-    color: #ccc;
+  color: #ccc;
 }
 
 .recomendation .details {
-    font-size: 0.875rem;
-    color    : #666;
+  font-size: 0.875rem;
+  color: #666;
 }
 
 .recomendation .details i {
-    margin-right: 5px;
-    color       : #333;
+  margin-right: 5px;
+  color: #333;
 }
 
-
 .recommendation-swiper .swiper-wrapper {
-    padding: 40px;
+  padding: 40px;
 }
 
 .recommendation-swiper .swiper-button-next,
 .recommendation-swiper .swiper-button-prev,
 .room-swiper .swiper-button-next,
 .room-swiper .swiper-button-prev {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius   : 50%;
-    width           : 50px;
-    height          : 50px;
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-    top             : 50%;
-    transform       : translateY(-50%);
-    transition      : background-color 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .recommendation-swiper .swiper-button-next img,
 .recommendation-swiper .swiper-button-prev img,
 .room-swiper .swiper-button-next img,
 .room-swiper .swiper-button-prev img {
-    width : 60%;
-    height: 60%;
+  width: 60%;
+  height: 60%;
 }
 
 .recommendation-swiper .swiper-button-next:hover,
 .recommendation-swiper .swiper-button-prev:hover,
 .room-swiper .swiper-button-next:hover,
 .room-swiper .swiper-button-prev:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .recommendation-swiper .swiper-button-next,
 .room-swiper .swiper-button-next {
-    right: 10px;
+  right: 10px;
 }
 
 .recommendation-swiper .swiper-button-prev,
 .room-swiper .swiper-button-prev {
-    left: 10px;
+  left: 10px;
 }
 
 /* Hide default navigation button icons */
@@ -732,140 +711,139 @@ nav .favourite-dropdown .card.profile-card img.main-img {
 .recommendation-swiper .swiper-button-prev::after,
 .room-swiper .swiper-button-next::after,
 .room-swiper .swiper-button-prev::after {
-    content: "";
+  content: "";
 }
 
 /*End recommendation Secton styling */
 /*Start Available Roommate Section */
 .available-rommate .available-rommate-heading {
-    font-size: 32px;
-    color    : #292C2D;
+  font-size: 32px;
+  color: #292c2d;
 }
 
 .available-rommate .available-rommate-subheading {
-    font-size: 30px;
-    color    : #292C2D;
+  font-size: 30px;
+  color: #292c2d;
 }
 
 /* Card Styling */
 .available-rommate .rommate-swiper .card {
-    position     : relative;
-    width        : 20vh;
-    height       : 90vh;
-    border-radius: 25px;
-    overflow     : hidden;
-    cursor       : pointer;
-    transition   : width 0.3s ease;
+  position: relative;
+  width: 20vh;
+  height: 90vh;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.3s ease;
 }
 
 .available-rommate .rommate-swiper .info .details,
 .available-rommate .rommate-swiper .info .star {
-    transform : translateX(100%);
-    transition: 0.3s;
+  transform: translateX(100%);
+  transition: 0.3s;
 }
 
 .available-rommate .rommate-swiper .card:hover .info .details,
 .available-rommate .rommate-swiper .info .star {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .available-rommate .rommate-swiper .card:hover {
-    width: 70vh !important;
+  width: 70vh !important;
 }
 
 .available-rommate .rommate-swiper .card .image {
-    width              : 100%;
-    height             : 100%;
-    background-size    : cover;
-    background-position: center;
-    border-radius      : 25px;
-    transition         : transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
 }
 
 .available-rommate .rommate-swiper .card:hover .info {
-    padding : 20px;
-    position: absolute;
-    bottom  : 5%;
+  padding: 20px;
+  position: absolute;
+  bottom: 5%;
 }
 
 .available-rommate .rommate-swiper .card .info .icon {
-    width : 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .available-rommate .rommate-swiper .card .info .details {
-    font-size: 20px;
-    color    : white !important;
+  font-size: 20px;
+  color: white !important;
 }
 
 .available-rommate .rommate-swiper .card .name {
-    position     : absolute;
-    font-size    : 24px;
-    font-weight  : bold;
-    margin-bottom: 5px;
-    top          : 72%;
-    transform    : rotate(-90deg);
-    color        : #fff;
-    transition   : transform 0.3s ease;
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  top: 72%;
+  transform: rotate(-90deg);
+  color: #fff;
+  transition: transform 0.3s ease;
 }
 
 .available-rommate .rommate-swiper .card:hover .name {
-    position : relative;
-    top      : 0;
-    transform: rotate(0deg);
-    padding  : 0;
-    margin   : 0;
+  position: relative;
+  top: 0;
+  transform: rotate(0deg);
+  padding: 0;
+  margin: 0;
 }
 
 .available-rommate .rommate-swiper .card .rating {
-    display    : flex;
-    align-items: center;
-    margin-top : 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
 }
 
 .available-rommate .rommate-swiper .card .rating ion-icon {
-    color       : gold;
-    margin-right: 5px;
+  color: gold;
+  margin-right: 5px;
 }
 
 /* Navigation buttons styling */
 .available-rommate .rommate-swiper .swiper-button-next,
 .available-rommate .rommate-swiper .swiper-button-prev {
-    color    : #000;
-    font-size: 24px;
+  color: #000;
+  font-size: 24px;
 }
 
 /* Styles for small screens */
 @media (max-width: 768px) {
-    .available-rommate .rommate-swiper .card {
-        width : 20vh;
-        height: 50vh;
+  .available-rommate .rommate-swiper .card {
+    width: 20vh;
+    height: 50vh;
+  }
 
-    }
+  /* Remove hover effects on small screens */
+  .available-rommate .rommate-swiper .card.active {
+    width: 40vh;
+  }
 
-    /* Remove hover effects on small screens */
-    .available-rommate .rommate-swiper .card.active {
-        width: 40vh;
-    }
+  .available-rommate .rommate-swiper .card.active .name {
+    position: relative;
+    top: 0;
+    transform: rotate(0deg);
+    padding: 0;
+    margin: 0;
+  }
 
-    .available-rommate .rommate-swiper .card.active .name {
-        position : relative;
-        top      : 0;
-        transform: rotate(0deg);
-        padding  : 0;
-        margin   : 0;
-    }
+  .available-rommate .rommate-swiper .card.active .info .details,
+  .available-rommate .rommate-swipe .card.activer .info .star {
+    transform: translateX(0);
+  }
 
-    .available-rommate .rommate-swiper .card.active .info .details,
-    .available-rommate .rommate-swipe .card.activer .info .star {
-        transform: translateX(0);
-    }
-
-    .available-rommate .rommate-swiper .card.active .info {
-        padding : 20px;
-        position: absolute;
-        bottom  : 5%;
-    }
+  .available-rommate .rommate-swiper .card.active .info {
+    padding: 20px;
+    position: absolute;
+    bottom: 5%;
+  }
 }
 
 /*End Available Roommate Section */
@@ -873,58 +851,56 @@ nav .favourite-dropdown .card.profile-card img.main-img {
 /*  */
 /* footer Styling Start */
 .footer {
-    background-image: linear-gradient(to right, #E8E8E8, #F6F6F6);
-    color           : #292C2D !important;
+  background-image: linear-gradient(to right, #e8e8e8, #f6f6f6);
+  color: #292c2d !important;
 }
 
 .footer .socials h5 {
-    color: #2387C2;
+  color: #2387c2;
 }
 
 .footer .socials p,
 .footer .Policies ul li a,
 .footer .Contact ul li a,
 .footer .rights {
-    color: #292C2D !important;
-
+  color: #292c2d !important;
 }
 
 /* footer Styling End */
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .search-container {
-        top      : 20%;
-        transform: translate(-50%, -20%);
-    }
+  .search-container {
+    top: 20%;
+    transform: translate(-50%, -20%);
+  }
 
-
-    .search-container .search-text {
-        width: 100% !important;
-    }
+  .search-container .search-text {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 576px) {
-    .search-container {
-        top      : 50%;
-        left     : 50%;
-        transform: translate(-50%, -50%);
-        width    : 75%;
-    }
+  .search-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+  }
 
-    .search-bar .input-container {
-        display: block;
-    }
+  .search-bar .input-container {
+    display: block;
+  }
 
-    .search-bar .btn-search {
-        width: 50% !important;
-    }
+  .search-bar .btn-search {
+    width: 50% !important;
+  }
 
-    .search-container .search-text {
-        color           : gray;
-        border-radius   : 25px;
-        background-color: rgb(225, 225, 225) !important;
+  .search-container .search-text {
+    color: gray;
+    border-radius: 25px;
+    background-color: rgb(225, 225, 225) !important;
 
-        font-size: 16px;
-    }
+    font-size: 16px;
+  }
 }
